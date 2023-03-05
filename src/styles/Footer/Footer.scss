@@ -1,0 +1,321 @@
+.footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    &_dimensions{
+        width: 100%;
+        height: 15000px;
+    }
+}
+
+.fog-container{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: none;
+    margin-bottom: -145%;
+}
+
+.fog{
+    width: 100%;
+    /*height: 1000px;*/
+    opacity: 0.7;
+}
+
+.forest-container{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: none;
+    margin-bottom: -34%;
+}
+
+.forest{
+    width: 100%;
+}
+
+.rocks{
+    z-index: 2;
+    width: 100%;
+}
+
+.kodamas{
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: none;
+
+    margin-bottom: -13%;
+}
+
+
+
+.kodama1{
+    z-index: 3;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 5%;
+    height: none;
+    margin-left: 9%;
+    margin-bottom: -5%;
+}
+
+
+
+.kodama1_head{
+    position: relative;
+    z-index: 5;
+    margin-bottom: -92%;
+
+    width: 95%;
+    height: none;
+    opacity: 1;
+    filter: brightness(0.9);
+}
+
+.kodama1_body{
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: none;
+    opacity: 1;
+    filter: brightness(0.9);
+}
+
+
+
+
+
+
+.kodama2{
+    z-index: 3;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 5%;
+    height: none;
+
+    margin-right: 10%;
+    margin-bottom: 9%;
+}
+
+.kodama2_head{
+    position: relative;
+    z-index: 5;
+    margin-bottom: -77%;
+
+    width: 75%;
+    height: none;
+    opacity: 1;
+    filter: brightness(0.9);
+}
+
+.kodama2_body{
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: none;
+    opacity: 1;
+    filter: brightness(0.9);
+}
+
+
+
+
+
+
+
+.kodama3{
+    z-index: 3;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 5%;
+    height: none;
+
+    margin-right: 16%;
+    margin-bottom: 7%;
+}
+
+
+.kodama3_head{
+    position: relative;
+    z-index: 5;
+    margin-bottom: -107%;
+
+    width: 100%;
+    height: none;
+    opacity: 1;
+    filter: brightness(0.9);
+}
+
+.kodama3_body{
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: none;
+    opacity: 1;
+    filter: brightness(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rotation1{
+    /*animation: head-rotation 2500ms linear infinite;*/
+    animation: head-rotation 2500ms linear;
+    /*animation-delay: 5000ms;*/
+    /*animation-fill-mode: backwards;*/
+}
+
+.rotation2{
+    /*animation: head-rotation 2500ms linear infinite;*/
+    animation: head-rotationbis 2500ms linear;
+    /*animation-delay: 5000ms;*/
+    /*animation-fill-mode: backwards;*/
+}
+
+.brightness1{
+    animation: brightness 2500ms linear;
+}
+
+@keyframes brightness{
+    0%{
+        filter: brightness(0.9);
+    }
+
+    50%{
+        filter: brightness(1.3);
+    }
+
+    100%{
+        filter: brightness(0.9);
+    }
+}
+
+@keyframes head-rotation {
+
+    0%   { 
+        transform: rotate(0deg); 
+        filter: brightness(0.9);
+    }
+    12% { transform: rotate(15deg); }
+    25% { transform: rotate(45deg); }
+    30% { transform: rotate(60deg); }
+    37% { transform: rotate(80deg); }
+    50%  { 
+        transform: rotate(90deg);
+        filter: brightness(1.3); 
+    }
+    55% { transform: rotate(-90deg); }
+
+    56% { transform: rotate(80deg); }
+    57% { transform: rotate(-80deg); }
+    58% { transform: rotate(80deg); }
+    59% { transform: rotate(-80deg); }
+    60% { transform: rotate(80deg); }
+    61% { transform: rotate(-80deg); }
+    62% { transform: rotate(80deg); }
+    63% { transform: rotate(-80deg); } 
+    64% { transform: rotate(80deg); }
+    65% { transform: rotate(-80deg); }
+    66% { transform: rotate(80deg); }
+    67% { transform: rotate(-80deg); }
+    68% { transform: rotate(80deg); }
+    69% { transform: rotate(-80deg); }
+    70% { transform: rotate(80deg); }
+    71% { transform: rotate(-80deg); }
+    72% { transform: rotate(80deg); }
+    73% { transform: rotate(-80deg); }
+    74% { transform: rotate(80deg); }
+    75% { transform: rotate(-80deg); }
+    76% { transform: rotate(80deg); }
+    77% { transform: rotate(-80deg); }
+    78% { transform: rotate(80deg); }
+    79% { transform: rotate(-80deg); }
+
+    85% { transform: rotate(40deg); }
+    95% { transform: rotate(35deg); }
+    100% { 
+        transform: rotate(0deg); 
+        filter: brightness(0.9);
+    } 
+}
+
+
+
+
+
+
+@keyframes head-rotationbis {
+
+    0%   { 
+        transform: rotate(0deg); 
+        filter: brightness(0.9);
+    }
+    12% { transform: rotate(-15deg); }
+    25% { transform: rotate(-45deg); }
+    30% { transform: rotate(-60deg); }
+    37% { transform: rotate(-80deg); }
+    50%  { 
+        transform: rotate(-90deg);
+        filter: brightness(1.3); 
+    }
+    55% { transform: rotate(90deg); }
+
+    56% { transform: rotate(-80deg); }
+    57% { transform: rotate(80deg); }
+    58% { transform: rotate(-80deg); }
+    59% { transform: rotate(80deg); }
+    60% { transform: rotate(-80deg); }
+    61% { transform: rotate(80deg); }
+    62% { transform: rotate(-80deg); }
+    63% { transform: rotate(80deg); } 
+    64% { transform: rotate(-80deg); }
+    65% { transform: rotate(80deg); }
+    66% { transform: rotate(-80deg); }
+    67% { transform: rotate(80deg); }
+    68% { transform: rotate(-80deg); }
+    69% { transform: rotate(80deg); }
+    70% { transform: rotate(-80deg); }
+    71% { transform: rotate(80deg); }
+    72% { transform: rotate(-80deg); }
+    73% { transform: rotate(80deg); }
+    74% { transform: rotate(-80deg); }
+    75% { transform: rotate(80deg); }
+    76% { transform: rotate(-80deg); }
+    77% { transform: rotate(80deg); }
+    78% { transform: rotate(-80deg); }
+    79% { transform: rotate(80deg); }
+
+    85% { transform: rotate(-40deg); }
+    95% { transform: rotate(-35deg); }
+    100% { 
+        transform: rotate(0deg); 
+        filter: brightness(0.9);
+    } 
+}

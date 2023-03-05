@@ -1,0 +1,14 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.Home_dimensions {
+  width: 100%;
+  height: 3000px;
+}
+
+.Home-title {
+  z-index: 3;
+}/*# sourceMappingURL=Home.css.map */
