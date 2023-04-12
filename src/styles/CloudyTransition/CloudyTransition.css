@@ -1,0 +1,19 @@
+.cloudy-transition {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 1000px;
+  /*Transition1*/
+  margin-top: -150px;
+  margin-bottom: -800px;
+  /*Transition2*/
+  /*margin-top: -800px;
+  margin-bottom: -150px;*/
+}
+
+.cloudy {
+  height: 1000px;
+  width: 100%;
+}/*# sourceMappingURL=CloudyTransition.css.map */

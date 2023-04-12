@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import "../Mixins/Mixin";
+
+$gris:#f6f6f6;
+$violet:#9356dc;
+$rose:#ff79da;
+
+.Card{
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #03222E, #0085C2);
+    cursor: pointer;
+}
+
+.Card-image-border{
+    width: 60%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.Card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.Card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 45%;
+    height: 270px;
+    text-align: left;
+}
+
+.black-dust{
+    width: 30px;
+    height: auto;
+}
+
+.black-dust-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heart{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+}
+
+/*.heart-style{
+    @include syntaxe-garamond(28px, normal);
+}*/
+
+.Card-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 170px;
+    @include margin-package(none, 10px, none, none);
+}
+
+.Card-title1{
+    @include syntaxe-garamond(24px, normal);
+    color: white;
+}
+
+.Card-title2{
+    @include syntaxe-garamond(18px, normal);
+    color: white;
+}
+
+
+
+
+
+
+
+.card-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_dimensions{
+        @include dimensions(55px, 55px);
+    }
+    &_aspect{
+        font-size: 24px;
+        font-style: normal;
+        color: black;
+    }
+}
+
+.animation-coeur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &:hover >.coeur1{
+      opacity: 1;
+    }
+    &:hover >.coeur2{
+      opacity: 0;
+    }
+}
+
+.coeur1{
+    position: absolute;
+    z-index: 2;
+    font-size: 24px;
+    background: linear-gradient($violet, $rose);
+    background-clip: text; /* Couleur du texte, ici le logo */
+    color: transparent; /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
+    opacity: 0;
+    transition: all 550ms;
+}
+
+.coeur2{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    color: black;
+    opacity: 1;
+    transition: all 550ms;
+}

@@ -1,0 +1,147 @@
+.Banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 1000px;
+  background: linear-gradient(#308EDE, #73E2FD);
+}
+
+/*.castle-animation{
+    border: 1px black solid;
+}*/
+.castlebody {
+  width: 800px;
+  height: none;
+  /*border: 1px red solid;*/
+}
+
+.castlehelix {
+  width: 80px;
+  height: none;
+  /*border: 1px blue solid;*/
+  margin-left: -280px;
+  margin-bottom: 45px;
+  rotate: 5deg;
+}
+
+.castle-content {
+  width: 890px;
+  height: none;
+  /*border: 1px green solid;*/
+}
+
+.castle-translation {
+  animation: castletranslate 10000ms linear;
+  animation-iteration-count: infinite;
+  /*animation-delay: 2000ms;*/
+}
+
+.castle-helix-rotation {
+  animation: castlehelixrotate 65ms linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes castletranslate {
+  0% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(-100%, -100%);
+  }
+}
+@keyframes castlehelixrotate {
+  0% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+/* SearchBar */
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  background: linear-gradient(to bottom right, #03222E, #0085C2);
+  margin-bottom: 40px;
+}
+.searchbar_dimensions {
+  width: 70%;
+  height: 70px;
+}
+
+.search-request {
+  border: none;
+  background-color: #d6d6d6;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5%;
+  margin-right: auto;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: black;
+  border-radius: 10px;
+}
+.search-request_dimensions {
+  width: 90%;
+  height: 50px;
+}
+
+.searchbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "EB Garamond", serif;
+  font-size: 44px;
+  font-weight: bold;
+  margin-right: 2%;
+  color: white;
+}
+
+/*ToolListing*/
+.forms {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.forms_dimensions {
+  width: 90%;
+  height: none;
+}
+.forms_border {
+  margin-bottom: 190px;
+}
+
+.list-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+}
+
+.titles-color {
+  background: linear-gradient(to bottom right, #483d8b, #ff79da);
+}
+
+.directors-color {
+  background: linear-gradient(to bottom right, #191970, #00BFFF);
+}
+
+.producers-color {
+  background: linear-gradient(to bottom right, #006400, #32CD32);
+}/*# sourceMappingURL=Banner.css.map */

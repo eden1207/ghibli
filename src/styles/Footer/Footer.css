@@ -1,13 +1,23 @@
 .footer {
-  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
 }
 .footer_dimensions {
+  /*@include dimensions(100%, 21480px);*/
   width: 100%;
-  height: 15000px;
+  height: auto;
+  /*@media all and (min-width: 992px) {
+      @include dimensions(100%, 2480px);
+  }
+  @media all and (min-width: 768px) and (max-width: 991px) {
+      @include dimensions(100%, 1300px);
+  }
+  @media all and (max-width: 767px) {
+      @include dimensions(100%, 610px);
+  }*/
 }
 
 .fog-container {
@@ -15,14 +25,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 145%;
   height: none;
+  margin-top: none;
   margin-bottom: -145%;
+  margin-left: none;
+  margin-right: none;
 }
 
 .fog {
   width: 100%;
-  /*height: 1000px;*/
+  height: none;
   opacity: 0.7;
 }
 
@@ -33,16 +46,21 @@
   align-items: center;
   width: 100%;
   height: none;
-  margin-bottom: -34%;
+  margin-top: none;
+  margin-bottom: -33%;
+  margin-left: none;
+  margin-right: none;
 }
 
 .forest {
   width: 100%;
+  height: none;
 }
 
 .rocks {
   z-index: 2;
   width: 100%;
+  height: none;
 }
 
 .kodamas {
@@ -52,7 +70,10 @@
   align-items: center;
   width: 100%;
   height: none;
+  margin-top: none;
   margin-bottom: -13%;
+  margin-left: none;
+  margin-right: none;
 }
 
 .kodama1 {
@@ -63,26 +84,27 @@
   align-items: center;
   width: 5%;
   height: none;
-  margin-left: 9%;
+  margin-top: none;
   margin-bottom: -5%;
+  margin-left: 9%;
+  margin-right: none;
 }
 
-.kodama1_head {
-  position: relative;
+.kodama1-head {
   z-index: 5;
+  margin-top: none;
   margin-bottom: -92%;
+  margin-left: none;
+  margin-right: none;
   width: 95%;
   height: none;
-  opacity: 1;
   filter: brightness(0.9);
 }
 
-.kodama1_body {
-  position: relative;
+.kodama1-body {
   z-index: 4;
   width: 100%;
   height: none;
-  opacity: 1;
   filter: brightness(0.9);
 }
 
@@ -94,26 +116,27 @@
   align-items: center;
   width: 5%;
   height: none;
-  margin-right: 10%;
+  margin-top: none;
   margin-bottom: 9%;
+  margin-left: none;
+  margin-right: 10%;
 }
 
-.kodama2_head {
-  position: relative;
+.kodama2-head {
   z-index: 5;
+  margin-top: none;
   margin-bottom: -77%;
+  margin-left: none;
+  margin-right: none;
   width: 75%;
   height: none;
-  opacity: 1;
   filter: brightness(0.9);
 }
 
-.kodama2_body {
-  position: relative;
+.kodama2-body {
   z-index: 4;
   width: 100%;
   height: none;
-  opacity: 1;
   filter: brightness(0.9);
 }
 
@@ -125,269 +148,347 @@
   align-items: center;
   width: 5%;
   height: none;
-  margin-right: 16%;
+  margin-top: none;
   margin-bottom: 7%;
+  margin-left: none;
+  margin-right: 16%;
 }
 
-.kodama3_head {
-  position: relative;
+.kodama3-head {
   z-index: 5;
+  margin-top: none;
   margin-bottom: -107%;
+  margin-left: none;
+  margin-right: none;
   width: 100%;
   height: none;
-  opacity: 1;
   filter: brightness(0.9);
 }
 
-.kodama3_body {
-  position: relative;
+.kodama3-body {
   z-index: 4;
   width: 100%;
   height: none;
-  opacity: 1;
   filter: brightness(0.9);
 }
 
-.rotation1 {
-  /*animation: head-rotation 2500ms linear infinite;*/
-  animation: head-rotation 2500ms linear;
-  /*animation-delay: 5000ms;*/
-  /*animation-fill-mode: backwards;*/
+.kodama1-head-animation {
+  animation: left-head-nodding 5000ms linear, kodamaOpacity 10000ms linear;
+  animation-iteration-count: infinite;
+  animation-delay: 2000ms;
 }
 
-.rotation2 {
-  /*animation: head-rotation 2500ms linear infinite;*/
-  animation: head-rotationbis 2500ms linear;
-  /*animation-delay: 5000ms;*/
-  /*animation-fill-mode: backwards;*/
+.kodama1-body-animation {
+  animation: brightness 5000ms linear, kodamaOpacity 10000ms linear;
+  animation-iteration-count: infinite;
+  animation-delay: 2000ms;
 }
 
-.brightness1 {
-  animation: brightness 2500ms linear;
+.kodama2-head-animation {
+  animation: right-head-nodding 5000ms linear, kodamaOpacity 10000ms linear;
+  animation-iteration-count: infinite;
+  animation-delay: 5000ms;
 }
 
+.kodama2-body-animation {
+  animation: brightness 5000ms linear, kodamaOpacity 10000ms linear;
+  animation-iteration-count: infinite;
+  animation-delay: 5000ms;
+}
+
+.kodama3-head-animation {
+  animation: right-head-nodding 5000ms linear, kodamaOpacity 10000ms linear;
+  animation-iteration-count: infinite;
+  animation-delay: 8000ms;
+}
+
+.kodama3-body-animation {
+  animation: brightness 5000ms linear, kodamaOpacity 10000ms linear;
+  animation-iteration-count: infinite;
+  animation-delay: 8000ms;
+}
+
+@keyframes kodamaOpacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes brightness {
   0% {
     filter: brightness(0.9);
   }
-  50% {
+  25% {
     filter: brightness(1.3);
   }
-  100% {
+  50% {
     filter: brightness(0.9);
   }
 }
-@keyframes head-rotation {
+@keyframes left-head-nodding {
   0% {
     transform: rotate(0deg);
     filter: brightness(0.9);
   }
-  12% {
+  6% {
     transform: rotate(15deg);
   }
-  25% {
+  12% {
     transform: rotate(45deg);
   }
-  30% {
+  15% {
     transform: rotate(60deg);
   }
-  37% {
+  18% {
     transform: rotate(80deg);
   }
-  50% {
+  25% {
     transform: rotate(90deg);
     filter: brightness(1.3);
   }
-  55% {
+  27% {
     transform: rotate(-90deg);
   }
-  56% {
+  28% {
     transform: rotate(80deg);
   }
-  57% {
+  29% {
     transform: rotate(-80deg);
   }
-  58% {
+  30% {
     transform: rotate(80deg);
   }
-  59% {
+  31% {
     transform: rotate(-80deg);
   }
-  60% {
+  32% {
     transform: rotate(80deg);
   }
-  61% {
+  33% {
     transform: rotate(-80deg);
   }
-  62% {
+  34% {
     transform: rotate(80deg);
   }
-  63% {
+  35% {
     transform: rotate(-80deg);
   }
-  64% {
+  36% {
     transform: rotate(80deg);
   }
-  65% {
+  37% {
     transform: rotate(-80deg);
   }
-  66% {
-    transform: rotate(80deg);
-  }
-  67% {
-    transform: rotate(-80deg);
-  }
-  68% {
-    transform: rotate(80deg);
-  }
-  69% {
-    transform: rotate(-80deg);
-  }
-  70% {
-    transform: rotate(80deg);
-  }
-  71% {
-    transform: rotate(-80deg);
-  }
-  72% {
-    transform: rotate(80deg);
-  }
-  73% {
-    transform: rotate(-80deg);
-  }
-  74% {
-    transform: rotate(80deg);
-  }
-  75% {
-    transform: rotate(-80deg);
-  }
-  76% {
-    transform: rotate(80deg);
-  }
-  77% {
-    transform: rotate(-80deg);
-  }
-  78% {
-    transform: rotate(80deg);
-  }
-  79% {
-    transform: rotate(-80deg);
-  }
-  85% {
+  42% {
     transform: rotate(40deg);
   }
-  95% {
+  47% {
     transform: rotate(35deg);
   }
-  100% {
+  50% {
     transform: rotate(0deg);
     filter: brightness(0.9);
   }
 }
-@keyframes head-rotationbis {
+@keyframes right-head-nodding {
   0% {
     transform: rotate(0deg);
     filter: brightness(0.9);
   }
-  12% {
+  6% {
     transform: rotate(-15deg);
   }
-  25% {
+  12% {
     transform: rotate(-45deg);
   }
-  30% {
+  15% {
     transform: rotate(-60deg);
   }
-  37% {
+  18% {
     transform: rotate(-80deg);
   }
-  50% {
+  25% {
     transform: rotate(-90deg);
     filter: brightness(1.3);
   }
-  55% {
+  27% {
     transform: rotate(90deg);
   }
-  56% {
+  28% {
     transform: rotate(-80deg);
   }
-  57% {
+  29% {
     transform: rotate(80deg);
   }
-  58% {
+  30% {
     transform: rotate(-80deg);
   }
-  59% {
+  31% {
     transform: rotate(80deg);
   }
-  60% {
+  32% {
     transform: rotate(-80deg);
   }
-  61% {
+  33% {
     transform: rotate(80deg);
   }
-  62% {
+  34% {
     transform: rotate(-80deg);
   }
-  63% {
+  35% {
     transform: rotate(80deg);
   }
-  64% {
+  36% {
     transform: rotate(-80deg);
   }
-  65% {
+  37% {
     transform: rotate(80deg);
   }
-  66% {
-    transform: rotate(-80deg);
-  }
-  67% {
-    transform: rotate(80deg);
-  }
-  68% {
-    transform: rotate(-80deg);
-  }
-  69% {
-    transform: rotate(80deg);
-  }
-  70% {
-    transform: rotate(-80deg);
-  }
-  71% {
-    transform: rotate(80deg);
-  }
-  72% {
-    transform: rotate(-80deg);
-  }
-  73% {
-    transform: rotate(80deg);
-  }
-  74% {
-    transform: rotate(-80deg);
-  }
-  75% {
-    transform: rotate(80deg);
-  }
-  76% {
-    transform: rotate(-80deg);
-  }
-  77% {
-    transform: rotate(80deg);
-  }
-  78% {
-    transform: rotate(-80deg);
-  }
-  79% {
-    transform: rotate(80deg);
-  }
-  85% {
+  42% {
     transform: rotate(-40deg);
   }
-  95% {
+  47% {
     transform: rotate(-35deg);
   }
-  100% {
+  50% {
     transform: rotate(0deg);
     filter: brightness(0.9);
+  }
+}
+.backgroundClouds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200%;
+  height: none;
+}
+
+.clouds-stage1 {
+  z-index: 2;
+  margin-top: none;
+  margin-bottom: -140%;
+  margin-left: none;
+  margin-right: none;
+}
+
+.clouds-stage2 {
+  z-index: 5;
+  margin-top: none;
+  margin-bottom: -40%;
+  margin-left: none;
+  margin-right: none;
+}
+
+.backgroundCloud1 {
+  width: 100%;
+  height: none;
+  margin-top: none;
+  margin-bottom: none;
+  margin-left: none;
+  margin-right: -20%;
+}
+
+.backgroundCloud2 {
+  width: 100%;
+  height: none;
+  margin-top: none;
+  margin-bottom: none;
+  margin-left: -20%;
+  margin-right: none;
+}
+
+.backgroundClouds2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 200%;
+  height: none;
+  /*border: 1px red solid;*/
+}
+
+.clouds-stage3 {
+  z-index: 5;
+  margin-top: -26%;
+  margin-bottom: none;
+  margin-left: none;
+  margin-right: none;
+}
+
+.backgroundCloud3 {
+  width: 100%;
+  height: none;
+  /*opacity: 0.3;*/
+}
+
+.backgroundCloud4 {
+  width: 100%;
+  height: none;
+  /*opacity: 0.3;*/
+}
+
+.cloud-animation1 {
+  animation: cloud-fog 10000ms linear;
+  animation-iteration-count: infinite;
+}
+
+.cloud-animation2 {
+  animation: cloud-fog 10000ms linear;
+  animation-iteration-count: infinite;
+  animation-delay: 2000ms;
+}
+
+@keyframes cloud-fog {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  12% {
+    /*transform: translateX(37%); */
+    opacity: 0.1;
+  }
+  25% {
+    /* transform: translateX(25%); */
+    opacity: 0.2;
+  }
+  37% {
+    /*transform: translateX(12%); */
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 0.3;
+  }
+  62% {
+    /* transform: translateX(-12%); */
+    opacity: 0.3;
+  }
+  75% {
+    /*transform: translateX(-25%); */
+    opacity: 0.3;
+  }
+  87% {
+    /*transform: translateX(-37%); */
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateX(-50%);
+    opacity: 0;
   }
 }/*# sourceMappingURL=Footer.css.map */

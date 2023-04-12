@@ -1,0 +1,43 @@
+.Header {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom right, #0590D5, #06455E);
+  margin-bottom: -200px;
+  box-shadow: 0px 1px 20px black;
+}
+
+.logo-ghibli {
+  width: none;
+  height: 150px;
+  margin-left: 2%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 2%;
+}
+.navigation_dimensions {
+  width: 40%;
+  height: none;
+}
+
+.menu-link {
+  font-family: "EB Garamond", serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
+}
+
+.menu-link:hover {
+  font-family: "EB Garamond", serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
+}/*# sourceMappingURL=Header.css.map */

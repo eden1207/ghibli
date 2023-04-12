@@ -1,0 +1,24 @@
+@mixin padding-package($top, $bottom, $left, $right) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin margin-package($top, $bottom, $left, $right) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    margin-right: $right;
+}
+
+@mixin syntaxe-garamond($size, $type) {
+    font-family: 'EB Garamond', serif;
+    font-size: $size;
+    font-weight: $type;
+}
+
+@mixin dimensions($width, $height) {
+    width: $width; 
+    height: $height;
+}

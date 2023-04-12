@@ -1,12 +1,24 @@
+@import "../Mixins/Mixin";
+
+
 .footer{
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    overflow: hidden;
     &_dimensions{
-        width: 100%;
-        height: 15000px;
+        /*@include dimensions(100%, 21480px);*/
+        @include dimensions(100%, auto);
+        /*@media all and (min-width: 992px) {
+            @include dimensions(100%, 2480px);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(100%, 1300px);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(100%, 610px);
+        }*/
     }
 }
 
@@ -15,14 +27,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: none;
-    margin-bottom: -145%;
+    @include dimensions(145%, none);
+    @include margin-package(none, -145%, none, none);
 }
 
 .fog{
-    width: 100%;
-    /*height: 1000px;*/
+    @include dimensions(100%, none);
     opacity: 0.7;
 }
 
@@ -31,18 +41,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: none;
-    margin-bottom: -34%;
+    @include dimensions(100%, none);
+    @include margin-package(none, -33%, none, none);
 }
 
 .forest{
-    width: 100%;
+    @include dimensions(100%, none);
 }
 
 .rocks{
     z-index: 2;
-    width: 100%;
+    @include dimensions(100%, none);
 }
 
 .kodamas{
@@ -50,10 +59,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: none;
+    @include dimensions(100%, none);
+    @include margin-package(none, -13%, none, none);
 
-    margin-bottom: -13%;
 }
 
 
@@ -64,31 +72,23 @@
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    width: 5%;
-    height: none;
-    margin-left: 9%;
-    margin-bottom: -5%;
+    @include dimensions(5%, none);
+    @include margin-package(none, -5%, 9%, none);
 }
 
 
 
-.kodama1_head{
-    position: relative;
+.kodama1-head{
     z-index: 5;
-    margin-bottom: -92%;
+    @include margin-package(none, -92%, none, none);
 
-    width: 95%;
-    height: none;
-    opacity: 1;
+    @include dimensions(95%, none);
     filter: brightness(0.9);
 }
 
-.kodama1_body{
-    position: relative;
+.kodama1-body{
     z-index: 4;
-    width: 100%;
-    height: none;
-    opacity: 1;
+    @include dimensions(100%, none);
     filter: brightness(0.9);
 }
 
@@ -103,30 +103,23 @@
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    width: 5%;
-    height: none;
+    @include dimensions(5%, none);
 
-    margin-right: 10%;
-    margin-bottom: 9%;
+    @include margin-package(none, 9%, none, 10%);
 }
 
-.kodama2_head{
-    position: relative;
+.kodama2-head{
     z-index: 5;
-    margin-bottom: -77%;
 
-    width: 75%;
-    height: none;
-    opacity: 1;
+    @include margin-package(none, -77%, none, none);
+
+    @include dimensions(75%, none);
     filter: brightness(0.9);
 }
 
-.kodama2_body{
-    position: relative;
+.kodama2-body{
     z-index: 4;
-    width: 100%;
-    height: none;
-    opacity: 1;
+    @include dimensions(100%, none);
     filter: brightness(0.9);
 }
 
@@ -142,125 +135,174 @@
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    width: 5%;
-    height: none;
+    @include dimensions(5%, none);
 
-    margin-right: 16%;
-    margin-bottom: 7%;
+    @include margin-package(none, 7%, none, 16%);
 }
 
 
-.kodama3_head{
-    position: relative;
+.kodama3-head{
     z-index: 5;
-    margin-bottom: -107%;
 
-    width: 100%;
-    height: none;
-    opacity: 1;
+    @include margin-package(none, -107%, none, none);
+    @include dimensions(100%, none);
     filter: brightness(0.9);
 }
 
-.kodama3_body{
-    position: relative;
+.kodama3-body{
     z-index: 4;
-    width: 100%;
-    height: none;
-    opacity: 1;
+    @include dimensions(100%, none);
     filter: brightness(0.9);
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.rotation1{
-    /*animation: head-rotation 2500ms linear infinite;*/
-    animation: head-rotation 2500ms linear;
-    /*animation-delay: 5000ms;*/
-    /*animation-fill-mode: backwards;*/
+.kodama1-head-animation{
+    animation: left-head-nodding 5000ms linear,
+                kodamaOpacity 10000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
 }
 
-.rotation2{
-    /*animation: head-rotation 2500ms linear infinite;*/
-    animation: head-rotationbis 2500ms linear;
-    /*animation-delay: 5000ms;*/
-    /*animation-fill-mode: backwards;*/
+.kodama1-body-animation{
+    animation: brightness 5000ms linear,
+                kodamaOpacity 10000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
 }
 
-.brightness1{
-    animation: brightness 2500ms linear;
+
+
+.kodama2-head-animation{
+    animation: right-head-nodding 5000ms linear,
+                kodamaOpacity 10000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 5000ms;
 }
+
+.kodama2-body-animation{
+    animation: brightness 5000ms linear,
+                kodamaOpacity 10000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 5000ms;
+}
+
+
+
+
+
+.kodama3-head-animation{
+    animation: right-head-nodding 5000ms linear,
+                kodamaOpacity 10000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 8000ms;
+}
+
+
+.kodama3-body-animation{
+    animation: brightness 5000ms linear,
+                kodamaOpacity 10000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 8000ms;
+}
+
+
+
+@keyframes kodamaOpacity{
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    55%{
+        opacity: 0.3;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    90%{
+        opacity: 0;
+    }
+
+    95%{
+        opacity: 0.3;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
 
 @keyframes brightness{
     0%{
         filter: brightness(0.9);
     }
 
-    50%{
+    25%{
         filter: brightness(1.3);
     }
 
-    100%{
+    50%{
         filter: brightness(0.9);
     }
 }
 
-@keyframes head-rotation {
+
+
+
+
+@keyframes left-head-nodding {
 
     0%   { 
         transform: rotate(0deg); 
         filter: brightness(0.9);
     }
-    12% { transform: rotate(15deg); }
-    25% { transform: rotate(45deg); }
-    30% { transform: rotate(60deg); }
-    37% { transform: rotate(80deg); }
-    50%  { 
+    6% { 
+        transform: rotate(15deg); 
+    }
+    12% { 
+        transform: rotate(45deg); 
+    }
+    15% { 
+        transform: rotate(60deg); 
+    }
+    18% { 
+        transform: rotate(80deg); 
+    }
+    25%  { 
         transform: rotate(90deg);
         filter: brightness(1.3); 
     }
-    55% { transform: rotate(-90deg); }
+    27% { 
+        transform: rotate(-90deg); 
+    }
 
-    56% { transform: rotate(80deg); }
-    57% { transform: rotate(-80deg); }
-    58% { transform: rotate(80deg); }
-    59% { transform: rotate(-80deg); }
-    60% { transform: rotate(80deg); }
-    61% { transform: rotate(-80deg); }
-    62% { transform: rotate(80deg); }
-    63% { transform: rotate(-80deg); } 
-    64% { transform: rotate(80deg); }
-    65% { transform: rotate(-80deg); }
-    66% { transform: rotate(80deg); }
-    67% { transform: rotate(-80deg); }
-    68% { transform: rotate(80deg); }
-    69% { transform: rotate(-80deg); }
-    70% { transform: rotate(80deg); }
-    71% { transform: rotate(-80deg); }
-    72% { transform: rotate(80deg); }
-    73% { transform: rotate(-80deg); }
-    74% { transform: rotate(80deg); }
-    75% { transform: rotate(-80deg); }
-    76% { transform: rotate(80deg); }
-    77% { transform: rotate(-80deg); }
-    78% { transform: rotate(80deg); }
-    79% { transform: rotate(-80deg); }
+    $i:14%;
+    @for $i from 14% through 18%{
+        #{2*$i}{
+            transform: rotate(80deg);
+        }
 
-    85% { transform: rotate(40deg); }
-    95% { transform: rotate(35deg); }
-    100% { 
+        #{2*$i+1}{
+            transform: rotate(-80deg);
+        }
+    }
+
+    42% { 
+        transform: rotate(40deg); 
+    }
+    47% { 
+        transform: rotate(35deg); 
+    }
+    50% { 
         transform: rotate(0deg); 
         filter: brightness(0.9);
     } 
@@ -269,53 +311,165 @@
 
 
 
-
-
-@keyframes head-rotationbis {
+@keyframes right-head-nodding {
 
     0%   { 
         transform: rotate(0deg); 
         filter: brightness(0.9);
     }
-    12% { transform: rotate(-15deg); }
-    25% { transform: rotate(-45deg); }
-    30% { transform: rotate(-60deg); }
-    37% { transform: rotate(-80deg); }
-    50%  { 
+    6% { 
+        transform: rotate(-15deg); 
+    }
+    12% { 
+        transform: rotate(-45deg); 
+    }
+    15% { 
+        transform: rotate(-60deg); 
+    }
+    18% { 
+        transform: rotate(-80deg); 
+    }
+    25%  { 
         transform: rotate(-90deg);
         filter: brightness(1.3); 
     }
-    55% { transform: rotate(90deg); }
+    27% { 
+        transform: rotate(90deg); 
+    }
 
-    56% { transform: rotate(-80deg); }
-    57% { transform: rotate(80deg); }
-    58% { transform: rotate(-80deg); }
-    59% { transform: rotate(80deg); }
-    60% { transform: rotate(-80deg); }
-    61% { transform: rotate(80deg); }
-    62% { transform: rotate(-80deg); }
-    63% { transform: rotate(80deg); } 
-    64% { transform: rotate(-80deg); }
-    65% { transform: rotate(80deg); }
-    66% { transform: rotate(-80deg); }
-    67% { transform: rotate(80deg); }
-    68% { transform: rotate(-80deg); }
-    69% { transform: rotate(80deg); }
-    70% { transform: rotate(-80deg); }
-    71% { transform: rotate(80deg); }
-    72% { transform: rotate(-80deg); }
-    73% { transform: rotate(80deg); }
-    74% { transform: rotate(-80deg); }
-    75% { transform: rotate(80deg); }
-    76% { transform: rotate(-80deg); }
-    77% { transform: rotate(80deg); }
-    78% { transform: rotate(-80deg); }
-    79% { transform: rotate(80deg); }
+    $i:14%;
+    @for $i from 14% through 18%{
+        #{2*$i}{
+            transform: rotate(-80deg);
+        }
 
-    85% { transform: rotate(-40deg); }
-    95% { transform: rotate(-35deg); }
-    100% { 
+        #{2*$i+1}{
+            transform: rotate(80deg);
+        }
+    }
+
+    42% { 
+        transform: rotate(-40deg); 
+    }
+    47% { 
+        transform: rotate(-35deg); 
+    }
+    50% { 
         transform: rotate(0deg); 
         filter: brightness(0.9);
     } 
+}
+
+
+
+.backgroundClouds{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include dimensions(200%, none);
+}
+
+.clouds-stage1{
+    z-index: 2;
+    @include margin-package(none, -140%, none, none);
+}
+
+.clouds-stage2{
+    z-index: 5;
+    @include margin-package(none, -40%, none, none);
+}
+
+.backgroundCloud1{
+    @include dimensions(100%, none);
+    @include margin-package(none, none, none, -20%);
+}
+
+.backgroundCloud2{
+    @include dimensions(100%, none);
+    @include margin-package(none, none, -20%, none);
+}
+
+
+
+
+
+
+
+.backgroundClouds2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include dimensions(200%, none);
+    /*border: 1px red solid;*/
+}
+
+.clouds-stage3{
+    z-index: 5;
+    @include margin-package(-26%, none, none, none);
+}
+
+.backgroundCloud3{
+    @include dimensions(100%, none);
+    /*opacity: 0.3;*/
+}
+
+.backgroundCloud4{
+    @include dimensions(100%, none);
+    /*opacity: 0.3;*/
+}
+
+
+
+
+
+
+.cloud-animation1{
+    animation: cloud-fog 10000ms linear;
+    animation-iteration-count: infinite;
+}
+
+.cloud-animation2{
+    animation: cloud-fog 10000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
+}
+
+@keyframes cloud-fog {
+
+    0% { 
+        transform: translateX(50%); 
+        opacity: 0;
+    }
+    12% {
+        /*transform: translateX(37%); */
+        opacity: 0.1;
+    }
+    25% { 
+       /* transform: translateX(25%); */
+        opacity: 0.20;
+    }
+    37% { 
+        /*transform: translateX(12%); */
+        opacity: 0.30;
+    }
+    50% { 
+        transform: translateX(0%); 
+        opacity: 0.30;
+    }
+    62% { 
+       /* transform: translateX(-12%); */
+        opacity: 0.30;
+    }
+    75% { 
+        /*transform: translateX(-25%); */
+        opacity: 0.30;
+    }
+    87% { 
+        /*transform: translateX(-37%); */
+        opacity: 0.15;
+    }
+    100% { 
+        transform: translateX(-50%); 
+        opacity: 0;
+    }
 }
