@@ -2,6 +2,8 @@
 
 @import "../Mixins/Mixin";
 
+
+/*Variables à modifier*/
 $gris:#f6f6f6;
 $violet:#9356dc;
 $rose:#ff79da;
@@ -11,15 +13,32 @@ $rose:#ff79da;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     border-radius: 10px;
     background: linear-gradient(to bottom right, #03222E, #0085C2);
     cursor: pointer;
+    box-shadow: 5px 5px 20px black;
+    @include dimensions(90%, none);
+    @media all and (min-width: 992px) {
+        @include margin-package(none, none, none, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(none, none, none, none);
+    }
+    @media all and (max-width: 767px) {
+        @include margin-package(none, none, 4%, 4%);
+    }
 }
 
 .Card-image-border{
-    width: 60%;
-    height: 300px;
+    @media all and (min-width: 992px) {
+        @include dimensions(60%, 300px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(60%, 250px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(60%, 250px);
+    }
     overflow: hidden;
     border-radius: 10px;
 }
@@ -28,7 +47,15 @@ $rose:#ff79da;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    @media all and (min-width: 992px) {
+        @include dimensions(200px, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(170px, none);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(170px, none);
+    }
 }
 
 .Card-text{
@@ -36,14 +63,20 @@ $rose:#ff79da;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: 45%;
-    height: 270px;
+    @media all and (min-width: 992px) {
+        @include dimensions(45%, 270px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(45%, 220px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(45%, 220px);
+    }
     text-align: left;
 }
 
 .black-dust{
-    width: 30px;
-    height: auto;
+    @include dimensions(30px, auto);
 }
 
 .black-dust-group{
@@ -56,19 +89,15 @@ $rose:#ff79da;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 90%;
+    @include dimensions(90%, none);
 }
-
-/*.heart-style{
-    @include syntaxe-garamond(28px, normal);
-}*/
 
 .Card-title{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 170px;
+    @include dimensions(none, 170px);
     @include margin-package(none, 10px, none, none);
 }
 
@@ -83,11 +112,7 @@ $rose:#ff79da;
 }
 
 
-
-
-
-
-
+/*Partie à modifier lors du travail sur les cartes*/
 .card-logo {
     display: flex;
     justify-content: center;

@@ -3,9 +3,9 @@ import '../../styles/CloudyTransition/CloudyTransition.css'
 import cloudy_transition from '../../assets/cloudy_transition.png'
 
 
-export default function CloudyTransition() {
+export default function CloudyTransition({ index }) {
     return(
-        <div className='cloudy-transition'>
+        <div className={'cloudy-transition' + index}>
             <img src={cloudy_transition} className='cloudy' alt='cloudy transition' />
         </div>
     )

@@ -1,19 +1,30 @@
-.cloudy-transition {
+.cloudy-transition1 {
   z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 1000px;
-  /*Transition1*/
   margin-top: -150px;
-  margin-bottom: -800px;
-  /*Transition2*/
-  /*margin-top: -800px;
-  margin-bottom: -150px;*/
+  margin-bottom: -900px;
+  margin-left: none;
+  margin-right: none;
+}
+
+.cloudy-transition2 {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 1000px;
+  margin-top: -800px;
+  margin-bottom: -150px;
+  margin-left: none;
+  margin-right: none;
 }
 
 .cloudy {
-  height: 1000px;
   width: 100%;
+  height: 1000px;
 }/*# sourceMappingURL=CloudyTransition.css.map */

@@ -5,70 +5,189 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
-    height: 1000px;
+    @media all and (min-width: 992px) {
+        @include dimensions(100%, 1200px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(100%, 1000px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(100%, 850px);
+    }
     background: linear-gradient(#308EDE, #73E2FD);
+    overflow: hidden;
 }
 
-/*.castle-animation{
-    border: 1px black solid;
-}*/
 
 .castlebody{
-    width: 800px;
-    height: none;
-    /*border: 1px red solid;*/
+    @media all and (min-width: 992px) {
+        @include dimensions(700px, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(450px, none);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(250px, none);
+    }
 }
 
-.castlehelix{
-    width: 80px;
-    height: none;
-    /*border: 1px blue solid;*/
-    margin-left: -280px;
-    margin-bottom: 45px;
-    rotate: (5deg);
+.castlehelix1{
+    @media all and (min-width: 992px) {
+        @include dimensions(70px, none);
+        @include margin-package(none, 38px, -245px, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(50px, none);
+        @include margin-package(none, 24px, -160px, none);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(28px, none);
+        @include margin-package(none, 13px, -89px, none);
+    }
+}
+
+.castlehelix2{
+    @media all and (min-width: 992px) {
+        @include dimensions(18px, none);
+        @include margin-package(none, 94px, -68px, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(12px, none);
+        @include margin-package(none, 61px, -47px, none);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(7px, none);
+        @include margin-package(none, 34px, -26px, none);
+    }
+}
+
+.castleflag{
+    @media all and (min-width: 992px) {
+        @include dimensions(20px, none);
+        @include margin-package(none, 372px, -210px, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(15px, none);
+        @include margin-package(none, 238px, -134px, none);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(10px, none);
+        @include margin-package(none, 133px, -76px, none);
+    }
 }
 
 .castle-content{
-    width: 890px;
-    height: none;
-    /*border: 1px green solid;*/
+    @media all and (min-width: 992px) {
+        @include dimensions(890px, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(690px, none);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(390px, none);
+    }
 }
 
 
 .castle-translation{
     animation: castletranslate 10000ms linear;
     animation-iteration-count: infinite;
-    /*animation-delay: 2000ms;*/
 }
 
-.castle-helix-rotation{
-    animation: castlehelixrotate 65ms linear;
+.castle-helix-rotation1{
+    animation: castlehelixrotate1 50ms linear;
+    animation-iteration-count: infinite;
+}
+
+.castle-helix-rotation2{
+    animation: castlehelixrotate2 80ms linear;
+    animation-iteration-count: infinite;
+}
+
+.castle-flag-scaling{
+    animation: flagscaling 800ms linear;
     animation-iteration-count: infinite;
 }
 
 
 @keyframes castletranslate{
     0%{
-        transform: translate(100%, 100%);
+        transform: translate(100%, 50%);
     }
 
     100%{
-        transform: translate(-100%, -100%);
+        transform: translate(-150%, -50%);
     }
 }
 
-@keyframes castlehelixrotate{
+@keyframes castlehelixrotate1{
     0%{
         transform: rotate(-25deg);
+    }
+
+    25%{
+        transform: rotate(-12deg);
     }
 
     50%{
         transform: rotate(0deg);
     }
 
+    75%{
+        transform: rotate(-12deg);
+    }
+
     100%{
-        transform: rotate(1deg);
+        transform: rotate(-25deg);
+    }
+}
+
+@keyframes castlehelixrotate2{
+    0%{
+        transform: rotate(35deg);
+    }
+
+    25%{
+        transform: rotate(17deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(-17deg);
+    }
+
+    100%{
+        transform: rotate(-35deg);
+    }
+}
+
+@keyframes flagscaling{
+    0%{
+        transform: scale(0.9, 1.1);
+        transform-origin: 5% 0%;
+    }
+
+    25%{
+        transform: scale(1, 1);
+        transform-origin: 5% 0%;
+    }
+
+    50%{
+        transform: scale(1.1, 0.9);
+        transform-origin: 5% 0%;
+    }
+
+    75%{
+        transform: scale(1, 1);
+        transform-origin: 5% 0%;
+    }
+
+    100%{
+        transform: scale(0.9, 1.1);
+        transform-origin: 5% 0%;
     }
 }
 
@@ -76,36 +195,82 @@
 /* SearchBar */
 
 .searchbar{
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
     background: linear-gradient(to bottom right, #03222E, #0085C2);
-    margin-bottom: 40px;
+    @media all and (min-width: 992px) {
+        @include margin-package(none, 70px, none, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(none, 70px, none, none);
+    }
+    @media all and (max-width: 767px) {
+        @include margin-package(none, 40px, none, none);
+    }
+    box-shadow: 1px 1px 10px black;
     &_dimensions{
-        width: 70%;
-        height: 70px;
+        @media all and (min-width: 768px) {
+            @include dimensions(70%, 70px);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(85%, 50px);
+        }
     }
 }
 
 .search-request{
     border: none;
     background-color: #d6d6d6;
-    @include margin-package(auto, auto, 5%, auto);
+    @media all and (min-width: 992px) {
+        @include margin-package(auto, auto, 5%, auto);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(auto, auto, 5%, auto);
+    }
+    @media all and (max-width: 767px) {
+        @include margin-package(auto, auto, 10%, auto);
+    }
     @include syntaxe-garamond(20px, normal);
     color: black;
     border-radius: 10px;
     &_dimensions{
-        @include dimensions(90%, 50px);
+        @media all and (min-width: 992px) {
+            @include dimensions(90%, 45px);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(82%, 50px);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(82%, 35px);
+        }
+    }
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: 768px) {
+        @include margin-package(none, none, none, 2%);
+    }
+    @media all and (max-width: 767px) {
+        @include margin-package(none, none, none, 4%);
     }
 }
 
 .searchbar-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include syntaxe-garamond(44px, bold);
-    margin-right: 2%;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(30px, bold);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(26px, bold);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(22px, bold);
+    }
     color: white;
 }
 
@@ -115,15 +280,41 @@
 /*ToolListing*/
 
 .forms{
+    z-index: 4;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    @media all and (min-width: 992px) {
+        justify-content: space-around;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        justify-content: space-around;
+    }
+    @media all and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 10px;
+    }
     &_dimensions{
-        width: 90%;
-        height: none;
+        @media all and (min-width: 992px) {
+            @include dimensions(90%, none);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(90%, none);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(100%, none);
+        }
     }
     &_border{
-        margin-bottom: 190px;
+        @media all and (min-width: 992px) {
+            @include margin-package(none, 150px, none, none);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include margin-package(none, 150px, none, none);
+        }
+        @media all and (max-width: 767px) {
+            @include margin-package(none, 100px, none, none);
+        }
     }
 }
 
@@ -131,13 +322,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
-    height: 40px;
+    @media all and (min-width: 992px) {
+        @include dimensions(200px, 40px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(130px, 40px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(300px, 40px);
+    }
     border-radius: 10px;
     border: none;
     cursor: pointer;
     @include syntaxe-garamond(20px, normal);
     color: white;
+    box-shadow: 1px 1px 10px black;
 }
 
 .titles-color{

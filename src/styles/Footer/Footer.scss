@@ -8,17 +8,7 @@
     align-items: center;
     overflow: hidden;
     &_dimensions{
-        /*@include dimensions(100%, 21480px);*/
         @include dimensions(100%, auto);
-        /*@media all and (min-width: 992px) {
-            @include dimensions(100%, 2480px);
-        }
-        @media all and (min-width: 768px) and (max-width: 991px) {
-            @include dimensions(100%, 1300px);
-        }
-        @media all and (max-width: 767px) {
-            @include dimensions(100%, 610px);
-        }*/
     }
 }
 
@@ -64,8 +54,6 @@
 
 }
 
-
-
 .kodama1{
     z-index: 3;
     display: flex;
@@ -75,8 +63,6 @@
     @include dimensions(5%, none);
     @include margin-package(none, -5%, 9%, none);
 }
-
-
 
 .kodama1-head{
     z-index: 5;
@@ -92,11 +78,6 @@
     filter: brightness(0.9);
 }
 
-
-
-
-
-
 .kodama2{
     z-index: 3;
     display: flex;
@@ -104,15 +85,12 @@
     justify-content: space-between;
     align-items: center;
     @include dimensions(5%, none);
-
     @include margin-package(none, 9%, none, 10%);
 }
 
 .kodama2-head{
     z-index: 5;
-
     @include margin-package(none, -77%, none, none);
-
     @include dimensions(75%, none);
     filter: brightness(0.9);
 }
@@ -123,12 +101,6 @@
     filter: brightness(0.9);
 }
 
-
-
-
-
-
-
 .kodama3{
     z-index: 3;
     display: flex;
@@ -136,14 +108,11 @@
     justify-content: space-between;
     align-items: center;
     @include dimensions(5%, none);
-
     @include margin-package(none, 7%, none, 16%);
 }
 
-
 .kodama3-head{
     z-index: 5;
-
     @include margin-package(none, -107%, none, none);
     @include dimensions(100%, none);
     filter: brightness(0.9);
@@ -154,9 +123,6 @@
     @include dimensions(100%, none);
     filter: brightness(0.9);
 }
-
-
-
 
 .kodama1-head-animation{
     animation: left-head-nodding 5000ms linear,
@@ -172,8 +138,6 @@
     animation-delay: 2000ms;
 }
 
-
-
 .kodama2-head-animation{
     animation: right-head-nodding 5000ms linear,
                 kodamaOpacity 10000ms linear;
@@ -188,10 +152,6 @@
     animation-delay: 5000ms;
 }
 
-
-
-
-
 .kodama3-head-animation{
     animation: right-head-nodding 5000ms linear,
                 kodamaOpacity 10000ms linear;
@@ -199,15 +159,12 @@
     animation-delay: 8000ms;
 }
 
-
 .kodama3-body-animation{
     animation: brightness 5000ms linear,
                 kodamaOpacity 10000ms linear;
     animation-iteration-count: infinite;
     animation-delay: 8000ms;
 }
-
-
 
 @keyframes kodamaOpacity{
     0%{
@@ -239,8 +196,6 @@
     }
 }
 
-
-
 @keyframes brightness{
     0%{
         filter: brightness(0.9);
@@ -254,10 +209,6 @@
         filter: brightness(0.9);
     }
 }
-
-
-
-
 
 @keyframes left-head-nodding {
 
@@ -308,9 +259,6 @@
     } 
 }
 
-
-
-
 @keyframes right-head-nodding {
 
     0%   { 
@@ -360,8 +308,6 @@
     } 
 }
 
-
-
 .backgroundClouds{
     display: flex;
     justify-content: space-between;
@@ -387,20 +333,14 @@
 .backgroundCloud2{
     @include dimensions(100%, none);
     @include margin-package(none, none, -20%, none);
+    overflow: hidden;
 }
-
-
-
-
-
-
 
 .backgroundClouds2{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     @include dimensions(200%, none);
-    /*border: 1px red solid;*/
 }
 
 .clouds-stage3{
@@ -410,18 +350,11 @@
 
 .backgroundCloud3{
     @include dimensions(100%, none);
-    /*opacity: 0.3;*/
 }
 
 .backgroundCloud4{
     @include dimensions(100%, none);
-    /*opacity: 0.3;*/
 }
-
-
-
-
-
 
 .cloud-animation1{
     animation: cloud-fog 10000ms linear;
@@ -441,15 +374,12 @@
         opacity: 0;
     }
     12% {
-        /*transform: translateX(37%); */
         opacity: 0.1;
     }
     25% { 
-       /* transform: translateX(25%); */
         opacity: 0.20;
     }
     37% { 
-        /*transform: translateX(12%); */
         opacity: 0.30;
     }
     50% { 
@@ -457,15 +387,12 @@
         opacity: 0.30;
     }
     62% { 
-       /* transform: translateX(-12%); */
         opacity: 0.30;
     }
     75% { 
-        /*transform: translateX(-25%); */
         opacity: 0.30;
     }
     87% { 
-        /*transform: translateX(-37%); */
         opacity: 0.15;
     }
     100% { 

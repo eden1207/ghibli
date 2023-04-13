@@ -1,43 +1,131 @@
 .Header {
   z-index: 2;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 200px;
   background: linear-gradient(to bottom right, #0590D5, #06455E);
+  margin-top: none;
   margin-bottom: -200px;
+  margin-left: none;
+  margin-right: none;
   box-shadow: 0px 1px 20px black;
 }
+@media all and (min-width: 768px) {
+  .Header {
+    justify-content: space-between;
+  }
+}
+@media all and (max-width: 767px) {
+  .Header {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 
-.logo-ghibli {
-  width: none;
-  height: 150px;
-  margin-left: 2%;
+@media all and (min-width: 768px) {
+  .logo-ghibli {
+    width: none;
+    height: 150px;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: 2%;
+    margin-right: none;
+  }
+}
+@media all and (max-width: 767px) {
+  .logo-ghibli {
+    width: none;
+    height: 130px;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: none;
+    margin-right: none;
+  }
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: none;
-  margin-right: 2%;
 }
-.navigation_dimensions {
-  width: 40%;
-  height: none;
+@media all and (min-width: 768px) {
+  .navigation {
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: none;
+    margin-right: 8%;
+  }
+}
+@media all and (max-width: 767px) {
+  .navigation {
+    margin-top: none;
+    margin-bottom: 20px;
+    margin-left: none;
+    margin-right: none;
+  }
+}
+@media all and (min-width: 768px) {
+  .navigation_dimensions {
+    width: 40%;
+    height: none;
+  }
+}
+@media all and (max-width: 767px) {
+  .navigation_dimensions {
+    width: 80%;
+    height: none;
+  }
 }
 
 .menu-link {
-  font-family: "EB Garamond", serif;
-  font-size: 30px;
-  font-weight: normal;
   color: white;
+  text-decoration: none;
+}
+@media all and (min-width: 992px) {
+  .menu-link {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .menu-link {
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .menu-link {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
 }
 
 .menu-link:hover {
-  font-family: "EB Garamond", serif;
-  font-size: 30px;
-  font-weight: normal;
   color: white;
+  text-decoration: none;
+}
+@media all and (min-width: 992px) {
+  .menu-link:hover {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .menu-link:hover {
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .menu-link:hover {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
 }/*# sourceMappingURL=Header.css.map */

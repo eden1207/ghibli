@@ -6,9 +6,7 @@
     justify-content: space-between;
     align-items: center;
     &_dimensions{
-        width: 100%;
-        /*height: 7000px;*/
-        height: auto;
+        @include dimensions(100%, auto);
     }
 }
 
@@ -16,41 +14,48 @@
     z-index: 3;
 }
 
-
-
 .card-collection{
     display: grid;
+    background-image: url("../../assets/backgroung_sky.png");
     @media all and (min-width: 992px) {
         grid-template-columns: 1fr 1fr 1fr;
-        /*background-color: #f7f7f7;*/
-        background-image: url("../../assets/backgroung_sky3.png");
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
         grid-template-columns: 1fr 1fr;
-        background-image: url("../../assets/backgroung_sky3.png");
     }
     @media all and (max-width: 767px) {
         grid-template-columns: 1fr;
-        background-image: url("../../assets/backgroung_sky3.png");
+    }
+    &_dimensions{
+        @media all and (min-width: 768px) {
+            @include dimensions(92%, auto);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(100%, auto);
+        }
     }
     &_border{
         @media all and (min-width: 768px) {
-            /*@include margin-package(none, 43px, none, none);*/
-            @include padding-package(90px, 90px, 4%, 4%);
+            @include padding-package(10px, 90px, 4%, 4%);
+            @include dimensions(92%, auto);
         }
         @media all and (max-width: 767px) {
-            /*@include margin-package(none, 20px, none, none);*/
             @include padding-package(none, none, none, none);
+            @include dimensions(100%, auto);
         }
     }
     &_gap{
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 992px) {
             column-gap: 5%;
             row-gap: 125px;
         }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            column-gap: 5%;
+            row-gap: 60px;
+        }
         @media all and (max-width: 767px) {
             column-gap: none;
-            row-gap: 20px;
+            row-gap: 30px;
         }
     }
 }

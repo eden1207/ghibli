@@ -1,7 +1,9 @@
 import React from 'react'
 import '../../styles/Banner/Banner.css'
-import castle_body from '../../assets/castle_body.png'
-import castle_helix from '../../assets/castle_helix.png'
+import castle_body from '../../assets/castle_body2.png'
+import castle_helix1 from '../../assets/castle_helix1.png'
+import castle_helix2 from '../../assets/castle_helix2.png'
+import castle_flag from '../../assets/castle_flag.png'
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import { HiOutlineSearch } from "react-icons/hi";
 
@@ -14,11 +16,11 @@ function SearchBar() {
             <div class="research research_dimensions">
                 <form>
                     <p>
-                        <label for="search-tool"></label>
-                        <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Look for a movie" size="120" maxlength="30" />
+                        <label htmlFor="search-tool"></label>
+                        <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Look for a movie" size="120" maxLength="30" />
                     </p>
                 </form>
-                <button className="button button_dimensions"><i class="fa-solid fa-magnifying-glass button_logo" title="loupe"></i></button>
+                <HiOutlineSearch className='searchbar-logo' />
             </div>
             <div id="JS-error1" className="error JS-error">
                 <h3>We have not found what you are looking for… please, try another word such as « castle », « neighbor », etc.</h3>
@@ -28,11 +30,13 @@ function SearchBar() {
         <div className="searchbar searchbar_dimensions">
             <form>
                 <p>
-                    <label for="search-tool"></label>
-                    <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Find your movie" size="120" maxlength="30" />
+                    <label htmlFor="search-tool"></label>
+                    <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Find your movie" size="120" maxLength="30" />
                 </p>
             </form>
-            <HiOutlineSearch className='searchbar-logo' />
+            <div className='logo-container'>
+                <HiOutlineSearch className='searchbar-logo' />
+            </div>
         </div>
     )
 }
@@ -90,10 +94,21 @@ export default function Banner() {
         <div className='Banner'>
             <div className='castle-content castle-translation'>
                 <img src={castle_body} className='castlebody' alt='castle body' />
-                <img src={castle_helix} className='castlehelix castle-helix-rotation' alt='castle helix' />
+                <img src={castle_helix1} className='castlehelix1 castle-helix-rotation1' alt='castle helix 1' />
+                <img src={castle_helix2} className='castlehelix2 castle-helix-rotation2' alt='castle helix 2' />
+                <img src={castle_flag} className='castleflag castle-flag-scaling' alt='castle flag' />
             </div>
             <SearchBar />
             <ToolListing />
         </div>
     )
 }
+
+/*
+<div className='castle-content castle-translation'>
+<img src={castle_body} className='castlebody' alt='castle body' />
+<img src={castle_helix1} className='castlehelix1 castle-helix-rotation1' alt='castle helix 1' />
+<img src={castle_helix2} className='castlehelix2 castle-helix-rotation2' alt='castle helix 2' />
+<img src={castle_flag} className='castleflag castle-flag-scaling' alt='castle flag' />
+</div>
+*/
