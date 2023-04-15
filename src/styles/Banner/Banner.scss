@@ -254,7 +254,7 @@
 
 .sky-cloud-background{
     @media all and (min-width: 992px) {
-        @include dimensions(90%, 1900px);
+        @include dimensions(100%, 1900px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
         @include dimensions(100%, 1500px);
@@ -390,21 +390,21 @@
 .cloud-translation2{
     animation: cloud-translation2 30000ms linear;
     animation-iteration-count: infinite;
-    animation-delay: 5000ms;
+    /*animation-delay: 500ms;*/
     animation-fill-mode: backwards;  
 }
 
 .cloud-translation3{
     animation: cloud-translation1 70000ms linear;
     animation-iteration-count: infinite;
-    animation-delay: 5000ms;
+    /*animation-delay: 500ms;*/
     animation-fill-mode: backwards;  
 }
 
 .cloud-translation4{
     animation: cloud-translation1 80000ms linear;
     animation-iteration-count: infinite;
-    animation-delay: 7000ms;
+    /*animation-delay: 700ms;*/
     animation-fill-mode: backwards;  
 }
 
@@ -412,7 +412,7 @@
 @keyframes cloud-translation1 {
 
     0% { 
-        transform: translateX(500%); 
+        transform: translateX(100%); 
     }
 
     100% { 
