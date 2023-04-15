@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/ghibli/static/css/main.4ccb751a.css",
+    "main.js": "/ghibli/static/js/main.a619b1a0.js",
+    "static/media/cloudy_transition.png": "/ghibli/static/media/cloudy_transition.86cdb7c71b25fad5a14a.png",
+    "static/media/backgroung_sky.png": "/ghibli/static/media/backgroung_sky.64667e76bba12d0fdcdf.png",
+    "static/media/fog.png": "/ghibli/static/media/fog.9b8c1501130f63bba8ba.png",
+    "static/media/sky_cloud_background.png": "/ghibli/static/media/sky_cloud_background.e26f3f3fcfbcde34c7f8.png",
+    "static/media/rocks.png": "/ghibli/static/media/rocks.1eb97cf58b7d73145918.png",
+    "static/media/castle_body2.png": "/ghibli/static/media/castle_body2.f8cf51f236527925f2a0.png",
+    "static/media/backgroung_cloud_test6.png": "/ghibli/static/media/backgroung_cloud_test6.d0a1591ba486a9a27cf7.png",
+    "static/media/backgroung_cloud_test5.png": "/ghibli/static/media/backgroung_cloud_test5.977a785412d195852488.png",
+    "static/media/forest.jpg": "/ghibli/static/media/forest.da10509f0e820bfdc1e5.jpg",
+    "static/media/moving_sky_cloud2.png": "/ghibli/static/media/moving_sky_cloud2.ed4edcb672e8cbdd2006.png",
+    "static/media/moving_sky_cloud1.png": "/ghibli/static/media/moving_sky_cloud1.d2e25e48314c3c17ba6e.png",
+    "static/media/logo_ghibli.png": "/ghibli/static/media/logo_ghibli.16d0de5226844ee8e9ca.png",
+    "static/media/castle_clothes.png": "/ghibli/static/media/castle_clothes.fc4405c94d665d6a0e6d.png",
+    "static/media/rock_black_dust.png": "/ghibli/static/media/rock_black_dust.898525b3d929835daa81.png",
+    "static/media/star_black_dust.png": "/ghibli/static/media/star_black_dust.38e7147b645d6ecf4c3a.png",
+    "static/media/kodama3_body.png": "/ghibli/static/media/kodama3_body.e7a954a4aa5e1bbcdb60.png",
+    "index.html": "/ghibli/index.html",
+    "main.4ccb751a.css.map": "/ghibli/static/css/main.4ccb751a.css.map",
+    "main.a619b1a0.js.map": "/ghibli/static/js/main.a619b1a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ccb751a.css",
+    "static/js/main.a619b1a0.js"
+  ]
+}
