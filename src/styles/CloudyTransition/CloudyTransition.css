@@ -1,25 +1,25 @@
 .cloudy-transition1 {
-  z-index: 3;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 1000px;
-  margin-top: -150px;
-  margin-bottom: -900px;
+  margin-top: -150px !important;
+  margin-bottom: -900px !important;
   margin-left: none;
   margin-right: none;
 }
 
 .cloudy-transition2 {
-  z-index: 3;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 1000px;
-  margin-top: -800px;
-  margin-bottom: -150px;
+  margin-top: -800px !important;
+  margin-bottom: -150px !important;
   margin-left: none;
   margin-right: none;
 }

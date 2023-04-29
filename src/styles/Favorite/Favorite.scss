@@ -1,0 +1,72 @@
+@import "../Mixins/Mixin";
+
+.Favorite{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &_dimensions{
+        @include dimensions(100%, auto);
+    }
+}
+
+.favorite-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    @include dimensions(100%, auto);
+    background-image: url("../../assets/backgroung_sky.png");
+    @include padding-package(350px, 100px, none, none);
+}
+
+.favorite-card{
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include dimensions(80%, auto);
+    background: linear-gradient(to bottom right, #03222E, #0085C2);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    @include padding-package(none, none, none, 3%);
+}
+
+.Movie-Image-Border{
+    @include dimensions(130px, 200px);
+    overflow: hidden;
+}
+
+.favorite-card-informations{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    @include dimensions(70%, none);
+}
+
+.Movie-Image{
+    @include dimensions(none, 200px);
+}
+
+.Favorite-card-title{
+    @include syntaxe-garamond(36px, normal);
+    color: white;
+}
+
+.Favorite-card-trash-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #000000, #696969);
+    box-shadow: 5px 5px 20px black;
+    border-radius: 50%;
+    @include dimensions(50px, 50px);
+}
+
+.Favorite-card-trash{
+    @include syntaxe-garamond(25px, normal);
+    color: white;
+}

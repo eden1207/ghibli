@@ -17,8 +17,8 @@
   align-items: center;
   width: 145%;
   height: none;
-  margin-top: none;
-  margin-bottom: -145%;
+  margin-top: none !important;
+  margin-bottom: -145% !important;
   margin-left: none;
   margin-right: none;
 }
@@ -36,8 +36,8 @@
   align-items: center;
   width: 100%;
   height: none;
-  margin-top: none;
-  margin-bottom: -33%;
+  margin-top: none !important;
+  margin-bottom: -33% !important;
   margin-left: none;
   margin-right: none;
 }
@@ -60,8 +60,8 @@
   align-items: center;
   width: 100%;
   height: none;
-  margin-top: none;
-  margin-bottom: -13%;
+  margin-top: none !important;
+  margin-bottom: -13% !important;
   margin-left: none;
   margin-right: none;
 }
@@ -74,16 +74,16 @@
   align-items: center;
   width: 5%;
   height: none;
-  margin-top: none;
-  margin-bottom: -5%;
+  margin-top: none !important;
+  margin-bottom: -5% !important;
   margin-left: 9%;
   margin-right: none;
 }
 
 .kodama1-head {
   z-index: 5;
-  margin-top: none;
-  margin-bottom: -92%;
+  margin-top: none !important;
+  margin-bottom: -92% !important;
   margin-left: none;
   margin-right: none;
   width: 95%;
@@ -106,16 +106,16 @@
   align-items: center;
   width: 5%;
   height: none;
-  margin-top: none;
-  margin-bottom: 9%;
+  margin-top: none !important;
+  margin-bottom: 9% !important;
   margin-left: none;
   margin-right: 10%;
 }
 
 .kodama2-head {
   z-index: 5;
-  margin-top: none;
-  margin-bottom: -77%;
+  margin-top: none !important;
+  margin-bottom: -77% !important;
   margin-left: none;
   margin-right: none;
   width: 75%;
@@ -138,16 +138,16 @@
   align-items: center;
   width: 5%;
   height: none;
-  margin-top: none;
-  margin-bottom: 7%;
+  margin-top: none !important;
+  margin-bottom: 7% !important;
   margin-left: none;
   margin-right: 16%;
 }
 
 .kodama3-head {
   z-index: 5;
-  margin-top: none;
-  margin-bottom: -107%;
+  margin-top: none !important;
+  margin-bottom: -107% !important;
   margin-left: none;
   margin-right: none;
   width: 100%;
@@ -372,16 +372,16 @@
 
 .clouds-stage1 {
   z-index: 2;
-  margin-top: none;
-  margin-bottom: -140%;
+  margin-top: none !important;
+  margin-bottom: -140% !important;
   margin-left: none;
   margin-right: none;
 }
 
 .clouds-stage2 {
   z-index: 5;
-  margin-top: none;
-  margin-bottom: -40%;
+  margin-top: none !important;
+  margin-bottom: -40% !important;
   margin-left: none;
   margin-right: none;
 }
@@ -389,8 +389,8 @@
 .backgroundCloud1 {
   width: 100%;
   height: none;
-  margin-top: none;
-  margin-bottom: none;
+  margin-top: none !important;
+  margin-bottom: none !important;
   margin-left: none;
   margin-right: -20%;
 }
@@ -398,8 +398,8 @@
 .backgroundCloud2 {
   width: 100%;
   height: none;
-  margin-top: none;
-  margin-bottom: none;
+  margin-top: none !important;
+  margin-bottom: none !important;
   margin-left: -20%;
   margin-right: none;
   overflow: hidden;
@@ -415,8 +415,8 @@
 
 .clouds-stage3 {
   z-index: 5;
-  margin-top: -26%;
-  margin-bottom: none;
+  margin-top: -26% !important;
+  margin-bottom: none !important;
   margin-left: none;
   margin-right: none;
 }

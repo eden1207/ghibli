@@ -48,8 +48,8 @@
   .castlehelix1 {
     width: 70px;
     height: none;
-    margin-top: none;
-    margin-bottom: 38px;
+    margin-top: none !important;
+    margin-bottom: 38px !important;
     margin-left: -245px;
     margin-right: none;
   }
@@ -58,8 +58,8 @@
   .castlehelix1 {
     width: 50px;
     height: none;
-    margin-top: none;
-    margin-bottom: 24px;
+    margin-top: none !important;
+    margin-bottom: 24px !important;
     margin-left: -160px;
     margin-right: none;
   }
@@ -68,8 +68,8 @@
   .castlehelix1 {
     width: 28px;
     height: none;
-    margin-top: none;
-    margin-bottom: 13px;
+    margin-top: none !important;
+    margin-bottom: 13px !important;
     margin-left: -89px;
     margin-right: none;
   }
@@ -79,8 +79,8 @@
   .castlehelix2 {
     width: 18px;
     height: none;
-    margin-top: none;
-    margin-bottom: 94px;
+    margin-top: none !important;
+    margin-bottom: 94px !important;
     margin-left: -68px;
     margin-right: none;
   }
@@ -89,8 +89,8 @@
   .castlehelix2 {
     width: 12px;
     height: none;
-    margin-top: none;
-    margin-bottom: 61px;
+    margin-top: none !important;
+    margin-bottom: 61px !important;
     margin-left: -47px;
     margin-right: none;
   }
@@ -99,8 +99,8 @@
   .castlehelix2 {
     width: 7px;
     height: none;
-    margin-top: none;
-    margin-bottom: 34px;
+    margin-top: none !important;
+    margin-bottom: 34px !important;
     margin-left: -26px;
     margin-right: none;
   }
@@ -110,8 +110,8 @@
   .castleflag {
     width: 20px;
     height: none;
-    margin-top: none;
-    margin-bottom: 372px;
+    margin-top: none !important;
+    margin-bottom: 372px !important;
     margin-left: -210px;
     margin-right: none;
   }
@@ -120,8 +120,8 @@
   .castleflag {
     width: 15px;
     height: none;
-    margin-top: none;
-    margin-bottom: 238px;
+    margin-top: none !important;
+    margin-bottom: 238px !important;
     margin-left: -134px;
     margin-right: none;
   }
@@ -130,8 +130,8 @@
   .castleflag {
     width: 10px;
     height: none;
-    margin-top: none;
-    margin-bottom: 133px;
+    margin-top: none !important;
+    margin-bottom: 133px !important;
     margin-left: -76px;
     margin-right: none;
   }
@@ -141,8 +141,8 @@
   .castleclothes {
     width: 75px;
     height: none;
-    margin-top: none;
-    margin-bottom: 202px;
+    margin-top: none !important;
+    margin-bottom: 202px !important;
     margin-left: 148px;
     margin-right: none;
   }
@@ -151,8 +151,8 @@
   .castleclothes {
     width: 48px;
     height: none;
-    margin-top: none;
-    margin-bottom: 128px;
+    margin-top: none !important;
+    margin-bottom: 128px !important;
     margin-left: 93px;
     margin-right: none;
   }
@@ -161,8 +161,8 @@
   .castleclothes {
     width: 28px;
     height: none;
-    margin-top: none;
-    margin-bottom: 68px;
+    margin-top: none !important;
+    margin-bottom: 68px !important;
     margin-left: 48px;
     margin-right: none;
   }
@@ -175,8 +175,8 @@
   .castle-content {
     width: 890px;
     height: none;
-    margin-top: none;
-    margin-bottom: -65%;
+    margin-top: none !important;
+    margin-bottom: -65% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -185,8 +185,8 @@
   .castle-content {
     width: 890px;
     height: none;
-    margin-top: none;
-    margin-bottom: -105%;
+    margin-top: none !important;
+    margin-bottom: -105% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -195,8 +195,8 @@
   .castle-content {
     width: 690px;
     height: none;
-    margin-top: none;
-    margin-bottom: -115%;
+    margin-top: none !important;
+    margin-bottom: -115% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -205,8 +205,8 @@
   .castle-content {
     width: 390px;
     height: none;
-    margin-top: none;
-    margin-bottom: -105%;
+    margin-top: none !important;
+    margin-bottom: -105% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -215,8 +215,8 @@
   .castle-content {
     width: 390px;
     height: none;
-    margin-top: none;
-    margin-bottom: -160%;
+    margin-top: none !important;
+    margin-bottom: -160% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -355,24 +355,24 @@
 
 @media all and (min-width: 992px) {
   .sky-cloud-background-content {
-    margin-top: none;
-    margin-bottom: -800px;
+    margin-top: none !important;
+    margin-bottom: -800px !important;
     margin-left: none;
     margin-right: -30%;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .sky-cloud-background-content {
-    margin-top: none;
-    margin-bottom: -900px;
+    margin-top: none !important;
+    margin-bottom: -900px !important;
     margin-left: none;
     margin-right: -30%;
   }
 }
 @media all and (max-width: 767px) {
   .sky-cloud-background-content {
-    margin-top: none;
-    margin-bottom: -550px;
+    margin-top: none !important;
+    margin-bottom: -550px !important;
     margin-left: none;
     margin-right: -30%;
   }
@@ -389,32 +389,32 @@
 }
 @media all and (min-width: 1192px) {
   .moving-cloud1 {
-    margin-top: none;
-    margin-bottom: 5%;
+    margin-top: none !important;
+    margin-bottom: 5% !important;
     margin-left: none;
     margin-right: -70%;
   }
 }
 @media all and (min-width: 992px) and (max-width: 1191px) {
   .moving-cloud1 {
-    margin-top: none;
-    margin-bottom: 15%;
+    margin-top: none !important;
+    margin-bottom: 15% !important;
     margin-left: none;
     margin-right: -70%;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .moving-cloud1 {
-    margin-top: none;
-    margin-bottom: 15%;
+    margin-top: none !important;
+    margin-bottom: 15% !important;
     margin-left: none;
     margin-right: -70%;
   }
 }
 @media all and (max-width: 767px) {
   .moving-cloud1 {
-    margin-top: none;
-    margin-bottom: 25%;
+    margin-top: none !important;
+    margin-bottom: 25% !important;
     margin-left: none;
     margin-right: -70%;
   }
@@ -430,32 +430,32 @@
 }
 @media all and (min-width: 1192px) {
   .moving-cloud2 {
-    margin-top: none;
-    margin-bottom: 10%;
+    margin-top: none !important;
+    margin-bottom: 10% !important;
     margin-left: none;
     margin-right: -70%;
   }
 }
 @media all and (min-width: 992px) and (max-width: 1191px) {
   .moving-cloud2 {
-    margin-top: none;
-    margin-bottom: 10%;
+    margin-top: none !important;
+    margin-bottom: 10% !important;
     margin-left: none;
     margin-right: -70%;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .moving-cloud2 {
-    margin-top: none;
-    margin-bottom: 10%;
+    margin-top: none !important;
+    margin-bottom: 10% !important;
     margin-left: none;
     margin-right: -70%;
   }
 }
 @media all and (max-width: 767px) {
   .moving-cloud2 {
-    margin-top: none;
-    margin-bottom: 10%;
+    margin-top: none !important;
+    margin-bottom: 10% !important;
     margin-left: none;
     margin-right: -70%;
   }
@@ -471,32 +471,32 @@
 }
 @media all and (min-width: 1192px) {
   .moving-cloud3 {
-    margin-top: none;
-    margin-bottom: -40%;
+    margin-top: none !important;
+    margin-bottom: -40% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 992px) and (max-width: 1191px) {
   .moving-cloud3 {
-    margin-top: none;
-    margin-bottom: -40%;
+    margin-top: none !important;
+    margin-bottom: -40% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .moving-cloud3 {
-    margin-top: none;
-    margin-bottom: -40%;
+    margin-top: none !important;
+    margin-bottom: -40% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (max-width: 767px) {
   .moving-cloud3 {
-    margin-top: none;
-    margin-bottom: -1%;
+    margin-top: none !important;
+    margin-bottom: -1% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -511,32 +511,32 @@
 }
 @media all and (min-width: 1192px) {
   .moving-cloud4 {
-    margin-top: none;
-    margin-bottom: -1%;
+    margin-top: none !important;
+    margin-bottom: -1% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 992px) and (max-width: 1191px) {
   .moving-cloud4 {
-    margin-top: none;
-    margin-bottom: -1%;
+    margin-top: none !important;
+    margin-bottom: -1% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .moving-cloud4 {
-    margin-top: none;
-    margin-bottom: -5%;
+    margin-top: none !important;
+    margin-bottom: -5% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (max-width: 767px) {
   .moving-cloud4 {
-    margin-top: none;
-    margin-bottom: 20%;
+    margin-top: none !important;
+    margin-bottom: 20% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -556,32 +556,32 @@
 }
 @media all and (min-width: 1192px) {
   .moving-clouds-content {
-    margin-top: none;
-    margin-bottom: -100%;
+    margin-top: none !important;
+    margin-bottom: -100% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 992px) and (max-width: 1191px) {
   .moving-clouds-content {
-    margin-top: none;
-    margin-bottom: -125%;
+    margin-top: none !important;
+    margin-bottom: -125% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .moving-clouds-content {
-    margin-top: none;
-    margin-bottom: -95%;
+    margin-top: none !important;
+    margin-bottom: -95% !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (max-width: 767px) {
   .moving-clouds-content {
-    margin-top: none;
-    margin-bottom: -175%;
+    margin-top: none !important;
+    margin-bottom: -175% !important;
     margin-left: none;
     margin-right: none;
   }
@@ -632,7 +632,7 @@
 }
 /* SearchBar */
 .searchbar {
-  z-index: 4;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -642,24 +642,24 @@
 }
 @media all and (min-width: 992px) {
   .searchbar {
-    margin-top: none;
-    margin-bottom: 70px;
+    margin-top: none !important;
+    margin-bottom: 130px !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .searchbar {
-    margin-top: none;
-    margin-bottom: 70px;
+    margin-top: none !important;
+    margin-bottom: 70px !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (max-width: 767px) {
   .searchbar {
-    margin-top: none;
-    margin-bottom: 40px;
+    margin-top: none !important;
+    margin-bottom: 40px !important;
     margin-left: none;
     margin-right: none;
   }
@@ -688,24 +688,24 @@
 }
 @media all and (min-width: 992px) {
   .search-request {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
     margin-left: 5%;
     margin-right: auto;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .search-request {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
     margin-left: 5%;
     margin-right: auto;
   }
 }
 @media all and (max-width: 767px) {
   .search-request {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
     margin-left: 10%;
     margin-right: auto;
   }
@@ -736,16 +736,16 @@
 }
 @media all and (min-width: 768px) {
   .logo-container {
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: none;
     margin-right: 2%;
   }
 }
 @media all and (max-width: 767px) {
   .logo-container {
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: none;
     margin-right: 4%;
   }
@@ -774,114 +774,4 @@
     font-size: 22px;
     font-weight: bold;
   }
-}
-
-/*ToolListing*/
-.forms {
-  z-index: 4;
-  display: flex;
-  align-items: center;
-}
-@media all and (min-width: 992px) {
-  .forms {
-    justify-content: space-around;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .forms {
-    justify-content: space-around;
-  }
-}
-@media all and (max-width: 767px) {
-  .forms {
-    flex-direction: column;
-    justify-content: space-around;
-    row-gap: 10px;
-  }
-}
-@media all and (min-width: 992px) {
-  .forms_dimensions {
-    width: 90%;
-    height: none;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .forms_dimensions {
-    width: 90%;
-    height: none;
-  }
-}
-@media all and (max-width: 767px) {
-  .forms_dimensions {
-    width: 100%;
-    height: none;
-  }
-}
-@media all and (min-width: 992px) {
-  .forms_border {
-    margin-top: none;
-    margin-bottom: 150px;
-    margin-left: none;
-    margin-right: none;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .forms_border {
-    margin-top: none;
-    margin-bottom: 150px;
-    margin-left: none;
-    margin-right: none;
-  }
-}
-@media all and (max-width: 767px) {
-  .forms_border {
-    margin-top: none;
-    margin-bottom: 100px;
-    margin-left: none;
-    margin-right: none;
-  }
-}
-
-.list-custom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-family: "EB Garamond", serif;
-  font-size: 20px;
-  font-weight: normal;
-  color: white;
-  box-shadow: 1px 1px 10px black;
-}
-@media all and (min-width: 992px) {
-  .list-custom {
-    width: 200px;
-    height: 40px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .list-custom {
-    width: 130px;
-    height: 40px;
-  }
-}
-@media all and (max-width: 767px) {
-  .list-custom {
-    width: 300px;
-    height: 40px;
-  }
-}
-
-.titles-color {
-  background: linear-gradient(to bottom right, #483d8b, #ff79da);
-}
-
-.directors-color {
-  background: linear-gradient(to bottom right, #191970, #00BFFF);
-}
-
-.producers-color {
-  background: linear-gradient(to bottom right, #006400, #32CD32);
 }/*# sourceMappingURL=Banner.css.map */

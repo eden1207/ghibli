@@ -1,0 +1,97 @@
+@import "../Mixins/Mixin";
+
+.MoviePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &_dimensions{
+        @include dimensions(100%, auto);
+    }
+}
+
+.MovieData{
+    background-image: url("../../assets/backgroung_sky.png");
+    /*@include margin-package(200px, 700px, none, none);*/
+    @include padding-package(200px, 100px, none, none);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &_dimensions{
+        @include dimensions(100%, auto);
+    }
+}
+
+.Movie-Banner-border{
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include margin-package(50px, 50px, none, none);
+    overflow: hidden;
+    @include dimensions(95%, 700px);
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px black;
+}
+
+.Movie-Banner{
+    @include dimensions(none, 850px);
+}
+
+.Movie-Article{
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include dimensions(85%, auto);
+    /*background-color: rgb(0, 0, 0, 0.8);*/
+    box-shadow: 5px 5px 20px black;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #03222E, #0085C2);
+    @include padding-package(30px, 30px, 4%, 4%);
+    /*@include margin-package(none, 50px, none, none);*/
+}
+
+.Article-Banner{
+    @include dimensions(40%, auto);
+}
+
+.Article-text{
+    @include dimensions(45%, auto);
+    @include padding-package(15px, 15px, 4%, 4%);
+    line-height: 30px;
+    @include syntaxe-garamond(20px, normal);
+    text-align: justify;
+    background-color: rgb(255, 255, 255, 0.6);
+    box-shadow: 5px 5px 20px black;
+}
+
+.Article-List{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+    @include dimensions(100%, auto);
+    @include syntaxe-garamond(22px, normal);
+    color: white;
+}
+
+.List-text{
+    text-align: left;
+}
+
+
+.Article-title{
+    @include syntaxe-garamond(36px, normal);
+    color: white;
+    line-height: 10px;
+}
+
+.Article-subtitle{
+    @include syntaxe-garamond(24px, normal);
+    color: white;
+    line-height: 30px;
+}

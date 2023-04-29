@@ -2,9 +2,62 @@ import React from 'react'
 import '../../styles/Card/Card.css'
 
 /*import { data } from '../../mockedData/data';*/
-import star_black_dust from '../../assets/star_black_dust.png'
-import rock_black_dust from '../../assets/rock_black_dust.png'
-import { AiFillHeart } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+//import star_black_dust from '../../assets/star_black_dust.png'
+//import rock_black_dust from '../../assets/rock_black_dust.png'
+import { AiFillLike, AiFillClockCircle } from "react-icons/ai";
+import { FaStar } from "react-icons/fa";
+
+
+class Movie {
+    constructor(data) {
+      this._data = data
+    }
+  
+    get id() {
+      return this._data.id
+    }
+  
+    get description() {
+      return this._data.description
+    }
+  
+    get director() {
+      return this._data.director
+    }
+  
+    get image() {
+      return this._data.image
+    }
+
+    get banner() {
+        return this._data.movie_banner
+    }
+
+    get originalTitle() {
+        return this._data.original_title
+    }
+
+    get producer() {
+        return this._data.producer
+    }
+
+    get score() {
+        return this._data.rt_score
+    }
+
+    get duration() {
+        return this._data.running_time
+    }
+
+    get year() {
+        return this._data.release_date
+    }
+
+    get title() {
+        return this._data.title
+    }
+}
 
 
 function giveRating(rate) {
@@ -23,8 +76,25 @@ function giveRating(rate) {
     }
 }
 
+function Stars({ rating }) {
 
-function StateBlackDust({ state }) {
+    const number  = giveRating(rating);
+
+    const colorList = ['gray', 'gray', 'gray', 'gray', 'gray'];
+
+    for(let i=0; i<number; i++) {
+        colorList[i] = 'orange';
+    }
+
+    return (
+        <div className='starline'>
+            {colorList.map((color, index) => <FaStar key={`${color}-${index}`} className={color + '-star'} />)}
+        </div>
+    )
+} 
+
+
+/*function StateBlackDust({ state }) {
 
     return state ? (
         <div className='black-dust-group'>
@@ -35,10 +105,10 @@ function StateBlackDust({ state }) {
             <img src={rock_black_dust} alt="rock_black_dust" className='black-dust' />
         </div>
     )
-}
+}*/
 
 
-function BlackDust({ rating }) {
+/*function BlackDust({ rating }) {
 
     const number  = giveRating(rating);
 
@@ -53,31 +123,31 @@ function BlackDust({ rating }) {
             {blackDustState.map((state, index) => <StateBlackDust key={`'state'-${index}`} state={state} />)}
         </div>
     )
-}
+}*/
 
 
 
-export default function Card({ image, title, duration, rating }) {
+export default function Card({ data }) {
+
+    const movie = new Movie(data);
 
     return(
-        <div className='Card'>
+        <Link className='Card' to={'/movie/' + movie.id}>
             <div className='Card-image-border'>
-                <img src={image} alt={image} className='Card-image' />
+                <img src={movie.image} alt={movie.image} className='Card-image' />
             </div>
             <div className='Card-text'>
-
-                <div className="card-logo card-logo_dimensions card-logo_aspect animation-coeur">
-                    <div className='coeur1'><AiFillHeart /></div>
-                    <div className='coeur2'><AiFillHeart /></div>
-                </div>
-
                 <div className='Card-title'>
-                    <h2 className='Card-title1'>{title}</h2>
-                    <h3 className='Card-title2'>Duration: {duration}min</h3>
+                    <h2 className='Card-title1'>{movie.title}</h2>
+                    <p className='Card-title2'><AiFillClockCircle className='clock-symbol'/> {movie.duration}min</p>
+                    <Stars rating={movie.score} />
                 </div>
-                <BlackDust rating={rating} />
+                <div className="card-logo card-logo_dimensions card-logo_aspect animation-like">
+                    <div className='like1'><AiFillLike /></div>
+                    <div className='like2'><AiFillLike /></div>
+                </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

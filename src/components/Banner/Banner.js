@@ -4,7 +4,7 @@ import castle_body from '../../assets/castle_body2.png'
 import castle_helix1 from '../../assets/castle_helix1.png'
 import castle_helix2 from '../../assets/castle_helix2.png'
 import castle_flag from '../../assets/castle_flag.png'
-import { SlArrowDown, SlArrowUp } from "react-icons/sl";
+
 import { HiOutlineSearch } from "react-icons/hi";
 import sky_cloud_background from '../../assets/sky_cloud_background.png'
 import moving_sky_cloud1 from '../../assets/moving_sky_cloud1.png'
@@ -45,54 +45,6 @@ function SearchBar() {
     )
 }
 
-function ToolListing() {
-
-    const windowOpen = true;
-
-    return windowOpen ? (
-        <React.Fragment>
-            <div className="sortElements sortElements_dimensions sortElements_border JS-sortElements"></div>
-            <div className="forms forms_dimensions forms_border">
-
-                <div id="JS-ingredientsOpen">
-                    <button id="JS-openIngredientsListBtn" className="list-custom titles-color">Titles<SlArrowUp /></button>
-                </div>
-                <div className="JS-ingredients"></div>
-
-                <div id="JS-applianceOpen">
-                    <button id="JS-openApplianceListBtn" className="list-custom directors-color">Directors<SlArrowUp /></button>
-                </div>
-                <div className="JS-appliance"></div>
-
-                <div id="JS-ustensilsOpen">
-                    <button id="JS-openUstensilsListBtn" className="list-custom producers-color">Producers<SlArrowUp /></button>
-                </div>
-                <div className="JS-ustensils"></div>
-
-            </div>
-        </React.Fragment>
-    ) : (
-        <React.Fragment>
-            <div className="sortElements sortElements_dimensions sortElements_border JS-sortElements"></div>
-            <div className="forms forms_dimensions forms_border">
-                <div id="JS-ingredientsOpen" class="ingredientsOpen">
-                    <button id="JS-openIngredientsListBtn" className="listTitle ingredient-color">Titles<SlArrowDown /></button>
-                </div>
-                <div class="JS-ingredients"></div>
-                <div id="JS-applianceOpen" className="applianceOpen">
-                    <button id="JS-openApplianceListBtn" className="listTitle device-color">Directors<SlArrowDown /></button>
-                </div>
-                <div class="JS-appliance"></div>
-                <div id="JS-ustensilsOpen" className="ustensilsOpen">
-                    <button id="JS-openUstensilsListBtn" className="listTitle tool-color">Producers<SlArrowDown /></button>
-                </div>
-                <div className="JS-ustensils"></div>
-            </div>
-        </React.Fragment>
-    )
-}
-
-
 export default function Banner() {
     return(
         <div className='Banner'>
@@ -113,24 +65,6 @@ export default function Banner() {
                 <img src={sky_cloud_background} className='sky-cloud-background' alt='sky cloud' />
             </div>
             <SearchBar />
-            <ToolListing />
         </div>
     )
 }
-
-/*
-cloud-translation4
-cloud-translation3
-cloud-translation2
-cloud-translation1
- */
-
-/*
-castle-translation
-<div className='castle-content castle-translation'>
-<img src={castle_body} className='castlebody' alt='castle body' />
-<img src={castle_helix1} className='castlehelix1 castle-helix-rotation1' alt='castle helix 1' />
-<img src={castle_helix2} className='castlehelix2 castle-helix-rotation2' alt='castle helix 2' />
-<img src={castle_flag} className='castleflag castle-flag-scaling' alt='castle flag' />
-</div>
-*/

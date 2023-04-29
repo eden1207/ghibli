@@ -14,9 +14,223 @@
     z-index: 3;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include dimensions(100%, none);
+}
+
+
+/*ToolListing*/
+
+.forms{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    @media all and (min-width: 992px) {
+        justify-content: space-around;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        justify-content: space-around;
+    }
+    @media all and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 10px;
+    }
+    &_dimensions{
+        @media all and (min-width: 992px) {
+            @include dimensions(95%, none);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(95%, none);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(100%, none);
+        }
+    }
+    &_border{
+        @media all and (min-width: 992px) {
+            @include margin-package(none, 150px, none, none);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include margin-package(none, 150px, none, none);
+        }
+        @media all and (max-width: 767px) {
+            @include margin-package(none, 100px, none, none);
+        }
+    }
+}
+
+.listOpen-custom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    @media all and (min-width: 992px) {
+        @include dimensions(30%, auto);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(30%, auto);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(30%, auto);
+    }
+}
+
+.listClose-custom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    @media all and (min-width: 992px) {
+        @include dimensions(17%, auto);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(30%, auto);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(30%, auto);
+    }
+}
+
+.titles-color{
+    z-index: 6;
+    background: linear-gradient(to bottom right, #483d8b, #ff79da);
+}
+
+.directors-color{
+    z-index: 6;
+    background: linear-gradient(to bottom right, #191970, #00BFFF);
+}
+
+.producers-color{
+    z-index: 6;
+    background: linear-gradient(to bottom right, #006400, #32CD32);
+}
+
+.listBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        @include dimensions(95%, 40px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(130px, 40px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(300px, 40px);
+    }
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    @include syntaxe-garamond(20px, normal);
+    color: white;
+}
+
+/*mini searchbar*/
+
+.minisearchbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include margin-package(none, none, none, 10%);
+    &_dimensions{
+        @media all and (min-width: 768px) {
+            @include dimensions(70%, 70px);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(85%, 50px);
+        }
+    }
+}
+
+.minisearch-request{
+    border: none;
+    background-color: #d6d6d6;
+    @include syntaxe-garamond(18px, normal);
+    color: black;
+    border-radius: 10px;
+    &_dimensions{
+        @media all and (min-width: 992px) {
+            @include dimensions(90%, 35px);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(82%, 50px);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(82%, 35px);
+        }
+    }
+}
+
+.minilogo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: 768px) {
+        @include margin-package(none, none, none, 2%);
+    }
+    @media all and (max-width: 767px) {
+        @include margin-package(none, none, none, 4%);
+    }
+}
+
+.minisearchbar-logo{
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(20px, bold);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(26px, bold);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(22px, bold);
+    }
+    color: white;
+}
+
+.filterBtn{
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    @include syntaxe-garamond(18px, normal);
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @media all and (min-width: 992px) {
+        @include dimensions(80%, 40px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(30%, 40px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(30%, 40px);
+    }
+}
+
+.listElements{
+    padding-left: 4%;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+
+
 .card-collection{
     display: grid;
-    background-image: url("../../assets/backgroung_sky.png");
+    background-image: url("../../assets/backgroung_sky_resize2.png");
     @media all and (min-width: 992px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -28,7 +242,7 @@
     }
     &_dimensions{
         @media all and (min-width: 768px) {
-            @include dimensions(92%, auto);
+            @include dimensions(100%, auto);
         }
         @media all and (max-width: 767px) {
             @include dimensions(100%, auto);
@@ -36,7 +250,7 @@
     }
     &_border{
         @media all and (min-width: 768px) {
-            @include padding-package(10px, 90px, 4%, 4%);
+            @include padding-package(100px, 90px, 4%, 4%);
             @include dimensions(92%, auto);
         }
         @media all and (max-width: 767px) {
@@ -46,11 +260,11 @@
     }
     &_gap{
         @media all and (min-width: 992px) {
-            column-gap: 5%;
-            row-gap: 125px;
+            column-gap: 3%;
+            row-gap: 85px;
         }
         @media all and (min-width: 768px) and (max-width: 991px) {
-            column-gap: 5%;
+            column-gap: 3%;
             row-gap: 60px;
         }
         @media all and (max-width: 767px) {

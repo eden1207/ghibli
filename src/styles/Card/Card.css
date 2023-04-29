@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 /*Variables à modifier*/
 .Card {
-  z-index: 4;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,27 +12,28 @@
   box-shadow: 5px 5px 20px black;
   width: 90%;
   height: none;
+  text-decoration: none;
 }
 @media all and (min-width: 992px) {
   .Card {
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Card {
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: none;
     margin-right: none;
   }
 }
 @media all and (max-width: 767px) {
   .Card {
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: none !important;
+    margin-bottom: none !important;
     margin-left: 4%;
     margin-right: 4%;
   }
@@ -40,12 +41,13 @@
 
 .Card-image-border {
   overflow: hidden;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
+  border-radius: 10px 0px 0px 10px;
 }
 @media all and (min-width: 992px) {
   .Card-image-border {
-    width: 60%;
-    height: 300px;
+    width: 50%;
+    height: 250px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -68,7 +70,7 @@
 }
 @media all and (min-width: 992px) {
   .Card-image {
-    width: 200px;
+    width: 170px;
     height: none;
   }
 }
@@ -95,7 +97,7 @@
 @media all and (min-width: 992px) {
   .Card-text {
     width: 45%;
-    height: 270px;
+    height: 250px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -111,14 +113,100 @@
   }
 }
 
-.black-dust {
-  width: 30px;
-  height: auto;
-}
-
-.black-dust-group {
+/*.black-dust{
+    @include dimensions(30px, auto);
+}*/
+/*.black-dust-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}*/
+.starline {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+@media all and (min-width: 992px) {
+  .starline {
+    width: 120px;
+    height: none;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .starline {
+    width: 115px;
+    height: none;
+  }
+}
+@media all and (max-width: 767px) {
+  .starline {
+    width: 105px;
+    height: none;
+  }
+}
+
+.gray-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #03222E;
+  /*color: linear-gradient(to bottom right, #03222E, #0085C2);*/
+}
+@media all and (min-width: 992px) {
+  .gray-star {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .gray-star {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .gray-star {
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
+
+.orange-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00BFFF;
+}
+@media all and (min-width: 992px) {
+  .orange-star {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .orange-star {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .orange-star {
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
+
+.clock-symbol {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -133,12 +221,12 @@
 .Card-title {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   width: none;
   height: 170px;
-  margin-top: none;
-  margin-bottom: 10px;
+  margin-top: none !important;
+  margin-bottom: 10px !important;
   margin-left: none;
   margin-right: none;
 }
@@ -151,6 +239,10 @@
 }
 
 .Card-title2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
   font-family: "EB Garamond", serif;
   font-size: 18px;
   font-weight: normal;
@@ -159,9 +251,10 @@
 
 /*Partie à modifier lors du travail sur les cartes*/
 .card-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*display: flex;*/
+  /*justify-content: flex-end;*/
+  /*align-items: flex-end;*/
+  text-align: right;
 }
 .card-logo_dimensions {
   width: 55px;
@@ -173,36 +266,36 @@
   color: black;
 }
 
-.animation-coeur {
+.animation-like {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
 }
-.animation-coeur:hover > .coeur1 {
+.animation-like:hover > .like1 {
   opacity: 1;
 }
-.animation-coeur:hover > .coeur2 {
+.animation-like:hover > .like2 {
   opacity: 0;
 }
 
-.coeur1 {
+.like1 {
   position: absolute;
   z-index: 2;
-  font-size: 24px;
-  background: linear-gradient(#9356dc, #ff79da);
+  font-size: 28px;
+  color: #00BFFF;
   -webkit-background-clip: text;
           background-clip: text; /* Couleur du texte, ici le logo */
-  color: transparent; /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
+  /*color: transparent;*/ /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
   opacity: 0;
   transition: all 550ms;
 }
 
-.coeur2 {
+.like2 {
   position: absolute;
   z-index: 1;
-  font-size: 22px;
-  color: black;
+  font-size: 26px;
+  color: #03222E;
   opacity: 1;
   transition: all 550ms;
 }/*# sourceMappingURL=Card.css.map */

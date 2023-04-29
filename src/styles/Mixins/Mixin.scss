@@ -6,8 +6,8 @@
 }
 
 @mixin margin-package($top, $bottom, $left, $right) {
-    margin-top: $top;
-    margin-bottom: $bottom;
+    margin-top: $top !important;
+    margin-bottom: $bottom !important;
     margin-left: $left;
     margin-right: $right;
 }

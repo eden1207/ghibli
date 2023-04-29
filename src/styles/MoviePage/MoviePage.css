@@ -1,0 +1,121 @@
+.MoviePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.MoviePage_dimensions {
+  width: 100%;
+  height: auto;
+}
+
+.MovieData {
+  background-image: url("../../assets/backgroung_sky.png");
+  /*@include margin-package(200px, 700px, none, none);*/
+  padding-top: 200px;
+  padding-bottom: 100px;
+  padding-left: none;
+  padding-right: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.MovieData_dimensions {
+  width: 100%;
+  height: auto;
+}
+
+.Movie-Banner-border {
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+  margin-left: none;
+  margin-right: none;
+  overflow: hidden;
+  width: 95%;
+  height: 700px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px black;
+}
+
+.Movie-Banner {
+  width: none;
+  height: 850px;
+}
+
+.Movie-Article {
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: auto;
+  /*background-color: rgb(0, 0, 0, 0.8);*/
+  box-shadow: 5px 5px 20px black;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #03222E, #0085C2);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 4%;
+  padding-right: 4%;
+  /*@include margin-package(none, 50px, none, none);*/
+}
+
+.Article-Banner {
+  width: 40%;
+  height: auto;
+}
+
+.Article-text {
+  width: 45%;
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 4%;
+  padding-right: 4%;
+  line-height: 30px;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 5px 5px 20px black;
+}
+
+.Article-List {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  list-style: none;
+  width: 100%;
+  height: auto;
+  font-family: "EB Garamond", serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: white;
+}
+
+.List-text {
+  text-align: left;
+}
+
+.Article-title {
+  font-family: "EB Garamond", serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: white;
+  line-height: 10px;
+}
+
+.Article-subtitle {
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  line-height: 30px;
+}/*# sourceMappingURL=MoviePage.css.map */

@@ -9,7 +9,7 @@ $violet:#9356dc;
 $rose:#ff79da;
 
 .Card{
-    z-index: 4;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,6 +18,7 @@ $rose:#ff79da;
     cursor: pointer;
     box-shadow: 5px 5px 20px black;
     @include dimensions(90%, none);
+    text-decoration: none;
     @media all and (min-width: 992px) {
         @include margin-package(none, none, none, none);
     }
@@ -31,7 +32,7 @@ $rose:#ff79da;
 
 .Card-image-border{
     @media all and (min-width: 992px) {
-        @include dimensions(60%, 300px);
+        @include dimensions(50%, 250px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
         @include dimensions(60%, 250px);
@@ -40,7 +41,8 @@ $rose:#ff79da;
         @include dimensions(60%, 250px);
     }
     overflow: hidden;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
+    border-radius: 10px 0px 0px 10px;
 }
 
 .Card-image{
@@ -48,7 +50,7 @@ $rose:#ff79da;
     justify-content: center;
     align-items: center;
     @media all and (min-width: 992px) {
-        @include dimensions(200px, none);
+        @include dimensions(170px, none);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
         @include dimensions(170px, none);
@@ -64,7 +66,7 @@ $rose:#ff79da;
     justify-content: space-between;
     align-items: flex-start;
     @media all and (min-width: 992px) {
-        @include dimensions(45%, 270px);
+        @include dimensions(45%, 250px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
         @include dimensions(45%, 220px);
@@ -75,13 +77,69 @@ $rose:#ff79da;
     text-align: left;
 }
 
-.black-dust{
+/*.black-dust{
     @include dimensions(30px, auto);
-}
+}*/
 
-.black-dust-group{
+/*.black-dust-group{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}*/
+
+.starline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        @include dimensions(120px, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(115px, none);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(105px, none);
+    }
+    gap: 5px;
+}
+
+.gray-star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(15px, normal);
+    }
+    color: #03222E;
+    /*color: linear-gradient(to bottom right, #03222E, #0085C2);*/
+}
+
+.orange-star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(15px, normal);
+    }
+    color: #00BFFF;
+}
+
+.clock-symbol{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -95,7 +153,7 @@ $rose:#ff79da;
 .Card-title{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     @include dimensions(none, 170px);
     @include margin-package(none, 10px, none, none);
@@ -107,6 +165,10 @@ $rose:#ff79da;
 }
 
 .Card-title2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
     @include syntaxe-garamond(18px, normal);
     color: white;
 }
@@ -114,9 +176,10 @@ $rose:#ff79da;
 
 /*Partie à modifier lors du travail sur les cartes*/
 .card-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: flex-end;*/
+    /*align-items: flex-end;*/
+    text-align: right;
     &_dimensions{
         @include dimensions(55px, 55px);
     }
@@ -127,35 +190,35 @@ $rose:#ff79da;
     }
 }
 
-.animation-coeur{
+.animation-like{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
-    &:hover >.coeur1{
+    &:hover >.like1{
       opacity: 1;
     }
-    &:hover >.coeur2{
+    &:hover >.like2{
       opacity: 0;
     }
 }
 
-.coeur1{
+.like1{
     position: absolute;
     z-index: 2;
-    font-size: 24px;
-    background: linear-gradient($violet, $rose);
+    font-size: 28px;
+    color: #00BFFF;
     background-clip: text; /* Couleur du texte, ici le logo */
-    color: transparent; /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
+    /*color: transparent;*/ /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
     opacity: 0;
     transition: all 550ms;
 }
 
-.coeur2{
+.like2{
     position: absolute;
     z-index: 1;
-    font-size: 22px;
-    color: black;
+    font-size: 26px;
+    color: #03222E;
     opacity: 1;
     transition: all 550ms;
 }
