@@ -12,8 +12,8 @@
 .MovieData {
   background-image: url("../../assets/backgroung_sky.png");
   /*@include margin-package(200px, 700px, none, none);*/
-  padding-top: 200px;
-  padding-bottom: 100px;
+  padding-top: 200px !important;
+  padding-bottom: 100px !important;
   padding-left: none;
   padding-right: none;
   display: flex;
@@ -27,63 +27,192 @@
 }
 
 .Movie-Banner-border {
-  z-index: 4;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px !important;
-  margin-bottom: 50px !important;
-  margin-left: none;
-  margin-right: none;
   overflow: hidden;
-  width: 95%;
-  height: 700px;
   border-radius: 20px;
   box-shadow: 5px 5px 20px black;
 }
+@media all and (min-width: 992px) {
+  .Movie-Banner-border {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    margin-left: none;
+    margin-right: none;
+    width: 95%;
+    height: 700px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Movie-Banner-border {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    margin-left: none;
+    margin-right: none;
+    width: 95%;
+    height: 500px;
+  }
+}
+@media all and (min-width: 461px) and (max-width: 767px) {
+  .Movie-Banner-border {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    margin-left: none;
+    margin-right: none;
+    width: 95%;
+    height: 400px;
+  }
+}
+@media all and (max-width: 460px) {
+  .Movie-Banner-border {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    margin-left: none;
+    margin-right: none;
+    width: 95%;
+    height: 200px;
+  }
+}
 
-.Movie-Banner {
-  width: none;
-  height: 850px;
+@media all and (min-width: 992px) {
+  .Movie-Banner {
+    width: none;
+    height: 850px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Movie-Banner {
+    width: none;
+    height: 520px;
+  }
+}
+@media all and (min-width: 461px) and (max-width: 767px) {
+  .Movie-Banner {
+    width: none;
+    height: 410px;
+  }
+}
+@media all and (max-width: 460px) {
+  .Movie-Banner {
+    width: none;
+    height: 250px;
+  }
 }
 
 .Movie-Article {
-  z-index: 4;
+  z-index: 5;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 85%;
   height: auto;
   /*background-color: rgb(0, 0, 0, 0.8);*/
   box-shadow: 5px 5px 20px black;
   border-radius: 10px;
   background: linear-gradient(to bottom right, #03222E, #0085C2);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
   padding-left: 4%;
   padding-right: 4%;
   /*@include margin-package(none, 50px, none, none);*/
 }
+@media all and (min-width: 992px) {
+  .Movie-Article {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Movie-Article {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media all and (max-width: 767px) {
+  .Movie-Article {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
-.Article-Banner {
-  width: 40%;
-  height: auto;
+@media all and (min-width: 992px) {
+  .Article-Banner {
+    width: 40%;
+    height: auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Article-Banner {
+    width: 40%;
+    height: auto;
+  }
+}
+@media all and (max-width: 767px) {
+  .Article-Banner {
+    width: 85%;
+    height: auto;
+  }
 }
 
 .Article-text {
-  width: 45%;
-  height: auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 4%;
-  padding-right: 4%;
-  line-height: 30px;
-  font-family: "EB Garamond", serif;
-  font-size: 20px;
-  font-weight: normal;
   text-align: justify;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 5px 5px 20px black;
+}
+@media all and (min-width: 992px) {
+  .Article-text {
+    width: 45%;
+    height: auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Article-text {
+    width: 45%;
+    height: auto;
+  }
+}
+@media all and (max-width: 767px) {
+  .Article-text {
+    width: 85%;
+    height: auto;
+  }
+}
+@media all and (min-width: 992px) {
+  .Article-text {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Article-text {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media all and (max-width: 767px) {
+  .Article-text {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
 }
 
 .Article-List {
@@ -94,10 +223,28 @@
   list-style: none;
   width: 100%;
   height: auto;
-  font-family: "EB Garamond", serif;
-  font-size: 22px;
-  font-weight: normal;
   color: white;
+}
+@media all and (min-width: 992px) {
+  .Article-List {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Article-List {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .Article-List {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
 }
 
 .List-text {
@@ -105,17 +252,57 @@
 }
 
 .Article-title {
-  font-family: "EB Garamond", serif;
-  font-size: 36px;
-  font-weight: normal;
   color: white;
-  line-height: 10px;
+}
+@media all and (min-width: 992px) {
+  .Article-title {
+    font-family: "EB Garamond", serif;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 10px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Article-title {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 10px;
+  }
+}
+@media all and (max-width: 767px) {
+  .Article-title {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+  }
 }
 
 .Article-subtitle {
-  font-family: "EB Garamond", serif;
-  font-size: 24px;
-  font-weight: normal;
   color: white;
-  line-height: 30px;
+}
+@media all and (min-width: 992px) {
+  .Article-subtitle {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Article-subtitle {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+  }
+}
+@media all and (max-width: 767px) {
+  .Article-subtitle {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 10px;
+  }
 }/*# sourceMappingURL=MoviePage.css.map */

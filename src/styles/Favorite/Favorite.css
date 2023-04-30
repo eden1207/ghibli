@@ -14,58 +14,154 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
   width: 100%;
   height: auto;
   background-image: url("../../assets/backgroung_sky.png");
-  padding-top: 350px;
-  padding-bottom: 100px;
+  padding-top: 350px !important;
+  padding-bottom: 100px !important;
   padding-left: none;
   padding-right: none;
 }
+@media all and (min-width: 992px) {
+  .favorite-list {
+    gap: 40px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .favorite-list {
+    gap: 30px;
+  }
+}
+@media all and (max-width: 767px) {
+  .favorite-list {
+    gap: 20px;
+  }
+}
 
 .favorite-card {
-  z-index: 4;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  height: auto;
   background: linear-gradient(to bottom right, #03222E, #0085C2);
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 20px black;
-  padding-top: none;
-  padding-bottom: none;
+  padding-top: none !important;
+  padding-bottom: none !important;
   padding-left: none;
   padding-right: 3%;
 }
+@media all and (min-width: 992px) {
+  .favorite-card {
+    width: 80%;
+    height: auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .favorite-card {
+    width: 85%;
+    height: auto;
+  }
+}
+@media all and (max-width: 767px) {
+  .favorite-card {
+    width: 87%;
+    height: auto;
+  }
+}
 
 .Movie-Image-Border {
-  width: 130px;
-  height: 200px;
   overflow: hidden;
+}
+@media all and (min-width: 992px) {
+  .Movie-Image-Border {
+    width: 80px;
+    height: 120px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Movie-Image-Border {
+    width: 65px;
+    height: 100px;
+  }
+}
+@media all and (max-width: 767px) {
+  .Movie-Image-Border {
+    width: 55px;
+    height: 80px;
+  }
 }
 
 .favorite-card-informations {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 5%;
-  width: 70%;
-  height: none;
+}
+@media all and (min-width: 992px) {
+  .favorite-card-informations {
+    width: 70%;
+    height: none;
+    gap: 5%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .favorite-card-informations {
+    width: 70%;
+    height: none;
+    gap: 5%;
+  }
+}
+@media all and (max-width: 767px) {
+  .favorite-card-informations {
+    width: 85%;
+    height: none;
+    gap: 5%;
+  }
 }
 
-.Movie-Image {
-  width: none;
-  height: 200px;
+@media all and (min-width: 992px) {
+  .Movie-Image {
+    width: none;
+    height: 120px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Movie-Image {
+    width: none;
+    height: 100px;
+  }
+}
+@media all and (max-width: 767px) {
+  .Movie-Image {
+    width: none;
+    height: 85px;
+  }
 }
 
 .Favorite-card-title {
-  font-family: "EB Garamond", serif;
-  font-size: 36px;
-  font-weight: normal;
   color: white;
+}
+@media all and (min-width: 992px) {
+  .Favorite-card-title {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Favorite-card-title {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .Favorite-card-title {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
 
 .Favorite-card-trash-border {
@@ -75,13 +171,47 @@
   background: linear-gradient(to bottom right, #000000, #696969);
   box-shadow: 5px 5px 20px black;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+}
+@media all and (min-width: 992px) {
+  .Favorite-card-trash-border {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Favorite-card-trash-border {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media all and (max-width: 767px) {
+  .Favorite-card-trash-border {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .Favorite-card-trash {
-  font-family: "EB Garamond", serif;
-  font-size: 25px;
-  font-weight: normal;
   color: white;
+}
+@media all and (min-width: 992px) {
+  .Favorite-card-trash {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Favorite-card-trash {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .Favorite-card-trash {
+    font-family: "EB Garamond", serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
 }/*# sourceMappingURL=Favorite.css.map */

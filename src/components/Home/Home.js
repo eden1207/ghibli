@@ -164,7 +164,7 @@ function ListFilter ({ listTitle, listStyle, data, barTitle }) {
 function MiniSearchBar({ barTitle }) {
 
     return (
-        <div class="minisearchbar minisearchbar_dimensions">
+        <div className="minisearchbar minisearchbar_dimensions">
             <form>
                 <p>
                     <label htmlFor="search-tool"></label>

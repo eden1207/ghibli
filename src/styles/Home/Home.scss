@@ -27,16 +27,18 @@
 .forms{
     position: absolute;
     display: flex;
-    align-items: flex-start;
     @media all and (min-width: 992px) {
         justify-content: space-around;
+        align-items: flex-start;
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
         justify-content: space-around;
+        align-items: flex-start;
     }
     @media all and (max-width: 767px) {
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         row-gap: 10px;
     }
     &_dimensions{
@@ -77,7 +79,7 @@
         @include dimensions(30%, auto);
     }
     @media all and (max-width: 767px) {
-        @include dimensions(30%, auto);
+        @include dimensions(90%, auto);
     }
 }
 
@@ -92,10 +94,10 @@
         @include dimensions(17%, auto);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include dimensions(30%, auto);
+        @include dimensions(25%, auto);
     }
     @media all and (max-width: 767px) {
-        @include dimensions(30%, auto);
+        @include dimensions(80%, auto);
     }
 }
 
@@ -118,19 +120,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(22px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(18px, normal);
+    }
+
     @media all and (min-width: 992px) {
         @include dimensions(95%, 40px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include dimensions(130px, 40px);
+        @include dimensions(92%, 40px);
     }
     @media all and (max-width: 767px) {
-        @include dimensions(300px, 40px);
+        @include dimensions(95%, 40px);
+    }
+
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(18px, normal);
     }
     border: none;
     cursor: pointer;
     background-color: transparent;
-    @include syntaxe-garamond(20px, normal);
     color: white;
 }
 
@@ -140,13 +162,24 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    @include margin-package(none, none, none, 10%);
+    @media all and (min-width: 992px) {
+        @include margin-package(none, none, none, 10%);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(none, none, none, 10%);
+    }
+    @media all and (max-width: 767px) {
+        @include margin-package(none, none, none, 2%);
+    }
     &_dimensions{
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 992px) {
             @include dimensions(70%, 70px);
         }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(92%, 40px);
+        }
         @media all and (max-width: 767px) {
-            @include dimensions(85%, 50px);
+            @include dimensions(75%, 50px);
         }
     }
 }
@@ -154,7 +187,16 @@
 .minisearch-request{
     border: none;
     background-color: #d6d6d6;
-    @include syntaxe-garamond(18px, normal);
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(16px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(16px, normal);
+    }
+    @include padding-package(none, none, 2%, none);
     color: black;
     border-radius: 10px;
     &_dimensions{
@@ -162,10 +204,10 @@
             @include dimensions(90%, 35px);
         }
         @media all and (min-width: 768px) and (max-width: 991px) {
-            @include dimensions(82%, 50px);
+            @include dimensions(82%, 25px);
         }
         @media all and (max-width: 767px) {
-            @include dimensions(82%, 35px);
+            @include dimensions(90%, 35px);
         }
     }
 }
@@ -187,7 +229,7 @@
         @include syntaxe-garamond(20px, bold);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include syntaxe-garamond(26px, bold);
+        @include syntaxe-garamond(18px, bold);
     }
     @media all and (max-width: 767px) {
         @include syntaxe-garamond(22px, bold);
@@ -209,18 +251,28 @@
         @include dimensions(80%, 40px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include dimensions(30%, 40px);
+        @include dimensions(80%, 40px);
     }
     @media all and (max-width: 767px) {
-        @include dimensions(30%, 40px);
+        @include dimensions(80%, 40px);
     }
 }
 
 .listElements{
-    padding-left: 4%;
-    padding-bottom: 10px;
+    @include padding-package(none, 10px, 4%, none);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    @media all and (min-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media all and (min-width: 301px) and (max-width: 767px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media all and (max-width: 300px) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
@@ -234,28 +286,29 @@
     @media all and (min-width: 992px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    @media all and (min-width: 768px) and (max-width: 991px) {
+    @media all and (min-width: 451px) and (max-width: 991px) {
         grid-template-columns: 1fr 1fr;
     }
-    @media all and (max-width: 767px) {
+    @media all and (max-width: 450px) {
         grid-template-columns: 1fr;
     }
     &_dimensions{
         @media all and (min-width: 768px) {
-            @include dimensions(100%, auto);
+            @include dimensions(92%, auto);
         }
         @media all and (max-width: 767px) {
             @include dimensions(100%, auto);
         }
     }
     &_border{
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 992px) {
             @include padding-package(100px, 90px, 4%, 4%);
-            @include dimensions(92%, auto);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include padding-package(100px, 90px, 4%, 4%);
         }
         @media all and (max-width: 767px) {
-            @include padding-package(none, none, none, none);
-            @include dimensions(100%, auto);
+            @include padding-package(170px, none, none, none);
         }
     }
     &_gap{

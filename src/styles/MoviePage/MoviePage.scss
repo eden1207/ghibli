@@ -25,26 +25,62 @@
 }
 
 .Movie-Banner-border{
-    z-index: 4;
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include margin-package(50px, 50px, none, none);
     overflow: hidden;
-    @include dimensions(95%, 700px);
+    @media all and (min-width: 992px) {
+        @include margin-package(50px, 50px, none, none);
+        @include dimensions(95%, 700px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(50px, 50px, none, none);
+        @include dimensions(95%, 500px);
+    }
+    @media all and (min-width: 461px) and (max-width: 767px) {
+        @include margin-package(20px, 20px, none, none);
+        @include dimensions(95%, 400px);
+    }
+    @media all and (max-width: 460px) {
+        @include margin-package(20px, 20px, none, none);
+        @include dimensions(95%, 200px);
+    }
     border-radius: 20px;
     box-shadow: 5px 5px 20px black;
 }
 
 .Movie-Banner{
-    @include dimensions(none, 850px);
+    @media all and (min-width: 992px) {
+        @include dimensions(none, 850px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(none, 520px);
+    }
+    @media all and (min-width: 461px) and (max-width: 767px) {
+        @include dimensions(none, 410px);
+    }
+    @media all and (max-width: 460px) {
+        @include dimensions(none, 250px);
+    }
 }
 
 .Movie-Article{
-    z-index: 4;
+    z-index: 5;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @media all and (min-width: 992px) {
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media all and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
     @include dimensions(85%, auto);
     /*background-color: rgb(0, 0, 0, 0.8);*/
     box-shadow: 5px 5px 20px black;
@@ -55,14 +91,42 @@
 }
 
 .Article-Banner{
-    @include dimensions(40%, auto);
+    @media all and (min-width: 992px) {
+        @include dimensions(40%, auto);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(40%, auto);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(85%, auto);
+    }
 }
 
 .Article-text{
-    @include dimensions(45%, auto);
-    @include padding-package(15px, 15px, 4%, 4%);
-    line-height: 30px;
-    @include syntaxe-garamond(20px, normal);
+    @media all and (min-width: 992px) {
+        @include dimensions(45%, auto);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(45%, auto);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(85%, auto);
+    }
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(20px, normal);
+        line-height: 30px;
+        @include padding-package(15px, 15px, 4%, 4%);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(18px, normal);
+        line-height: 30px;
+        @include padding-package(15px, 15px, 4%, 4%);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(14px, normal);
+        line-height: 20px;
+        @include padding-package(5px, 5px, 4%, 4%);
+    }
     text-align: justify;
     background-color: rgb(255, 255, 255, 0.6);
     box-shadow: 5px 5px 20px black;
@@ -75,7 +139,15 @@
     align-items: flex-start;
     list-style: none;
     @include dimensions(100%, auto);
-    @include syntaxe-garamond(22px, normal);
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(22px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(14px, normal);
+    }
     color: white;
 }
 
@@ -85,13 +157,33 @@
 
 
 .Article-title{
-    @include syntaxe-garamond(36px, normal);
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(36px, normal);
+        line-height: 10px;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(30px, normal);
+        line-height: 10px;
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(24px, normal);
+        line-height: 30px;
+    }
     color: white;
-    line-height: 10px;
 }
 
 .Article-subtitle{
-    @include syntaxe-garamond(24px, normal);
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+        line-height: 30px;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+        line-height: 30px;
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(16px, normal);
+        line-height: 10px;
+    }
     color: white;
-    line-height: 30px;
 }

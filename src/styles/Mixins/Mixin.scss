@@ -1,6 +1,6 @@
 @mixin padding-package($top, $bottom, $left, $right) {
-    padding-top: $top;
-    padding-bottom: $bottom;
+    padding-top: $top !important;
+    padding-bottom: $bottom !important;
     padding-left: $left;
     padding-right: $right;
 }

@@ -37,8 +37,11 @@ $rose:#ff79da;
     @media all and (min-width: 768px) and (max-width: 991px) {
         @include dimensions(60%, 250px);
     }
-    @media all and (max-width: 767px) {
-        @include dimensions(60%, 250px);
+    @media all and (min-width: 301px) and (max-width: 767px) {
+        @include dimensions(40%, 160px);
+    }
+    @media all and (max-width: 300px) {
+        @include dimensions(40%, 150px);
     }
     overflow: hidden;
     /*border-radius: 10px;*/
@@ -55,8 +58,11 @@ $rose:#ff79da;
     @media all and (min-width: 768px) and (max-width: 991px) {
         @include dimensions(170px, none);
     }
-    @media all and (max-width: 767px) {
-        @include dimensions(170px, none);
+    @media all and (min-width: 301px) and (max-width: 767px) {
+        @include dimensions(110px, none);
+    }
+    @media all and (max-width: 300px) {
+        @include dimensions(100px, none);
     }
 }
 
@@ -66,13 +72,16 @@ $rose:#ff79da;
     justify-content: space-between;
     align-items: flex-start;
     @media all and (min-width: 992px) {
-        @include dimensions(45%, 250px);
+        @include dimensions(45%, 245px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include dimensions(45%, 220px);
+        @include dimensions(45%, 235px);
     }
-    @media all and (max-width: 767px) {
-        @include dimensions(45%, 220px);
+    @media all and (min-width: 301px) and (max-width: 767px) {
+        @include dimensions(55%, 150px);
+    }
+    @media all and (max-width: 301px) {
+        @include dimensions(60%, 140px);
     }
     text-align: left;
 }
@@ -160,7 +169,15 @@ $rose:#ff79da;
 }
 
 .Card-title1{
-    @include syntaxe-garamond(24px, normal);
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(17px, normal);
+    }
     color: white;
 }
 
@@ -169,7 +186,16 @@ $rose:#ff79da;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
-    @include syntaxe-garamond(18px, normal);
+    line-height: 10px;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(19px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(15px, normal);
+    }
     color: white;
 }
 
@@ -181,11 +207,22 @@ $rose:#ff79da;
     /*align-items: flex-end;*/
     text-align: right;
     &_dimensions{
-        @include dimensions(55px, 55px);
+        @media all and (min-width: 992px) {
+            @include dimensions(35px, 35px);
+            @include margin-package(none, none, 70%, none);
+        }
+        @media all and (min-width: 768px) and (max-width: 991px) {
+            @include dimensions(35px, 35px);
+            @include margin-package(none, none, 70%, none);
+        }
+        @media all and (max-width: 767px) {
+            @include dimensions(30px, 30px);
+            @include margin-package(none, none, 70%, none);
+        }
     }
     &_aspect{
-        font-size: 24px;
-        font-style: normal;
+        /*font-size: 24px;
+        font-style: normal;*/
         color: black;
     }
 }
@@ -206,7 +243,15 @@ $rose:#ff79da;
 .like1{
     position: absolute;
     z-index: 2;
-    font-size: 28px;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(26px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(26px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(24px, normal);
+    }
     color: #00BFFF;
     background-clip: text; /* Couleur du texte, ici le logo */
     /*color: transparent;*/ /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
@@ -217,7 +262,15 @@ $rose:#ff79da;
 .like2{
     position: absolute;
     z-index: 1;
-    font-size: 26px;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(22px, normal);
+    }
     color: #03222E;
     opacity: 1;
     transition: all 550ms;

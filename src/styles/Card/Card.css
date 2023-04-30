@@ -56,10 +56,16 @@
     height: 250px;
   }
 }
-@media all and (max-width: 767px) {
+@media all and (min-width: 301px) and (max-width: 767px) {
   .Card-image-border {
-    width: 60%;
-    height: 250px;
+    width: 40%;
+    height: 160px;
+  }
+}
+@media all and (max-width: 300px) {
+  .Card-image-border {
+    width: 40%;
+    height: 150px;
   }
 }
 
@@ -80,9 +86,15 @@
     height: none;
   }
 }
-@media all and (max-width: 767px) {
+@media all and (min-width: 301px) and (max-width: 767px) {
   .Card-image {
-    width: 170px;
+    width: 110px;
+    height: none;
+  }
+}
+@media all and (max-width: 300px) {
+  .Card-image {
+    width: 100px;
     height: none;
   }
 }
@@ -97,19 +109,25 @@
 @media all and (min-width: 992px) {
   .Card-text {
     width: 45%;
-    height: 250px;
+    height: 245px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Card-text {
     width: 45%;
-    height: 220px;
+    height: 235px;
   }
 }
-@media all and (max-width: 767px) {
+@media all and (min-width: 301px) and (max-width: 767px) {
   .Card-text {
-    width: 45%;
-    height: 220px;
+    width: 55%;
+    height: 150px;
+  }
+}
+@media all and (max-width: 301px) {
+  .Card-text {
+    width: 60%;
+    height: 140px;
   }
 }
 
@@ -232,10 +250,28 @@
 }
 
 .Card-title1 {
-  font-family: "EB Garamond", serif;
-  font-size: 24px;
-  font-weight: normal;
   color: white;
+}
+@media all and (min-width: 992px) {
+  .Card-title1 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Card-title1 {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .Card-title1 {
+    font-family: "EB Garamond", serif;
+    font-size: 17px;
+    font-weight: normal;
+  }
 }
 
 .Card-title2 {
@@ -243,10 +279,29 @@
   justify-content: space-between;
   align-items: center;
   gap: 5px;
-  font-family: "EB Garamond", serif;
-  font-size: 18px;
-  font-weight: normal;
+  line-height: 10px;
   color: white;
+}
+@media all and (min-width: 992px) {
+  .Card-title2 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .Card-title2 {
+    font-family: "EB Garamond", serif;
+    font-size: 19px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .Card-title2 {
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    font-weight: normal;
+  }
 }
 
 /*Partie à modifier lors du travail sur les cartes*/
@@ -256,13 +311,39 @@
   /*align-items: flex-end;*/
   text-align: right;
 }
-.card-logo_dimensions {
-  width: 55px;
-  height: 55px;
+@media all and (min-width: 992px) {
+  .card-logo_dimensions {
+    width: 35px;
+    height: 35px;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: 70%;
+    margin-right: none;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .card-logo_dimensions {
+    width: 35px;
+    height: 35px;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: 70%;
+    margin-right: none;
+  }
+}
+@media all and (max-width: 767px) {
+  .card-logo_dimensions {
+    width: 30px;
+    height: 30px;
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: 70%;
+    margin-right: none;
+  }
 }
 .card-logo_aspect {
-  font-size: 24px;
-  font-style: normal;
+  /*font-size: 24px;
+  font-style: normal;*/
   color: black;
 }
 
@@ -282,7 +363,6 @@
 .like1 {
   position: absolute;
   z-index: 2;
-  font-size: 28px;
   color: #00BFFF;
   -webkit-background-clip: text;
           background-clip: text; /* Couleur du texte, ici le logo */
@@ -290,12 +370,53 @@
   opacity: 0;
   transition: all 550ms;
 }
+@media all and (min-width: 992px) {
+  .like1 {
+    font-family: "EB Garamond", serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .like1 {
+    font-family: "EB Garamond", serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .like1 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
 
 .like2 {
   position: absolute;
   z-index: 1;
-  font-size: 26px;
   color: #03222E;
   opacity: 1;
   transition: all 550ms;
+}
+@media all and (min-width: 992px) {
+  .like2 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .like2 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .like2 {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
 }/*# sourceMappingURL=Card.css.map */

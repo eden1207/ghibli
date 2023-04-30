@@ -16,20 +16,22 @@ function SearchBar() {
     const isErrorBar = false;
 
     return isErrorBar ? (
-        <React.Fragment>
-            <div class="research research_dimensions">
+        <div className='packageSearchBarErrorMessage'>
+            <div className="searchbar searchbar_dimensions">
                 <form>
                     <p>
                         <label htmlFor="search-tool"></label>
-                        <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Look for a movie" size="120" maxLength="30" />
+                        <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Find your movie" size="120" maxLength="30" />
                     </p>
                 </form>
-                <HiOutlineSearch className='searchbar-logo' />
+                <div className='logo-container'>
+                    <HiOutlineSearch className='searchbar-logo' />
+                </div>
             </div>
-            <div id="JS-error1" className="error JS-error">
-                <h3>We have not found what you are looking for… please, try another word such as « castle », « neighbor », etc.</h3>
+            <div className="errorMessage-container">
+                <h3 className="errorMessage">We have not found what you are looking for… please, try another word such as « castle », « neighbor », etc.</h3>
             </div>
-        </React.Fragment>
+        </div>
     ) : (
         <div className="searchbar searchbar_dimensions">
             <form>

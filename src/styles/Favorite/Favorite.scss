@@ -15,18 +15,34 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    @media all and (min-width: 992px) {
+        gap: 40px;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        gap: 30px;
+    }
+    @media all and (max-width: 767px) {
+        gap: 20px;
+    }
     @include dimensions(100%, auto);
     background-image: url("../../assets/backgroung_sky.png");
     @include padding-package(350px, 100px, none, none);
 }
 
 .favorite-card{
-    z-index: 4;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include dimensions(80%, auto);
+    @media all and (min-width: 992px) {
+        @include dimensions(80%, auto);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(85%, auto);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(87%, auto);
+    }
     background: linear-gradient(to bottom right, #03222E, #0085C2);
     overflow: hidden;
     border-radius: 10px;
@@ -35,7 +51,15 @@
 }
 
 .Movie-Image-Border{
-    @include dimensions(130px, 200px);
+    @media all and (min-width: 992px) {
+        @include dimensions(80px, 120px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(65px, 100px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(55px, 80px);
+    }
     overflow: hidden;
 }
 
@@ -43,16 +67,42 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5%;
-    @include dimensions(70%, none);
+    @media all and (min-width: 992px) {
+        @include dimensions(70%, none);
+        gap: 5%;
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(70%, none);
+        gap: 5%;
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(85%, none);
+        gap: 5%;
+    }
 }
 
 .Movie-Image{
-    @include dimensions(none, 200px);
+    @media all and (min-width: 992px) {
+        @include dimensions(none, 120px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(none, 100px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(none, 85px);
+    }
 }
 
 .Favorite-card-title{
-    @include syntaxe-garamond(36px, normal);
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(16px, normal);
+    }
     color: white;
 }
 
@@ -63,10 +113,26 @@
     background: linear-gradient(to bottom right, #000000, #696969);
     box-shadow: 5px 5px 20px black;
     border-radius: 50%;
-    @include dimensions(50px, 50px);
+    @media all and (min-width: 992px) {
+        @include dimensions(35px, 35px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(30px, 30px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(25px, 25px);
+    }
 }
 
 .Favorite-card-trash{
-    @include syntaxe-garamond(25px, normal);
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(20px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(18px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(14px, normal);
+    }
     color: white;
 }

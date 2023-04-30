@@ -25,22 +25,24 @@
 .forms {
   position: absolute;
   display: flex;
-  align-items: flex-start;
 }
 @media all and (min-width: 992px) {
   .forms {
     justify-content: space-around;
+    align-items: flex-start;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .forms {
     justify-content: space-around;
+    align-items: flex-start;
   }
 }
 @media all and (max-width: 767px) {
   .forms {
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     row-gap: 10px;
   }
 }
@@ -109,7 +111,7 @@
 }
 @media all and (max-width: 767px) {
   .listOpen-custom {
-    width: 30%;
+    width: 90%;
     height: auto;
   }
 }
@@ -130,13 +132,13 @@
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .listClose-custom {
-    width: 30%;
+    width: 25%;
     height: auto;
   }
 }
 @media all and (max-width: 767px) {
   .listClose-custom {
-    width: 30%;
+    width: 80%;
     height: auto;
   }
 }
@@ -163,10 +165,28 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
-  font-family: "EB Garamond", serif;
-  font-size: 20px;
-  font-weight: normal;
   color: white;
+}
+@media all and (min-width: 992px) {
+  .listBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .listBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .listBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
 }
 @media all and (min-width: 992px) {
   .listBtn {
@@ -176,14 +196,35 @@
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .listBtn {
-    width: 130px;
+    width: 92%;
     height: 40px;
   }
 }
 @media all and (max-width: 767px) {
   .listBtn {
-    width: 300px;
+    width: 95%;
     height: 40px;
+  }
+}
+@media all and (min-width: 992px) {
+  .listBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .listBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .listBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
   }
 }
 
@@ -192,20 +233,46 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: none !important;
-  margin-bottom: none !important;
-  margin-left: none;
-  margin-right: 10%;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 992px) {
+  .minisearchbar {
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: none;
+    margin-right: 10%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .minisearchbar {
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: none;
+    margin-right: 10%;
+  }
+}
+@media all and (max-width: 767px) {
+  .minisearchbar {
+    margin-top: none !important;
+    margin-bottom: none !important;
+    margin-left: none;
+    margin-right: 2%;
+  }
+}
+@media all and (min-width: 992px) {
   .minisearchbar_dimensions {
     width: 70%;
     height: 70px;
   }
 }
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .minisearchbar_dimensions {
+    width: 92%;
+    height: 40px;
+  }
+}
 @media all and (max-width: 767px) {
   .minisearchbar_dimensions {
-    width: 85%;
+    width: 75%;
     height: 50px;
   }
 }
@@ -213,11 +280,33 @@
 .minisearch-request {
   border: none;
   background-color: #d6d6d6;
-  font-family: "EB Garamond", serif;
-  font-size: 18px;
-  font-weight: normal;
+  padding-top: none !important;
+  padding-bottom: none !important;
+  padding-left: 2%;
+  padding-right: none;
   color: black;
   border-radius: 10px;
+}
+@media all and (min-width: 992px) {
+  .minisearch-request {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .minisearch-request {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .minisearch-request {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
 @media all and (min-width: 992px) {
   .minisearch-request_dimensions {
@@ -228,12 +317,12 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .minisearch-request_dimensions {
     width: 82%;
-    height: 50px;
+    height: 25px;
   }
 }
 @media all and (max-width: 767px) {
   .minisearch-request_dimensions {
-    width: 82%;
+    width: 90%;
     height: 35px;
   }
 }
@@ -273,7 +362,7 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .minisearchbar-logo {
     font-family: "EB Garamond", serif;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: bold;
   }
 }
@@ -306,22 +395,43 @@
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .filterBtn {
-    width: 30%;
+    width: 80%;
     height: 40px;
   }
 }
 @media all and (max-width: 767px) {
   .filterBtn {
-    width: 30%;
+    width: 80%;
     height: 40px;
   }
 }
 
 .listElements {
+  padding-top: none !important;
+  padding-bottom: 10px !important;
   padding-left: 4%;
-  padding-bottom: 10px;
+  padding-right: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+}
+@media all and (min-width: 992px) {
+  .listElements {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .listElements {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (min-width: 301px) and (max-width: 767px) {
+  .listElements {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media all and (max-width: 300px) {
+  .listElements {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card-collection {
@@ -333,19 +443,19 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 451px) and (max-width: 991px) {
   .card-collection {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media all and (max-width: 767px) {
+@media all and (max-width: 450px) {
   .card-collection {
     grid-template-columns: 1fr;
   }
 }
 @media all and (min-width: 768px) {
   .card-collection_dimensions {
-    width: 100%;
+    width: 92%;
     height: auto;
   }
 }
@@ -355,24 +465,28 @@
     height: auto;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 992px) {
   .card-collection_border {
-    padding-top: 100px;
-    padding-bottom: 90px;
+    padding-top: 100px !important;
+    padding-bottom: 90px !important;
     padding-left: 4%;
     padding-right: 4%;
-    width: 92%;
-    height: auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .card-collection_border {
+    padding-top: 100px !important;
+    padding-bottom: 90px !important;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 @media all and (max-width: 767px) {
   .card-collection_border {
-    padding-top: none;
-    padding-bottom: none;
+    padding-top: 170px !important;
+    padding-bottom: none !important;
     padding-left: none;
     padding-right: none;
-    width: 100%;
-    height: auto;
   }
 }
 @media all and (min-width: 992px) {

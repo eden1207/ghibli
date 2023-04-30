@@ -105,13 +105,21 @@
         @include dimensions(690px, none);
         @include margin-package(none, -115%, none, none);
     }
-    @media all and (min-width: 450px) and (max-width: 767px) {
+    @media all and (min-width: 630px) and (max-width: 767px) {
         @include dimensions(390px, none);
-        @include margin-package(none, -105%, none, none);
+        @include margin-package(none, -5%, none, none);
     }
-    @media all and (max-width: 449px) {
+    @media all and (min-width: 461px) and (max-width: 629px) {
         @include dimensions(390px, none);
-        @include margin-package(none, -160%, none, none);
+        @include margin-package(none, -55%, none, none);
+    }
+    @media all and (min-width: 301px) and (max-width: 460px) {
+        @include dimensions(390px, none);
+        @include margin-package(none, -155%, none, none);
+    }
+    @media all and (max-width: 300px) {
+        @include dimensions(390px, none);
+        @include margin-package(none, -250%, none, none);
     }
 }
 
@@ -445,10 +453,10 @@
         @include margin-package(none, 130px, none, none);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include margin-package(none, 70px, none, none);
+        @include margin-package(none, 110px, none, none);
     }
     @media all and (max-width: 767px) {
-        @include margin-package(none, 40px, none, none);
+        @include margin-package(none, 80px, none, none);
     }
     box-shadow: 1px 1px 10px black;
     &_dimensions{
@@ -466,12 +474,15 @@
     background-color: #d6d6d6;
     @media all and (min-width: 992px) {
         @include margin-package(auto, auto, 5%, auto);
+        @include padding-package(none, none, 2%, none);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
         @include margin-package(auto, auto, 5%, auto);
+        @include padding-package(none, none, 2%, none);
     }
     @media all and (max-width: 767px) {
-        @include margin-package(auto, auto, 10%, auto);
+        @include margin-package(auto, auto, 5%, auto);
+        @include padding-package(none, none, 2%, none);
     }
     @include syntaxe-garamond(20px, normal);
     color: black;
@@ -481,10 +492,10 @@
             @include dimensions(90%, 45px);
         }
         @media all and (min-width: 768px) and (max-width: 991px) {
-            @include dimensions(82%, 50px);
+            @include dimensions(82%, 45px);
         }
         @media all and (max-width: 767px) {
-            @include dimensions(82%, 35px);
+            @include dimensions(80%, 30px);
         }
     }
 }
@@ -512,4 +523,63 @@
         @include syntaxe-garamond(22px, bold);
     }
     color: white;
+}
+
+.packageSearchBarErrorMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @media all and (min-width: 992px) {
+        @include margin-package(none, 100px, none, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(none, 80px, none, none);
+    }
+    @media all and (max-width: 767px) {
+        @include margin-package(none, 90px, none, none);
+    }
+}
+
+.errorMessage-container{
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: 992px) {
+        @include dimensions(100%, 35px);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include dimensions(70%, 30px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(80%, 30px);
+    }
+
+    @media all and (min-width: 992px) {
+        @include margin-package(-120px, none, none, none);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include margin-package(-100px, none, none, none);
+    }
+    @media all and (min-width: 351px) and (max-width: 767px) {
+        @include margin-package(-65px, none, none, none);
+    }
+    @media all and (max-width: 350px) {
+        @include margin-package(-55px, none, none, none);
+    }
+}
+
+.errorMessage{
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(20px, bold);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(18px, bold);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(16px, bold);
+    }
+    color: red;
 }
