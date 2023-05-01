@@ -10,7 +10,7 @@
 }
 
 .MovieData {
-  background-image: url("../../assets/backgroung_sky.png");
+  background-image: url("../../assets/backgroung_sky_resize2.png");
   /*@include margin-package(200px, 700px, none, none);*/
   padding-top: 200px !important;
   padding-bottom: 100px !important;

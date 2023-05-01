@@ -5,8 +5,10 @@ import fog from '../../assets/fog.png'
 import rocks from '../../assets/rocks.png'
 
 //import backgroung_cloud from '../../assets/backgroung_cloud.png'
-import backgroung_cloud2 from '../../assets/backgroung_cloud_test5.png'
-import backgroung_cloud2bis from '../../assets/backgroung_cloud_test6.png'
+//import backgroung_cloud2 from '../../assets/backgroung_cloud_test5.png'
+//import backgroung_cloud2bis from '../../assets/backgroung_cloud_test6.png'
+
+import moving_fog1 from '../../assets/moving_fog1.png'
 
 
 import kodama1_head from '../../assets/kodama1_head.png'
@@ -58,10 +60,19 @@ export default function Footer() {
                 </div>
             </div>
             <img src={rocks} className="rocks" alt="rocks" />
-            <div className='backgroundClouds2 clouds-stage3'>
-                <img src={backgroung_cloud2} className='backgroundCloud3 cloud-animation1' alt='backgroung cloud' />
-                <img src={backgroung_cloud2bis} className='backgroundCloud4 cloud-animation2' alt='backgroung cloud' />
+            <div className='moving_fog'>
+                <img src={moving_fog1} className='moving_fog1 fog1-animation' alt='moving fog' />
+                <img src={moving_fog1} className='moving_fog2 fog2-animation' alt='moving fog' />
+                <img src={moving_fog1} className='moving_fog3 fog3-animation' alt='moving fog' />
+                <img src={moving_fog1} className='moving_fog4 fog4-animation' alt='moving fog' />
             </div>
         </footer>
     )
 }
+
+/**
+ *             <div className='backgroundClouds2 clouds-stage3'>
+                <img src={backgroung_cloud2} className='backgroundCloud3 cloud-animation1' alt='backgroung cloud' />
+                <img src={backgroung_cloud2bis} className='backgroundCloud4 cloud-animation2' alt='backgroung cloud' />
+            </div>
+ */

@@ -25,7 +25,7 @@
         gap: 20px;
     }
     @include dimensions(100%, auto);
-    background-image: url("../../assets/backgroung_sky.png");
+    background-image: url("../../assets/backgroung_sky_resize2.png");
     @include padding-package(350px, 100px, none, none);
 }
 

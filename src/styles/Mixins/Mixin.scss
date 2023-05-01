@@ -20,5 +20,5 @@
 
 @mixin dimensions($width, $height) {
     width: $width; 
-    height: $height;
+    height: $height !important;
 }

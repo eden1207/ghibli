@@ -400,3 +400,108 @@
         opacity: 0;
     }
 }
+
+
+
+
+/*Nuages brume (CSS nuages précédents à sûrement supprimer... faire le tri à la fin)*/
+
+.moving_fog{
+    z-index: 2;
+    position: absolute;
+    opacity: 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    @include dimensions(100%, none);
+    overflow: hidden;
+}
+
+.moving_fog1{
+    @include dimensions(200%, none);
+}
+
+.moving_fog2{
+    @include dimensions(250%, none);
+}
+
+.moving_fog3{
+    @include dimensions(250%, none);
+}
+
+.moving_fog4{
+    @include dimensions(270%, none);
+}
+
+.fog1-animation{
+    animation: fog1-translation 30000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 10000ms;
+    animation-fill-mode: backwards;  
+}
+
+.fog2-animation{
+    animation: fog2-translation 30000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
+    animation-fill-mode: backwards;  
+}
+
+.fog3-animation{
+    animation: fog3-translation 30000ms linear;
+    animation-iteration-count: infinite;
+    animation-delay: 10000ms;
+    animation-fill-mode: backwards;  
+}
+
+.fog4-animation{
+    animation: fog4-translation 30000ms linear;
+    animation-iteration-count: infinite;
+    /*animation-delay: 500ms;*/
+    animation-fill-mode: backwards;  
+}
+
+@keyframes fog1-translation {
+
+    0%{
+        transform: translate(80%, 110%);
+    }
+
+    100%{
+        transform: translate(-80%, 110%);
+    }
+}
+
+@keyframes fog2-translation {
+
+    0%{
+        transform: translate(70%, 130%);
+    }
+
+    100%{
+        transform: translate(-70%, 130%);
+    }
+}
+
+@keyframes fog3-translation {
+
+    0%{
+        transform: translate(70%, 135%);
+    }
+
+    100%{
+        transform: translate(-70%, 135%);
+    }
+}
+
+@keyframes fog4-translation {
+
+    0%{
+        transform: translate(70%, 50%);
+    }
+
+    100%{
+        transform: translate(-70%, 50%);
+    }
+}
