@@ -1,4 +1,4 @@
-import '../../styles/App.css';
+import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import ScrollToTop from '../ScrollToTop/ScrollToTop.js';
 import Home from '../Home/Home.js';

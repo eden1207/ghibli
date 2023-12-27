@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../styles/Card/Card.css'
+import './styles/Card.css'
 
 /*import { data } from '../../mockedData/data';*/
 import { Link } from 'react-router-dom';

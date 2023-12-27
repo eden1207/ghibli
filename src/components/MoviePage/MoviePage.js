@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/MoviePage/MoviePage.css'
+import './styles/MoviePage.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import CloudyTransition from '../CloudyTransition/CloudyTransition'

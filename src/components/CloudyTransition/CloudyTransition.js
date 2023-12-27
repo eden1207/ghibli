@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/CloudyTransition/CloudyTransition.css'
+import './styles/CloudyTransition.css'
 import cloudy_transition from '../../assets/cloudy_transition_resize2.png'
 
 

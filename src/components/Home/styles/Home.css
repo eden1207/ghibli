@@ -501,7 +501,7 @@
 
 .card-collection {
   display: grid;
-  background-image: url("../../assets/backgroung_sky_resize2.png");
+  background-image: url("../../../assets/backgroung_sky_resize2.png");
 }
 @media all and (min-width: 992px) {
   .card-collection {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../styles/Favorite/Favorite.css'
+import './styles/Favorite.css'
 
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../styles/Banner/Banner.css'
+import './styles/Banner.css'
 import castle_body from '../../assets/castle_body2.png'
 import castle_helix1 from '../../assets/castle_helix1.png'
 import castle_helix2 from '../../assets/castle_helix2.png'

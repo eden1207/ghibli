@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../../styles/Home/Home.css'
+import './styles/Home.css'
 import Card from '../Card/Card'
 import Banner from '../Banner/Banner'
 import Header from '../Header/Header'

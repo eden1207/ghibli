@@ -20,7 +20,7 @@ import kodama2_body from '../../assets/kodama2_body.png'
 import kodama3_head from '../../assets/kodama3_head.png'
 import kodama3_body from '../../assets/kodama3_body.png'
 
-import '../../styles/Footer/Footer.css'
+import './styles/Footer.css'
 
 /*
 
