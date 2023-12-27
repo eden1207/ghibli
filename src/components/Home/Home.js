@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../styles/Home/Home.css'
 import Card from '../Card/Card'
 import Banner from '../Banner/Banner'
@@ -8,195 +8,190 @@ import CloudyTransition from '../CloudyTransition/CloudyTransition'
 
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import { HiOutlineSearch } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 import { data } from '../../mockedData/data';
+import { useDispatch, useSelector } from "react-redux";
+import { setMovies } from "../Store/Store.js";
+
+import { getTitlesTags, getDirectorsTags, getProducersTags } from '../../utils/TagHelpers';
+import { searchKeyword, filterMoviesWithTags } from '../../utils/SearchHelpers';
 
 
-function stringCutter(tab) {
-    let allElements = [];
-        
-    for(let i=0; i<tab.length; i++) {
-        allElements.push(tab[i].split(','));
-    }    
-    return allElements
-}
-
-function sortAllElements(tab) {
-    let elementSorted = [];
-    let allElements = tab;
-        
-    for(let i=0; i<allElements.length; i++) {
-        let count = 0;
-        for(let j=0; j<elementSorted.length; j++) {
-            if(allElements[i] === elementSorted[j]) {
-                count += 1;
-            }
-        }
-        if(count === 0) {
-            elementSorted.push(allElements[i]);
-        }
-    }    
-    return elementSorted
-}
-
-class Titles {
-    constructor(data) {
-        this._data = data
-    }
-
-    get list() {
-        let allElements = [];
-
-        for(let i=0; i<this._data.length; i++) {
-            allElements.push(this._data[i].title.toLowerCase());
-        }
-
-        return sortAllElements(allElements)
-    }
-}
-
-class Directors {
-    constructor(data) {
-        this._data = data
-    }
-
-    get list() {
-        let allElements = [];
-
-        for(let i=0; i<this._data.length; i++) {
-            allElements.push(this._data[i].director.toLowerCase());
-        }
-
-        return sortAllElements(allElements)
-    }
-}
-
-class Producers {
-    constructor(data) {
-        this._data = data
-    }
-
-    get list() {
-        let firstTreatment = [];
-        for(let i=0; i<this._data.length; i++) {
-            firstTreatment.push(this._data[i].producer.toLowerCase());
-        }
-        const multiProducersSeparation = stringCutter(firstTreatment);
-        let secondTreatment = [];
-        for(let i=0; i<multiProducersSeparation.length; i++) {
-            const resultElement = multiProducersSeparation[i];
-            for(let j=0; j<resultElement.length; j++) {
-                secondTreatment.push(resultElement[j].trim())
-            }
-        }
-        return sortAllElements(secondTreatment)
-    }
-}
-
-class List {
-    constructor(data, type) {
-        if(type === 'titles') {
-            return new Titles(data)
-        } else if(type === 'directors') {
-            return new Directors(data)
-        } else if(type === 'producers') {
-            return new Producers(data)
-        }else{
-            console.log('Unknow list')
-        }
-    }
-}
-
-// Listes par ordre alphabétique
-const listTitles = new List(data, 'titles').list.sort();
-const listDirectors = new List(data, 'directors').list.sort();
-const listProducers = new List(data, 'producers').list.sort();
-
-
-function FilterBtn ({ name }) {
-
-    const isBtnSelected = false;
-
-    return isBtnSelected ? (
-        <React.Fragment></React.Fragment>
-    ) : (
-        <React.Fragment>
-            <button className="filterBtn">{name}</button>
-        </React.Fragment>
-    )
-}
-
-function ListFilter ({ listTitle, listStyle, data, barTitle }) {
-
-    const [isWindowOpen, setWindow] = useState(false);
-
-    return isWindowOpen ? (
-        <div className={"listOpen-custom " + listStyle + "-color"}>
-            <button 
-                className="listBtn" 
+function renderTags(tags, setTags, tagStyle) {
+    return tags.map((tag, index) => (
+        <div key={`${tag}-${index}`} className={`tag ${tagStyle}-tag`}>
+            <span>{tag}</span>
+            <button
+                className="tag-close-btn"
                 onClick={() => {
-                    setWindow(false);
+                    // Immutability of the data. I make a copy of keywords and I add
+                    // member in the array
+                    setTags((prevTags) => prevTags.filter((member) => member !== tag));
                 }}
             >
-                {listTitle}<SlArrowUp />
-            </button>
-            <MiniSearchBar barTitle={barTitle} />
-            <div className="listElements">
-                {data.map((member, index) => 
-                    <FilterBtn key={`member${index}`} name={member} />
-                )}
-            </div>
-        </div>
-    ) : (
-        <div className={"listClose-custom " + listStyle + "-color"}>
-            <button 
-                className="listBtn" 
-                onClick={() => {
-                    setWindow(true);
-                }}
-            >
-                {listTitle}<SlArrowDown />
+                <IoClose />
             </button>
         </div>
-    )
+    ));
 }
-
-function MiniSearchBar({ barTitle }) {
-
-    return (
-        <div className="minisearchbar minisearchbar_dimensions">
-            <form>
-                <p>
-                    <label htmlFor="search-tool"></label>
-                    <input type="text" name="search-tool" id="search-tool" className="minisearch-request minisearch-request_dimensions" placeholder={barTitle} size="120" maxLength="30" />
-                </p>
-            </form>
-            <div className='minilogo-container'>
-                <HiOutlineSearch className='minisearchbar-logo' />
-            </div>
-        </div>
-    )
-}
-
 
 export default function Home() {
+
+    const [isTitlesOpen, setIsTitlesOpen] = useState(false);
+    const [isDirectorsOpen, setIsDirectorsOpen] = useState(false);
+    const [isProducersOpen, setIsProducersOpen] = useState(false);
+
+    const [titlesTags, setTitlesTags] = useState([]);
+    const [directorsTags, setDirectorsTags] = useState([]);
+    const [producersTags, setProducersTags] = useState([]);
+
+    const [word, setWord] = useState('');
+
+    let movies = useSelector((state) => state.movies);
+    const dispatch = useDispatch();
+
+    const listTitles = getTitlesTags(movies);
+    const listDirectors = getDirectorsTags(movies);
+    const listProducers = getProducersTags(movies);
+
+    useEffect(() => {
+        let tags = [];
+        for(let i=0; i<titlesTags.length; i++) {
+            tags.push(titlesTags[i]);
+        }
+        for(let i=0; i<directorsTags.length; i++) {
+            tags.push(directorsTags[i]);
+        }
+        for(let i=0; i<producersTags.length; i++) {
+            tags.push(producersTags[i]);
+        }
+        const updatedData = filterMoviesWithTags(data, tags);
+        dispatch(setMovies(updatedData));
+    }, [titlesTags, directorsTags, producersTags, dispatch]);
+
+
+
+
+    const listFilters = [
+        {
+            'listTitle': 'Titles',
+            'listStyle': 'titles',
+            'data': listTitles,
+            'isListOpen': isTitlesOpen,
+            'setIsListOpen': setIsTitlesOpen,
+            'setTags': setTitlesTags,
+            'barTitle': 'Find your title'
+        },
+        {
+            'listTitle': 'Directors',
+            'listStyle': 'directors',
+            'data': listDirectors,
+            'isListOpen': isDirectorsOpen,
+            'setIsListOpen': setIsDirectorsOpen,
+            'setTags': setDirectorsTags,
+            'barTitle': 'Find your director'
+        },
+        {
+            'listTitle': 'Producers',
+            'listStyle': 'producers',
+            'data': listProducers,
+            'isListOpen': isProducersOpen,
+            'setIsListOpen': setIsProducersOpen,
+            'setTags': setProducersTags,
+            'barTitle': 'Find your producer'
+        }
+    ];
+
+
+
+
     return(
         <div className='Home Home_dimensions'>
             <Header />
             <Banner />
             <CloudyTransition index={1} />
+            <div className="tags">
+                {renderTags(titlesTags, setTitlesTags, 'title')}
+                {renderTags(directorsTags, setDirectorsTags, 'director')}
+                {renderTags(producersTags, setProducersTags, 'producer')}
+            </div>
             <main className='main'>
 
-                <div className="sortElements sortElements_dimensions sortElements_border JS-sortElements"></div>
-
                 <div className="forms forms_dimensions forms_border">
-                    <ListFilter listTitle={'Titles'} listStyle={'titles'} data={listTitles} barTitle={'Find your title'} />
-                    <ListFilter listTitle={'Directors'} listStyle={'directors'} data={listDirectors} barTitle={'Find your director'} />
-                    <ListFilter listTitle={'Producers'} listStyle={'producers'} data={listProducers} barTitle={'Find your producer'} />
+                    {
+                        listFilters.map((filter) => {
+                            const isListOpen = filter.isListOpen;
+                            const setIsListOpen = filter.setIsListOpen;
+                            const setTags = filter.setTags;
+                            const keywordsList = filter.data;
+                            const sortedKeywords = searchKeyword(word, keywordsList);
+                            return isListOpen ? (
+                                <div key={filter.listTitle} className={"listOpen-custom " + filter.listStyle + "-color"}>
+                                    <button 
+                                        className="listBtn" 
+                                        onClick={() => {
+                                            setIsListOpen(false);
+                                        }}
+                                    >
+                                        {filter.listTitle}<SlArrowUp />
+                                    </button>
+                                    <div className="minisearchbar minisearchbar_dimensions">
+                                        <form>
+                                            <p>
+                                                <label htmlFor="search-tool"></label>
+                                                <input 
+                                                    type="text" 
+                                                    name="search-tool" 
+                                                    id="search-tool" 
+                                                    className="minisearch-request minisearch-request_dimensions" 
+                                                    placeholder={filter.barTitle} 
+                                                    size="120" 
+                                                    maxLength="30" 
+                                                    onChange={(e) => {setWord(e.target.value)}}
+                                                />
+                                            </p>
+                                        </form>
+                                        <div className='minilogo-container'>
+                                            <HiOutlineSearch className='minisearchbar-logo' />
+                                        </div>
+                                    </div>
+                                    <div className="listElements">
+                                        {
+                                            sortedKeywords.map((member, index) => 
+                                                <button 
+                                                    key={`member${index}`} 
+                                                    className="filterBtn"
+                                                    onClick={() => {
+                                                        //Immutability of the data. I make a copy of keywords and I add
+                                                        // member in the array
+                                                        setTags(prevTags => [...prevTags, member]);
+                                                    }}
+                                                >
+                                                    {member}
+                                                </button>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            ) : (
+                                <div key={filter.listTitle} className={"listClose-custom " + filter.listStyle + "-color"}>
+                                    <button 
+                                        className="listBtn" 
+                                        onClick={() => {
+                                            setIsListOpen(true);
+                                        }}
+                                    >
+                                        {filter.listTitle}<SlArrowDown />
+                                    </button>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
 
                 <div className='card-collection card-collection_dimensions card-collection_border card-collection_gap'>
-                    {data.map((data) => 
+                    {movies.map((data) => 
                         <Card key={data.id} data={data} />
                     )}
                 </div>

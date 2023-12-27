@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../styles/Favorite/Favorite.css'
 
 import Header from '../Header/Header'
@@ -6,42 +6,63 @@ import Footer from '../Footer/Footer'
 import CloudyTransition from '../CloudyTransition/CloudyTransition'
 import { HiTrash } from "react-icons/hi";
 
-import { data } from '../../mockedData/data';
+import { useDispatch, useSelector } from "react-redux";
+import { setFavoriteMovies } from "../Store/Store.js";
 
-const image1 = data[0].image;
-const title1 = data[0].title;
 
-const image2 = data[1].image;
-const title2 = data[1].title;
-
-const image3 = data[2].image;
-const title3 = data[2].title;
-
-function FavoriteCard({ image, title }) {
+function FavoriteCard({ movie, favoriteMovies, setMovieId }) {
+    //const dispatch = useDispatch();
     return(
         <div className='favorite-card'>
             <div className='favorite-card-informations'>
                 <div className='Movie-Image-Border'>
-                    <img src={image} alt={image} className='Movie-Image' />
+                    <img src={movie.image} alt={movie.image} className='Movie-Image' />
                 </div>
-                <h2 className='Favorite-card-title'>{title}</h2>
+                <h2 className='Favorite-card-title'>{movie.title}</h2>
             </div>
-            <div className='Favorite-card-trash-border'>
+            <button 
+                className='Favorite-card-trash-border'
+                onClick={(e) => {
+                    e.preventDefault();
+                    /*let sortedFavoriteMovies = favoriteMovies.filter((e) => {
+                        if(e.id !== movie.id) {
+                            return true
+                        } else{
+                            return false
+                        }
+                    });*/
+                    //console.log(sortedFavoriteMovies);
+                    //dispatch(setFavoriteMovies(sortedFavoriteMovies));
+                    setMovieId(movie.id);
+                    //dispatch(setFavoriteMovies(prevFavoriteMovies => [...prevFavoriteMovies, sortedFavoriteMovies]));
+                }}
+            >
                 <HiTrash className='Favorite-card-trash' />
-            </div>
+            </button>
         </div>
     )
 }
 
 export default function Favorite() {
+    const dispatch = useDispatch();
+    let favoriteMovies = useSelector((state) => state.favoriteMovies);
+    console.log(favoriteMovies)
+    const [movieId, setMovieId] = useState(null);
+    console.log(movieId)
+    let sortedFavoriteMovies = favoriteMovies.filter((e) => e.id !== movieId);
+    console.log(sortedFavoriteMovies)
+    //dispatch(setFavoriteMovies(sortedFavoriteMovies));
+    dispatch(setFavoriteMovies(prevFavoriteMovies => [...prevFavoriteMovies, sortedFavoriteMovies]));
     return(
         <div className='Favorite Favorite_dimensions'>
             <Header />
             <CloudyTransition index={1} />
             <div className='favorite-list'>
-                <FavoriteCard image={image1} title={title1} />
-                <FavoriteCard image={image2} title={title2} />
-                <FavoriteCard image={image3} title={title3} />
+                {
+                    sortedFavoriteMovies.map((movie) => 
+                        <FavoriteCard key={movie.id} movie={movie} sortedFavoriteMovies={sortedFavoriteMovies} setMovieId={setMovieId} />
+                    )
+                }
             </div>
             <CloudyTransition index={2} />
             <Footer />

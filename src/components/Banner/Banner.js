@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../styles/Banner/Banner.css'
 import castle_body from '../../assets/castle_body2.png'
 import castle_helix1 from '../../assets/castle_helix1.png'
@@ -11,38 +11,67 @@ import moving_sky_cloud1 from '../../assets/moving_sky_cloud1.png'
 import moving_sky_cloud2 from '../../assets/moving_sky_cloud2.png'
 import castle_clothes from '../../assets/castle_clothes.png'
 
+import { useDispatch, useSelector } from "react-redux";
+import { setMovies } from "../Store/Store.js";
+
+import { getTitlesTags } from '../../utils/TagHelpers';
+import { searchKeyword, filterMoviesWithSearchBar } from '../../utils/SearchHelpers';
+
+import { data } from '../../mockedData/data';
+
 
 function SearchBar() {
-    const isErrorBar = false;
+    const dispatch = useDispatch();
+    const [isErrorBar, setIsErrorBar] = useState(false);
+    let movies = useSelector((state) => state.movies);
 
-    return isErrorBar ? (
+    return (
         <div className='packageSearchBarErrorMessage'>
             <div className="searchbar searchbar_dimensions">
                 <form>
                     <p>
                         <label htmlFor="search-tool"></label>
-                        <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Find your movie" size="120" maxLength="30" />
+                        <input 
+                            type="text" 
+                            name="search-tool" 
+                            id="search-tool" 
+                            className="search-request search-request_dimensions" 
+                            placeholder="Find your movie" 
+                            size="120" 
+                            maxLength="30" 
+                            onChange={(e) => {
+                                const word = e.target.value;
+                                if(word.length>2) {
+                                    const listTitles = getTitlesTags(data);
+                                    let searchedKeywords = searchKeyword(word, listTitles);
+                                    const searchedMovies = filterMoviesWithSearchBar(data, searchedKeywords);
+                                    dispatch(setMovies(searchedMovies));
+                                    if(searchedKeywords.length === 0) {
+                                        setIsErrorBar(true);
+                                    } else{
+                                        setIsErrorBar(false);
+                                    }
+                                } else{
+                                    dispatch(setMovies(data));
+                                    setIsErrorBar(false);
+                                }
+                            }}
+                        />
                     </p>
                 </form>
                 <div className='logo-container'>
                     <HiOutlineSearch className='searchbar-logo' />
                 </div>
             </div>
-            <div className="errorMessage-container">
-                <h3 className="errorMessage">We have not found what you are looking for… please, try another word such as « castle », « neighbor », etc.</h3>
-            </div>
-        </div>
-    ) : (
-        <div className="searchbar searchbar_dimensions">
-            <form>
-                <p>
-                    <label htmlFor="search-tool"></label>
-                    <input type="text" name="search-tool" id="search-tool" className="search-request search-request_dimensions" placeholder="Find your movie" size="120" maxLength="30" />
-                </p>
-            </form>
-            <div className='logo-container'>
-                <HiOutlineSearch className='searchbar-logo' />
-            </div>
+            {
+                isErrorBar ? (
+                    <div className="errorMessage-container">
+                        <h3 className="errorMessage">We have not found what you are looking for… please, try another word such as « castle », « neighbor », etc.</h3>
+                    </div>
+                ) : (
+                    null
+                )
+            }
         </div>
     )
 }

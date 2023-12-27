@@ -6,7 +6,7 @@
 }
 .Home_dimensions {
   width: 100%;
-  height: auto;
+  height: auto !important;
 }
 
 .Home-title {
@@ -14,11 +14,13 @@
 }
 
 .main {
+  border: 1px green solid;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: none;
+  height: none !important;
 }
 
 /*ToolListing*/
@@ -49,19 +51,19 @@
 @media all and (min-width: 992px) {
   .forms_dimensions {
     width: 95%;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .forms_dimensions {
     width: 95%;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (max-width: 767px) {
   .forms_dimensions {
     width: 100%;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (min-width: 992px) {
@@ -100,19 +102,19 @@
 @media all and (min-width: 992px) {
   .listOpen-custom {
     width: 30%;
-    height: auto;
+    height: auto !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .listOpen-custom {
     width: 30%;
-    height: auto;
+    height: auto !important;
   }
 }
 @media all and (max-width: 767px) {
   .listOpen-custom {
     width: 90%;
-    height: auto;
+    height: auto !important;
   }
 }
 
@@ -127,19 +129,19 @@
 @media all and (min-width: 992px) {
   .listClose-custom {
     width: 17%;
-    height: auto;
+    height: auto !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .listClose-custom {
     width: 25%;
-    height: auto;
+    height: auto !important;
   }
 }
 @media all and (max-width: 767px) {
   .listClose-custom {
     width: 80%;
-    height: auto;
+    height: auto !important;
   }
 }
 
@@ -191,19 +193,19 @@
 @media all and (min-width: 992px) {
   .listBtn {
     width: 95%;
-    height: 40px;
+    height: 40px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .listBtn {
     width: 92%;
-    height: 40px;
+    height: 40px !important;
   }
 }
 @media all and (max-width: 767px) {
   .listBtn {
     width: 95%;
-    height: 40px;
+    height: 40px !important;
   }
 }
 @media all and (min-width: 992px) {
@@ -261,19 +263,19 @@
 @media all and (min-width: 992px) {
   .minisearchbar_dimensions {
     width: 70%;
-    height: 70px;
+    height: 70px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .minisearchbar_dimensions {
     width: 92%;
-    height: 40px;
+    height: 40px !important;
   }
 }
 @media all and (max-width: 767px) {
   .minisearchbar_dimensions {
     width: 75%;
-    height: 50px;
+    height: 50px !important;
   }
 }
 
@@ -311,19 +313,19 @@
 @media all and (min-width: 992px) {
   .minisearch-request_dimensions {
     width: 90%;
-    height: 35px;
+    height: 35px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .minisearch-request_dimensions {
     width: 82%;
-    height: 25px;
+    height: 25px !important;
   }
 }
 @media all and (max-width: 767px) {
   .minisearch-request_dimensions {
     width: 90%;
-    height: 35px;
+    height: 35px !important;
   }
 }
 
@@ -390,19 +392,19 @@
 @media all and (min-width: 992px) {
   .filterBtn {
     width: 80%;
-    height: 40px;
+    height: 40px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .filterBtn {
     width: 80%;
-    height: 40px;
+    height: 40px !important;
   }
 }
 @media all and (max-width: 767px) {
   .filterBtn {
     width: 80%;
-    height: 40px;
+    height: 40px !important;
   }
 }
 
@@ -434,6 +436,69 @@
   }
 }
 
+/* Tags */
+.tags {
+  width: 85%;
+  height: auto !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  padding-left: 2%;
+  padding-right: 2%;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3%;
+}
+
+.tag {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 40px !important;
+  border-radius: 10px;
+}
+
+.tag span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title-tag {
+  background: linear-gradient(to bottom right, #483d8b, #ff79da);
+}
+
+.director-tag {
+  background: linear-gradient(to bottom right, #191970, #00BFFF);
+}
+
+.producer-tag {
+  background: linear-gradient(to bottom right, #006400, #32CD32);
+}
+
+.tag-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
 .card-collection {
   display: grid;
   background-image: url("../../assets/backgroung_sky_resize2.png");
@@ -456,13 +521,13 @@
 @media all and (min-width: 768px) {
   .card-collection_dimensions {
     width: 92%;
-    height: auto;
+    height: auto !important;
   }
 }
 @media all and (max-width: 767px) {
   .card-collection_dimensions {
     width: 100%;
-    height: auto;
+    height: auto !important;
   }
 }
 @media all and (min-width: 992px) {

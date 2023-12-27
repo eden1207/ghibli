@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../styles/Card/Card.css'
 
 /*import { data } from '../../mockedData/data';*/
@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 //import rock_black_dust from '../../assets/rock_black_dust.png'
 import { AiFillLike, AiFillClockCircle } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
+
+import { useDispatch, useSelector } from "react-redux";
+import { setFavoriteMovies } from "../Store/Store.js";
 
 
 class Movie {
@@ -131,6 +134,11 @@ export default function Card({ data }) {
 
     const movie = new Movie(data);
 
+    let favoriteMovies = useSelector((state) => state.favoriteMovies);
+    const [isLikeSelected, setIsLikeSelected] = useState(false);
+    const dispatch = useDispatch();
+    console.log(isLikeSelected)
+
     return(
         <Link className='Card' to={'/movie/' + movie.id}>
             <div className='Card-image-border'>
@@ -143,8 +151,24 @@ export default function Card({ data }) {
                     <Stars rating={movie.score} />
                 </div>
                 <div className="card-logo card-logo_dimensions card-logo_aspect animation-like">
-                    <div className='like1'><AiFillLike /></div>
-                    <div className='like2'><AiFillLike /></div>
+                    <button 
+                        className='like1'
+                        onClick={(e) => {
+                            e.preventDefault();
+                            if(!isLikeSelected) {
+                                favoriteMovies.push(movie);
+                                setIsLikeSelected(true);
+                                dispatch(setFavoriteMovies(favoriteMovies));
+                            }
+                        }}
+                    >
+                        <AiFillLike />
+                    </button>
+                    <button 
+                        className='like2'
+                    >
+                        <AiFillLike />
+                    </button>
                 </div>
             </div>
         </Link>

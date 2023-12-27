@@ -8,7 +8,7 @@
 }
 .footer_dimensions {
   width: 100%;
-  height: auto;
+  height: auto !important;
 }
 
 .fog-container {
@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   width: 145%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: -145% !important;
   margin-left: none;
@@ -26,7 +26,7 @@
 
 .fog {
   width: 100%;
-  height: none;
+  height: none !important;
   opacity: 0.7;
 }
 
@@ -36,7 +36,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: -33% !important;
   margin-left: none;
@@ -45,13 +45,13 @@
 
 .forest {
   width: 100%;
-  height: none;
+  height: none !important;
 }
 
 .rocks {
   z-index: 2;
   width: 100%;
-  height: none;
+  height: none !important;
 }
 
 .kodamas {
@@ -60,7 +60,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: -13% !important;
   margin-left: none;
@@ -74,7 +74,7 @@
   justify-content: space-between;
   align-items: center;
   width: 5%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: -5% !important;
   margin-left: 9%;
@@ -88,14 +88,14 @@
   margin-left: none;
   margin-right: none;
   width: 95%;
-  height: none;
+  height: none !important;
   filter: brightness(0.9);
 }
 
 .kodama1-body {
   z-index: 4;
   width: 100%;
-  height: none;
+  height: none !important;
   filter: brightness(0.9);
 }
 
@@ -106,7 +106,7 @@
   justify-content: space-between;
   align-items: center;
   width: 5%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: 9% !important;
   margin-left: none;
@@ -120,14 +120,14 @@
   margin-left: none;
   margin-right: none;
   width: 75%;
-  height: none;
+  height: none !important;
   filter: brightness(0.9);
 }
 
 .kodama2-body {
   z-index: 4;
   width: 100%;
-  height: none;
+  height: none !important;
   filter: brightness(0.9);
 }
 
@@ -138,7 +138,7 @@
   justify-content: space-between;
   align-items: center;
   width: 5%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: 7% !important;
   margin-left: none;
@@ -152,14 +152,14 @@
   margin-left: none;
   margin-right: none;
   width: 100%;
-  height: none;
+  height: none !important;
   filter: brightness(0.9);
 }
 
 .kodama3-body {
   z-index: 4;
   width: 100%;
-  height: none;
+  height: none !important;
   filter: brightness(0.9);
 }
 
@@ -368,7 +368,7 @@
   justify-content: space-between;
   align-items: center;
   width: 200%;
-  height: none;
+  height: none !important;
 }
 
 .clouds-stage1 {
@@ -389,7 +389,7 @@
 
 .backgroundCloud1 {
   width: 100%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: none !important;
   margin-left: none;
@@ -398,7 +398,7 @@
 
 .backgroundCloud2 {
   width: 100%;
-  height: none;
+  height: none !important;
   margin-top: none !important;
   margin-bottom: none !important;
   margin-left: -20%;
@@ -411,7 +411,7 @@
   justify-content: space-between;
   align-items: flex-end;
   width: 200%;
-  height: none;
+  height: none !important;
 }
 
 .clouds-stage3 {
@@ -424,12 +424,12 @@
 
 .backgroundCloud3 {
   width: 100%;
-  height: none;
+  height: none !important;
 }
 
 .backgroundCloud4 {
   width: 100%;
-  height: none;
+  height: none !important;
 }
 
 .cloud-animation1 {
@@ -485,28 +485,28 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: none;
+  height: none !important;
   overflow: hidden;
 }
 
 .moving_fog1 {
   width: 200%;
-  height: none;
+  height: none !important;
 }
 
 .moving_fog2 {
   width: 250%;
-  height: none;
+  height: none !important;
 }
 
 .moving_fog3 {
   width: 250%;
-  height: none;
+  height: none !important;
 }
 
 .moving_fog4 {
   width: 270%;
-  height: none;
+  height: none !important;
 }
 
 .fog1-animation {

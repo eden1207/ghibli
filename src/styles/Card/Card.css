@@ -11,7 +11,7 @@
   cursor: pointer;
   box-shadow: 5px 5px 20px black;
   width: 90%;
-  height: none;
+  height: none !important;
   text-decoration: none;
 }
 @media all and (min-width: 992px) {
@@ -47,25 +47,25 @@
 @media all and (min-width: 992px) {
   .Card-image-border {
     width: 50%;
-    height: 250px;
+    height: 250px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Card-image-border {
     width: 60%;
-    height: 250px;
+    height: 250px !important;
   }
 }
 @media all and (min-width: 301px) and (max-width: 767px) {
   .Card-image-border {
     width: 40%;
-    height: 160px;
+    height: 160px !important;
   }
 }
 @media all and (max-width: 300px) {
   .Card-image-border {
     width: 40%;
-    height: 150px;
+    height: 150px !important;
   }
 }
 
@@ -77,25 +77,25 @@
 @media all and (min-width: 992px) {
   .Card-image {
     width: 170px;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Card-image {
     width: 170px;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (min-width: 301px) and (max-width: 767px) {
   .Card-image {
     width: 110px;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (max-width: 300px) {
   .Card-image {
     width: 100px;
-    height: none;
+    height: none !important;
   }
 }
 
@@ -109,25 +109,25 @@
 @media all and (min-width: 992px) {
   .Card-text {
     width: 45%;
-    height: 245px;
+    height: 245px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Card-text {
     width: 45%;
-    height: 235px;
+    height: 235px !important;
   }
 }
 @media all and (min-width: 301px) and (max-width: 767px) {
   .Card-text {
     width: 55%;
-    height: 150px;
+    height: 150px !important;
   }
 }
 @media all and (max-width: 301px) {
   .Card-text {
     width: 60%;
-    height: 140px;
+    height: 140px !important;
   }
 }
 
@@ -148,19 +148,19 @@
 @media all and (min-width: 992px) {
   .starline {
     width: 120px;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .starline {
     width: 115px;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (max-width: 767px) {
   .starline {
     width: 105px;
-    height: none;
+    height: none !important;
   }
 }
 
@@ -233,7 +233,7 @@
   justify-content: flex-end;
   align-items: center;
   width: 90%;
-  height: none;
+  height: none !important;
 }
 
 .Card-title {
@@ -242,7 +242,7 @@
   justify-content: space-between;
   align-items: flex-start;
   width: none;
-  height: 170px;
+  height: 170px !important;
   margin-top: none !important;
   margin-bottom: 10px !important;
   margin-left: none;
@@ -314,7 +314,7 @@
 @media all and (min-width: 992px) {
   .card-logo_dimensions {
     width: 35px;
-    height: 35px;
+    height: 35px !important;
     margin-top: none !important;
     margin-bottom: none !important;
     margin-left: 70%;
@@ -324,7 +324,7 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .card-logo_dimensions {
     width: 35px;
-    height: 35px;
+    height: 35px !important;
     margin-top: none !important;
     margin-bottom: none !important;
     margin-left: 70%;
@@ -334,7 +334,7 @@
 @media all and (max-width: 767px) {
   .card-logo_dimensions {
     width: 30px;
-    height: 30px;
+    height: 30px !important;
     margin-top: none !important;
     margin-bottom: none !important;
     margin-left: 70%;

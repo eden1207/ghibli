@@ -9,45 +9,45 @@
 @media all and (min-width: 992px) {
   .Banner {
     width: 100%;
-    height: 1200px;
+    height: 1200px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .Banner {
     width: 100%;
-    height: 1000px;
+    height: 1000px !important;
   }
 }
 @media all and (max-width: 767px) {
   .Banner {
     width: 100%;
-    height: 850px;
+    height: 850px !important;
   }
 }
 
 @media all and (min-width: 992px) {
   .castlebody {
     width: 700px;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .castlebody {
     width: 450px;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (max-width: 767px) {
   .castlebody {
     width: 250px;
-    height: none;
+    height: none !important;
   }
 }
 
 @media all and (min-width: 992px) {
   .castlehelix1 {
     width: 70px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 38px !important;
     margin-left: -245px;
@@ -57,7 +57,7 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .castlehelix1 {
     width: 50px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 24px !important;
     margin-left: -160px;
@@ -67,7 +67,7 @@
 @media all and (max-width: 767px) {
   .castlehelix1 {
     width: 28px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 13px !important;
     margin-left: -89px;
@@ -78,7 +78,7 @@
 @media all and (min-width: 992px) {
   .castlehelix2 {
     width: 18px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 94px !important;
     margin-left: -68px;
@@ -88,7 +88,7 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .castlehelix2 {
     width: 12px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 61px !important;
     margin-left: -47px;
@@ -98,7 +98,7 @@
 @media all and (max-width: 767px) {
   .castlehelix2 {
     width: 7px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 34px !important;
     margin-left: -26px;
@@ -109,7 +109,7 @@
 @media all and (min-width: 992px) {
   .castleflag {
     width: 20px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 372px !important;
     margin-left: -210px;
@@ -119,7 +119,7 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .castleflag {
     width: 15px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 238px !important;
     margin-left: -134px;
@@ -129,7 +129,7 @@
 @media all and (max-width: 767px) {
   .castleflag {
     width: 10px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 133px !important;
     margin-left: -76px;
@@ -140,7 +140,7 @@
 @media all and (min-width: 992px) {
   .castleclothes {
     width: 75px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 202px !important;
     margin-left: 148px;
@@ -150,7 +150,7 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .castleclothes {
     width: 48px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 128px !important;
     margin-left: 93px;
@@ -160,7 +160,7 @@
 @media all and (max-width: 767px) {
   .castleclothes {
     width: 28px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: 68px !important;
     margin-left: 48px;
@@ -174,7 +174,7 @@
 @media all and (min-width: 1192px) {
   .castle-content {
     width: 890px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: -65% !important;
     margin-left: none;
@@ -184,7 +184,7 @@
 @media all and (min-width: 992px) and (max-width: 1191px) {
   .castle-content {
     width: 890px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: -105% !important;
     margin-left: none;
@@ -194,7 +194,7 @@
 @media all and (min-width: 768px) and (max-width: 991px) {
   .castle-content {
     width: 690px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: -115% !important;
     margin-left: none;
@@ -204,7 +204,7 @@
 @media all and (min-width: 630px) and (max-width: 767px) {
   .castle-content {
     width: 390px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: -5% !important;
     margin-left: none;
@@ -214,7 +214,7 @@
 @media all and (min-width: 461px) and (max-width: 629px) {
   .castle-content {
     width: 390px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: -55% !important;
     margin-left: none;
@@ -224,7 +224,7 @@
 @media all and (min-width: 301px) and (max-width: 460px) {
   .castle-content {
     width: 390px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: -155% !important;
     margin-left: none;
@@ -234,7 +234,7 @@
 @media all and (max-width: 300px) {
   .castle-content {
     width: 390px;
-    height: none;
+    height: none !important;
     margin-top: none !important;
     margin-bottom: -250% !important;
     margin-left: none;
@@ -357,19 +357,19 @@
 @media all and (min-width: 992px) {
   .sky-cloud-background {
     width: 100%;
-    height: 1900px;
+    height: 1900px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .sky-cloud-background {
     width: 100%;
-    height: 1500px;
+    height: 1500px !important;
   }
 }
 @media all and (max-width: 767px) {
   .sky-cloud-background {
     width: 120%;
-    height: 900px;
+    height: 900px !important;
   }
 }
 
@@ -402,7 +402,7 @@
 .moving-cloud1 {
   z-index: 4;
   width: 60%;
-  height: none;
+  height: none !important;
   /*@include margin-package(none, -5px, none, -70%);*/
   /*border: 1px yellow solid;*/
   opacity: 0.45;
@@ -443,7 +443,7 @@
 .moving-cloud2 {
   z-index: 1;
   width: 20%;
-  height: none;
+  height: none !important;
   /*border: 1px blue solid;*/
   /*@include margin-package(none, -50px, none, -70%);*/
   opacity: 0.75;
@@ -484,7 +484,7 @@
 .moving-cloud3 {
   z-index: 1;
   width: 60%;
-  height: none;
+  height: none !important;
   /*border: 1px green solid;*/
   /*@include margin-package(none, -450px, none, none);*/
   opacity: 0.55;
@@ -525,7 +525,7 @@
 .moving-cloud4 {
   z-index: 4;
   width: 80%;
-  height: none;
+  height: none !important;
   /*border: 1px red solid;*/
   opacity: 0.55;
 }
@@ -571,7 +571,7 @@
   /*margin-bottom: -1350px;*/
   /*@include dimensions(100%, 900px);*/
   width: 100%;
-  height: 120%;
+  height: 120% !important;
   /*border: 1px green solid;*/
 }
 @media all and (min-width: 1192px) {
@@ -687,13 +687,13 @@
 @media all and (min-width: 768px) {
   .searchbar_dimensions {
     width: 70%;
-    height: 70px;
+    height: 70px !important;
   }
 }
 @media all and (max-width: 767px) {
   .searchbar_dimensions {
     width: 85%;
-    height: 50px;
+    height: 50px !important;
   }
 }
 
@@ -745,19 +745,19 @@
 @media all and (min-width: 992px) {
   .search-request_dimensions {
     width: 90%;
-    height: 45px;
+    height: 45px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .search-request_dimensions {
     width: 82%;
-    height: 45px;
+    height: 45px !important;
   }
 }
 @media all and (max-width: 767px) {
   .search-request_dimensions {
     width: 80%;
-    height: 30px;
+    height: 30px !important;
   }
 }
 
@@ -848,19 +848,19 @@
 @media all and (min-width: 992px) {
   .errorMessage-container {
     width: 100%;
-    height: 35px;
+    height: 35px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .errorMessage-container {
     width: 70%;
-    height: 30px;
+    height: 30px !important;
   }
 }
 @media all and (max-width: 767px) {
   .errorMessage-container {
     width: 80%;
-    height: 30px;
+    height: 30px !important;
   }
 }
 @media all and (min-width: 992px) {

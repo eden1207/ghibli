@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 200px;
+  height: 200px !important;
   background: linear-gradient(to bottom right, #0590D5, #06455E);
   margin-top: none !important;
   margin-bottom: -200px !important;
@@ -26,7 +26,7 @@
 @media all and (min-width: 768px) {
   .logo-ghibli {
     width: none;
-    height: 150px;
+    height: 150px !important;
     margin-top: none !important;
     margin-bottom: none !important;
     margin-left: 2%;
@@ -36,7 +36,7 @@
 @media all and (max-width: 767px) {
   .logo-ghibli {
     width: none;
-    height: 130px;
+    height: 130px !important;
     margin-top: none !important;
     margin-bottom: none !important;
     margin-left: none;
@@ -68,13 +68,13 @@
 @media all and (min-width: 768px) {
   .navigation_dimensions {
     width: 40%;
-    height: none;
+    height: none !important;
   }
 }
 @media all and (max-width: 767px) {
   .navigation_dimensions {
     width: 80%;
-    height: none;
+    height: none !important;
   }
 }
 
