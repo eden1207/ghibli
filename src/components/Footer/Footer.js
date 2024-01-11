@@ -4,10 +4,6 @@ import forest from '../../assets/forest.jpg'
 import fog from '../../assets/fog.png'
 import rocks from '../../assets/rocks.png'
 
-//import backgroung_cloud from '../../assets/backgroung_cloud.png'
-//import backgroung_cloud2 from '../../assets/backgroung_cloud_test5.png'
-//import backgroung_cloud2bis from '../../assets/backgroung_cloud_test6.png'
-
 import moving_fog1 from '../../assets/moving_fog1.png'
 
 
@@ -22,18 +18,6 @@ import kodama3_body from '../../assets/kodama3_body.png'
 
 import './styles/Footer.css'
 
-/*
-
-            <div className='backgroundClouds clouds-stage1'>
-                <img src={backgroung_cloud} className='backgroundCloud1' alt='backgroung cloud' />
-                <img src={backgroung_cloud} className='backgroundCloud2' alt='backgroung cloud' />
-            </div>
-            <div className='backgroundClouds clouds-stage2'>
-                <img src={backgroung_cloud} className='backgroundCloud1' alt='backgroung cloud' />
-                <img src={backgroung_cloud} className='backgroundCloud2' alt='backgroung cloud' />
-            </div>
-
- */
 
 
 export default function Footer() {
@@ -69,10 +53,3 @@ export default function Footer() {
         </footer>
     )
 }
-
-/**
- *             <div className='backgroundClouds2 clouds-stage3'>
-                <img src={backgroung_cloud2} className='backgroundCloud3 cloud-animation1' alt='backgroung cloud' />
-                <img src={backgroung_cloud2bis} className='backgroundCloud4 cloud-animation2' alt='backgroung cloud' />
-            </div>
- */

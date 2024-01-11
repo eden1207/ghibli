@@ -174,6 +174,8 @@
     font-family: "EB Garamond", serif;
     font-size: 22px;
     font-weight: normal;
+    width: 95%;
+    height: 40px !important;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -181,52 +183,17 @@
     font-family: "EB Garamond", serif;
     font-size: 20px;
     font-weight: normal;
-  }
-}
-@media all and (max-width: 767px) {
-  .listBtn {
-    font-family: "EB Garamond", serif;
-    font-size: 18px;
-    font-weight: normal;
-  }
-}
-@media all and (min-width: 992px) {
-  .listBtn {
-    width: 95%;
-    height: 40px !important;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .listBtn {
     width: 92%;
     height: 40px !important;
   }
 }
 @media all and (max-width: 767px) {
   .listBtn {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: normal;
     width: 95%;
     height: 40px !important;
-  }
-}
-@media all and (min-width: 992px) {
-  .listBtn {
-    font-family: "EB Garamond", serif;
-    font-size: 20px;
-    font-weight: normal;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .listBtn {
-    font-family: "EB Garamond", serif;
-    font-size: 18px;
-    font-weight: normal;
-  }
-}
-@media all and (max-width: 767px) {
-  .listBtn {
-    font-family: "EB Garamond", serif;
-    font-size: 18px;
-    font-weight: normal;
   }
 }
 
@@ -499,6 +466,7 @@
   background-color: transparent;
 }
 
+/* Cards */
 .card-collection {
   display: grid;
   background-image: url("../../../assets/backgroung_sky_resize2.png");

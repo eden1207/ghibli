@@ -125,32 +125,15 @@
 
     @media all and (min-width: 992px) {
         @include syntaxe-garamond(22px, normal);
-    }
-    @media all and (min-width: 768px) and (max-width: 991px) {
-        @include syntaxe-garamond(20px, normal);
-    }
-    @media all and (max-width: 767px) {
-        @include syntaxe-garamond(18px, normal);
-    }
-
-    @media all and (min-width: 992px) {
         @include dimensions(95%, 40px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(20px, normal);
         @include dimensions(92%, 40px);
     }
     @media all and (max-width: 767px) {
+        @include syntaxe-garamond(18px, normal);
         @include dimensions(95%, 40px);
-    }
-
-    @media all and (min-width: 992px) {
-        @include syntaxe-garamond(20px, normal);
-    }
-    @media all and (min-width: 768px) and (max-width: 991px) {
-        @include syntaxe-garamond(18px, normal);
-    }
-    @media all and (max-width: 767px) {
-        @include syntaxe-garamond(18px, normal);
     }
     border: none;
     cursor: pointer;
@@ -277,8 +260,6 @@
     }
 }
 
-
-
 /* Tags */
 
 .tags {
@@ -332,9 +313,7 @@
 }
 
 
-
-
-
+/* Cards */
 
 .card-collection{
     display: grid;

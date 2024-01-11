@@ -8,16 +8,6 @@ import { data } from '../../mockedData/data';
 
 import { useParams } from 'react-router-dom';
 
-/*const index = 5;
-const movieBanner = data[index].movie_banner;
-const title = data[index].title;
-const originalTitle = data[index].original_title;
-const director = data[index].director;
-const producer = data[index].producer;
-const year = data[index].release_date;
-const duration = data[index].running_time;
-const description = data[index].description;*/
-
 
 export default function MoviePage() {
 
@@ -30,7 +20,7 @@ export default function MoviePage() {
             }
         }
     }
-    /*const index = 5;*/
+    
     const index = giveMovieData(id, data);
     const movieBanner = data[index].movie_banner;
     const title = data[index].title;

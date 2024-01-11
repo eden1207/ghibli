@@ -131,14 +131,6 @@
   }
 }
 
-/*.black-dust{
-    @include dimensions(30px, auto);
-}*/
-/*.black-dust-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}*/
 .starline {
   display: flex;
   justify-content: space-between;
@@ -170,7 +162,6 @@
   align-items: center;
   text-decoration: none;
   color: #03222E;
-  /*color: linear-gradient(to bottom right, #03222E, #0085C2);*/
 }
 @media all and (min-width: 992px) {
   .gray-star {
@@ -304,119 +295,153 @@
   }
 }
 
-/*Partie à modifier lors du travail sur les cartes*/
-.card-logo {
-  /*display: flex;*/
-  /*justify-content: flex-end;*/
-  /*align-items: flex-end;*/
-  text-align: right;
+/* Gestion du like */
+.likebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  margin-left: 70%;
+  margin-right: none;
 }
 @media all and (min-width: 992px) {
-  .card-logo_dimensions {
+  .likebtn {
     width: 35px;
     height: 35px !important;
-    margin-top: none !important;
-    margin-bottom: none !important;
-    margin-left: 70%;
-    margin-right: none;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .card-logo_dimensions {
-    width: 35px;
-    height: 35px !important;
-    margin-top: none !important;
-    margin-bottom: none !important;
-    margin-left: 70%;
-    margin-right: none;
+  .likebtn {
+    width: 32px;
+    height: 32px !important;
   }
 }
 @media all and (max-width: 767px) {
-  .card-logo_dimensions {
+  .likebtn {
     width: 30px;
     height: 30px !important;
-    margin-top: none !important;
-    margin-bottom: none !important;
-    margin-left: 70%;
-    margin-right: none;
   }
 }
-.card-logo_aspect {
-  /*font-size: 24px;
-  font-style: normal;*/
-  color: black;
-}
-
-.animation-like {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-}
-.animation-like:hover > .like1 {
-  opacity: 1;
-}
-.animation-like:hover > .like2 {
-  opacity: 0;
-}
-
-.like1 {
-  position: absolute;
-  z-index: 2;
+.likebtn:hover > .like {
+  scale: 1.2;
   color: #00BFFF;
-  -webkit-background-clip: text;
-          background-clip: text; /* Couleur du texte, ici le logo */
-  /*color: transparent;*/ /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
-  opacity: 0;
-  transition: all 550ms;
-}
-@media all and (min-width: 992px) {
-  .like1 {
-    font-family: "EB Garamond", serif;
-    font-size: 26px;
-    font-weight: normal;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .like1 {
-    font-family: "EB Garamond", serif;
-    font-size: 26px;
-    font-weight: normal;
-  }
-}
-@media all and (max-width: 767px) {
-  .like1 {
-    font-family: "EB Garamond", serif;
-    font-size: 24px;
-    font-weight: normal;
-  }
 }
 
-.like2 {
-  position: absolute;
-  z-index: 1;
+.like {
+  transition: all 250ms;
   color: #03222E;
-  opacity: 1;
-  transition: all 550ms;
 }
 @media all and (min-width: 992px) {
-  .like2 {
+  .like {
     font-family: "EB Garamond", serif;
     font-size: 24px;
     font-weight: normal;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .like2 {
+  .like {
     font-family: "EB Garamond", serif;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: normal;
   }
 }
 @media all and (max-width: 767px) {
-  .like2 {
+  .like {
     font-family: "EB Garamond", serif;
     font-size: 22px;
     font-weight: normal;
+  }
+}
+
+.liked {
+  animation: like-nodding 2800ms linear;
+  color: #00BFFF;
+}
+@media all and (min-width: 992px) {
+  .liked {
+    font-family: "EB Garamond", serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .liked {
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .liked {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+
+@keyframes like-nodding {
+  0% {
+    transform: rotate(0deg);
+    scale: 1;
+  }
+  6% {
+    transform: rotate(15deg);
+  }
+  12% {
+    transform: rotate(45deg);
+  }
+  28% {
+    transform: rotate(80deg);
+    scale: 1.2;
+  }
+  29% {
+    transform: rotate(-80deg);
+    scale: 1.2;
+  }
+  30% {
+    transform: rotate(80deg);
+    scale: 1.2;
+  }
+  31% {
+    transform: rotate(-80deg);
+    scale: 1.2;
+  }
+  32% {
+    transform: rotate(80deg);
+    scale: 1.2;
+  }
+  33% {
+    transform: rotate(-80deg);
+    scale: 1.2;
+  }
+  34% {
+    transform: rotate(80deg);
+    scale: 1.2;
+  }
+  35% {
+    transform: rotate(-80deg);
+    scale: 1.2;
+  }
+  36% {
+    transform: rotate(80deg);
+    scale: 1.2;
+  }
+  37% {
+    transform: rotate(-80deg);
+    scale: 1.2;
+  }
+  42% {
+    transform: rotate(40deg);
+  }
+  47% {
+    transform: rotate(35deg);
+  }
+  50% {
+    transform: rotate(0deg);
+    scale: 1;
   }
 }/*# sourceMappingURL=Card.css.map */

@@ -86,16 +86,6 @@ $rose:#ff79da;
     text-align: left;
 }
 
-/*.black-dust{
-    @include dimensions(30px, auto);
-}*/
-
-/*.black-dust-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}*/
-
 .starline{
     display: flex;
     justify-content: space-between;
@@ -127,7 +117,6 @@ $rose:#ff79da;
         @include syntaxe-garamond(15px, normal);
     }
     color: #03222E;
-    /*color: linear-gradient(to bottom right, #03222E, #0085C2);*/
 }
 
 .orange-star{
@@ -200,78 +189,93 @@ $rose:#ff79da;
 }
 
 
-/*Partie à modifier lors du travail sur les cartes*/
-.card-logo {
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
-    /*align-items: flex-end;*/
-    text-align: right;
-    &_dimensions{
-        @media all and (min-width: 992px) {
-            @include dimensions(35px, 35px);
-            @include margin-package(none, none, 70%, none);
-        }
-        @media all and (min-width: 768px) and (max-width: 991px) {
-            @include dimensions(35px, 35px);
-            @include margin-package(none, none, 70%, none);
-        }
-        @media all and (max-width: 767px) {
-            @include dimensions(30px, 30px);
-            @include margin-package(none, none, 70%, none);
-        }
-    }
-    &_aspect{
-        /*font-size: 24px;
-        font-style: normal;*/
-        color: black;
-    }
-}
+/* Gestion du like */
 
-.animation-like{
+.likebtn {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    &:hover >.like1{
-      opacity: 1;
-    }
-    &:hover >.like2{
-      opacity: 0;
-    }
-}
-
-.like1{
-    position: absolute;
-    z-index: 2;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    @include margin-package(none, none, 70%, none);
     @media all and (min-width: 992px) {
-        @include syntaxe-garamond(26px, normal);
+        @include dimensions(35px, 35px);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include syntaxe-garamond(26px, normal);
+        @include dimensions(32px, 32px);
     }
     @media all and (max-width: 767px) {
-        @include syntaxe-garamond(24px, normal);
+        @include dimensions(30px, 30px);
     }
-    color: #00BFFF;
-    background-clip: text; /* Couleur du texte, ici le logo */
-    /*color: transparent;*/ /* le texte, ici le logo, n'est plus noir mais transparent pour laisser place à l'autre couleur */
-    opacity: 0;
-    transition: all 550ms;
+    &:hover >.like{
+        scale: (1.2);
+        color: #00BFFF;
+    }
 }
 
-.like2{
-    position: absolute;
-    z-index: 1;
+.like {
+    transition: all 250ms;
+    color: #03222E;
     @media all and (min-width: 992px) {
         @include syntaxe-garamond(24px, normal);
     }
     @media all and (min-width: 768px) and (max-width: 991px) {
-        @include syntaxe-garamond(24px, normal);
+        @include syntaxe-garamond(23px, normal);
     }
     @media all and (max-width: 767px) {
         @include syntaxe-garamond(22px, normal);
     }
-    color: #03222E;
-    opacity: 1;
-    transition: all 550ms;
+}
+
+.liked {
+    animation: like-nodding 2800ms linear;
+    color: #00BFFF;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(26px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(25px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+}
+
+@keyframes like-nodding {
+
+    0%   { 
+        transform: rotate(0deg);
+        scale: 1; 
+    }
+    6% { 
+        transform: rotate(15deg); 
+    }
+    12% { 
+        transform: rotate(45deg); 
+    }
+
+    $i:14%;
+    @for $i from 14% through 18%{
+        #{2*$i}{
+            transform: rotate(80deg);
+            scale: 1.2;
+        }
+
+        #{2*$i+1}{
+            transform: rotate(-80deg);
+            scale: 1.2;
+        }
+    }
+
+    42% { 
+        transform: rotate(40deg); 
+    }
+    47% { 
+        transform: rotate(35deg); 
+    }
+    50% { 
+        transform: rotate(0deg); 
+        scale: 1;
+    } 
 }

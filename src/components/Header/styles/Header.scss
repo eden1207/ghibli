@@ -1,12 +1,12 @@
 @import "../../../Mixins/Mixin";
 
 .Header{
-    z-index: 5;
+    z-index: 7;
     display: flex;
     align-items: center;
-    @include dimensions(100%, 200px);
     background: linear-gradient(to bottom right, #0590D5, #06455E);
-    @include margin-package(none, -200px, none, none);
+    position: fixed;
+    top: 0px;
     box-shadow: 0px 1px 20px black;
     @media all and (min-width: 768px) {
         justify-content: space-between;
@@ -17,14 +17,42 @@
     }
 }
 
+.high-header {
+    transition: all 600ms;
+    @include dimensions(100%, 200px);
+}
+
+.small-header {
+    transition: all 600ms;
+    @include dimensions(100%, 120px);
+}
+
 .logo-ghibli{
     @media all and (min-width: 768px) {
-        @include dimensions(none, 150px);
         @include margin-package(none, none, 2%, none);
     }
     @media all and (max-width: 767px) {
-        @include dimensions(none, 130px);
         @include margin-package(none, none, none, none);
+    }
+}
+
+.high-logo {
+    transition: all 600ms;
+    @media all and (min-width: 768px) {
+        @include dimensions(none, 150px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(none, 130px);
+    }
+}
+
+.small-logo {
+    transition: all 600ms;
+    @media all and (min-width: 768px) {
+        @include dimensions(none, 100px);
+    }
+    @media all and (max-width: 767px) {
+        @include dimensions(none, 80px);
     }
 }
 

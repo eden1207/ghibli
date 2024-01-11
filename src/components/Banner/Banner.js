@@ -1,29 +1,38 @@
 import React, { useState } from 'react'
+
+// Styles
 import './styles/Banner.css'
+
+// Assets
 import castle_body from '../../assets/castle_body2.png'
 import castle_helix1 from '../../assets/castle_helix1.png'
 import castle_helix2 from '../../assets/castle_helix2.png'
 import castle_flag from '../../assets/castle_flag.png'
-
-import { HiOutlineSearch } from "react-icons/hi";
 import sky_cloud_background from '../../assets/sky_cloud_background.png'
 import moving_sky_cloud1 from '../../assets/moving_sky_cloud1.png'
 import moving_sky_cloud2 from '../../assets/moving_sky_cloud2.png'
 import castle_clothes from '../../assets/castle_clothes.png'
 
-import { useDispatch, useSelector } from "react-redux";
-import { setMovies } from "../Store/Store.js";
+// Icons
+import { HiOutlineSearch } from "react-icons/hi";
 
+// Store
+// Rajout de useSelector en enlevant data...
+import { useDispatch } from "react-redux";
+//import { useDispatch, useSelector } from "react-redux";
+import { setMovies } from "../Store/Store.js";
+import { data } from '../../mockedData/data';
+
+// Research functionnalities
 import { getTitlesTags } from '../../utils/TagHelpers';
 import { searchKeyword, filterMoviesWithSearchBar } from '../../utils/SearchHelpers';
-
-import { data } from '../../mockedData/data';
 
 
 function SearchBar() {
     const dispatch = useDispatch();
     const [isErrorBar, setIsErrorBar] = useState(false);
-    let movies = useSelector((state) => state.movies);
+    // Voir pour remplacer par mockedData
+    //let movies = useSelector((state) => state.movies);
 
     return (
         <div className='packageSearchBarErrorMessage'>

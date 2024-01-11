@@ -1,68 +1,22 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+
+// Styles
 import './styles/Card.css'
 
-/*import { data } from '../../mockedData/data';*/
-import { Link } from 'react-router-dom';
-//import star_black_dust from '../../assets/star_black_dust.png'
-//import rock_black_dust from '../../assets/rock_black_dust.png'
+// Icons
 import { AiFillLike, AiFillClockCircle } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
 
+// Store
 import { useDispatch, useSelector } from "react-redux";
 import { setFavoriteMovies } from "../Store/Store.js";
 
-
-class Movie {
-    constructor(data) {
-      this._data = data
-    }
-  
-    get id() {
-      return this._data.id
-    }
-  
-    get description() {
-      return this._data.description
-    }
-  
-    get director() {
-      return this._data.director
-    }
-  
-    get image() {
-      return this._data.image
-    }
-
-    get banner() {
-        return this._data.movie_banner
-    }
-
-    get originalTitle() {
-        return this._data.original_title
-    }
-
-    get producer() {
-        return this._data.producer
-    }
-
-    get score() {
-        return this._data.rt_score
-    }
-
-    get duration() {
-        return this._data.running_time
-    }
-
-    get year() {
-        return this._data.release_date
-    }
-
-    get title() {
-        return this._data.title
-    }
-}
+// Constructor Pattern
+import { Movie } from '../../utils/Movie';
 
 
+/** Function to give the number of colored stars as function of the movie rating */
 function giveRating(rate) {
     if(0<=rate && rate<19) {
         return 1
@@ -79,15 +33,17 @@ function giveRating(rate) {
     }
 }
 
+/** Component to display the rating stars */
 function Stars({ rating }) {
-
     const number  = giveRating(rating);
 
-    const colorList = ['gray', 'gray', 'gray', 'gray', 'gray'];
-
-    for(let i=0; i<number; i++) {
-        colorList[i] = 'orange';
-    }
+    /**
+     * Create an arraw of 5 element 'gray'. We transform the first 'orange' in 'gray' as function
+     * of the rating value
+     */
+    const colorList = Array.from({ length: 5 }, (_, index) =>
+        index < number ? 'orange' : 'gray'
+    );
 
     return (
         <div className='starline'>
@@ -96,49 +52,15 @@ function Stars({ rating }) {
     )
 } 
 
-
-/*function StateBlackDust({ state }) {
-
-    return state ? (
-        <div className='black-dust-group'>
-            <img src={star_black_dust} alt="star_black_dust" className='black-dust' />
-        </div>
-    ) : (
-        <div className='black-dust-group'>
-            <img src={rock_black_dust} alt="rock_black_dust" className='black-dust' />
-        </div>
-    )
-}*/
-
-
-/*function BlackDust({ rating }) {
-
-    const number  = giveRating(rating);
-
-    const blackDustState = [false, false, false, false, false];
-
-    for(let i=0; i<number; i++) {
-        blackDustState[i] = true;
-    }
-
-    return(
-        <div className='black-dust-group'>
-            {blackDustState.map((state, index) => <StateBlackDust key={`'state'-${index}`} state={state} />)}
-        </div>
-    )
-}*/
-
-
-
+/**
+ * Component to display a movie card
+ */
 export default function Card({ data }) {
-
     const movie = new Movie(data);
-
     let favoriteMovies = useSelector((state) => state.favoriteMovies);
     const [isLikeSelected, setIsLikeSelected] = useState(false);
     const dispatch = useDispatch();
-    console.log(isLikeSelected)
-
+    const likedMovieIds = useSelector((state) => state.likedMovieIds);
     return(
         <Link className='Card' to={'/movie/' + movie.id}>
             <div className='Card-image-border'>
@@ -150,32 +72,23 @@ export default function Card({ data }) {
                     <p className='Card-title2'><AiFillClockCircle className='clock-symbol'/> {movie.duration}min</p>
                     <Stars rating={movie.score} />
                 </div>
-                <div className="card-logo card-logo_dimensions card-logo_aspect animation-like">
-                    <button 
-                        className='like1'
-                        onClick={(e) => {
-                            e.preventDefault();
-                            if(!isLikeSelected) {
-                                favoriteMovies.push(movie);
-                                setIsLikeSelected(true);
-                                dispatch(setFavoriteMovies(favoriteMovies));
-                            }
-                        }}
-                    >
+
+                <button
+                    className='likebtn'
+                    onClick={(e) => {
+                        e.preventDefault();
+                        if(!isLikeSelected && !likedMovieIds.includes(movie.id)) {
+                            // Immutabilité
+                            dispatch(setFavoriteMovies([...favoriteMovies, movie]));
+                            setIsLikeSelected(true);
+                        }
+                    }}
+                >
+                    <p className={`${isLikeSelected || likedMovieIds.includes(movie.id) ? 'liked' : 'like'}`}>
                         <AiFillLike />
-                    </button>
-                    <button 
-                        className='like2'
-                    >
-                        <AiFillLike />
-                    </button>
-                </div>
+                    </p>
+                </button>
             </div>
         </Link>
     )
 }
-
-
-/*
-<div className='heart'><AiFillHeart className='heart-style' /></div>
- */
