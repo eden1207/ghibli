@@ -257,7 +257,7 @@ export default function Home() {
 
                 <div className='card-collection card-collection_dimensions card-collection_border card-collection_gap'>
                     {movies.map((data) => 
-                        <Card key={data.id} data={data} />
+                        <Card data-testid={"mock-card"} key={data.id} data={data} />
                     )}
                 </div>
             </main>

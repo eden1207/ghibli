@@ -23,6 +23,7 @@ export default function Header() {
     });
     return(
         <header 
+            data-testid="header-component"
             className={`Header ${isSmallHeader ? 'small-header' : 'high-header'}`}
         >
             <img 

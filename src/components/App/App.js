@@ -9,8 +9,8 @@ import ErrorPage from '../ErrorPage/ErrorPage.js';
 
 function App() {
   return (
-    <div className="App">
-      <ScrollToTop />
+    <div className="App" data-testid="app-component">
+      <ScrollToTop data-testid="scrolled-element" />
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path='/about' element={<About />} />

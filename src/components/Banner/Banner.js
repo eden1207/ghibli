@@ -87,7 +87,10 @@ function SearchBar() {
 
 export default function Banner() {
     return(
-        <div className='Banner'>
+        <div 
+            data-testid="banner-component"
+            className='Banner'
+        >
             <div className='castle-content castle-translation'>
                 <img src={castle_body} className='castlebody' alt='castle body' />
                 <img src={castle_helix1} className='castlehelix1 castle-helix-rotation1' alt='castle helix 1' />

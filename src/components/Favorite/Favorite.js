@@ -43,7 +43,10 @@ export default function Favorite() {
         dispatch(setFavoriteMovies(favoriteMovies.filter((movie) => movie.id !== movieId)));
     };
     return(
-        <div className='Favorite Favorite_dimensions'>
+        <div 
+            data-testid="favorite-component"
+            className='Favorite Favorite_dimensions'
+        >
             <Header />
             <CloudyTransition index={1} />
             <div className='favorite-list'>

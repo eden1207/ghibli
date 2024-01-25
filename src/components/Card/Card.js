@@ -47,7 +47,15 @@ function Stars({ rating }) {
 
     return (
         <div className='starline'>
-            {colorList.map((color, index) => <FaStar key={`${color}-${index}`} className={color + '-star'} />)}
+            {
+                colorList.map((color, index) => 
+                    <FaStar 
+                        key={`${color}-${index}`} 
+                        data-testid={'star-icon'}
+                        className={color + '-star'} 
+                    />
+                )
+            }
         </div>
     )
 } 
@@ -62,7 +70,11 @@ export default function Card({ data }) {
     const dispatch = useDispatch();
     const likedMovieIds = useSelector((state) => state.likedMovieIds);
     return(
-        <Link className='Card' to={'/movie/' + movie.id}>
+        <Link 
+            data-testid="mock-card"
+            className='Card' 
+            to={'/movie/' + movie.id}
+        >
             <div className='Card-image-border'>
                 <img src={movie.image} alt={movie.image} className='Card-image' />
             </div>
@@ -74,6 +86,7 @@ export default function Card({ data }) {
                 </div>
 
                 <button
+                    aria-label='like'
                     className='likebtn'
                     onClick={(e) => {
                         e.preventDefault();
