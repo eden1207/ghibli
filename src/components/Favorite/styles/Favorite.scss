@@ -29,6 +29,20 @@
     @include padding-package(350px, 100px, none, none);
 }
 
+.favorite-list h3{
+    z-index: 5;
+    @media all and (min-width: 992px) {
+        @include syntaxe-garamond(32px, normal);
+    }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+        @include syntaxe-garamond(28px, normal);
+    }
+    @media all and (max-width: 767px) {
+        @include syntaxe-garamond(24px, normal);
+    }
+    color: black;
+}
+
 .favorite-card{
     z-index: 5;
     display: flex;

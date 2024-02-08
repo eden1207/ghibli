@@ -38,6 +38,32 @@
   }
 }
 
+.favorite-list h3 {
+  z-index: 5;
+  color: black;
+}
+@media all and (min-width: 992px) {
+  .favorite-list h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 32px;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .favorite-list h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 28px;
+    font-weight: normal;
+  }
+}
+@media all and (max-width: 767px) {
+  .favorite-list h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+
 .favorite-card {
   z-index: 5;
   display: flex;

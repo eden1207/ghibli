@@ -42,17 +42,6 @@ const mockMovie = {
     "url": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
 };
 
-// We mock the store
-const mockStore = configureStore();
-const initialState = {
-    isFormOpen: false,
-    movies: data,
-    favoriteMovies: [],
-    likedMovieIds: [],
-    likedMoviesCount: 0,
-};
-const store = mockStore(initialState);
-
 /** Function to give the number of colored stars as function of the movie rating */
 function giveRating(rate) {
     if(0<=rate && rate<19) {
@@ -72,6 +61,16 @@ function giveRating(rate) {
 
 describe("When I am connected to the home page", () => {
     beforeEach(() => {
+        // We mock the store
+        const mockStore = configureStore();
+        const initialState = {
+            isFormOpen: false,
+            movies: data,
+            favoriteMovies: [],
+            likedMovieIds: [],
+            likedMoviesCount: 0,
+        };
+        const store = mockStore(initialState);
         render(
             <Provider store={store}>
                 <Router>
@@ -100,6 +99,16 @@ describe("When I am connected to the home page", () => {
 
 describe("When I am connected to the home page", () => {
     beforeEach(() => {
+        // We mock the store
+        const mockStore = configureStore();
+        const initialState = {
+            isFormOpen: false,
+            movies: mockMovie,
+            favoriteMovies: [],
+            likedMovieIds: [],
+            likedMoviesCount: 0,
+        };
+        const store = mockStore(initialState);
         render(
             <Provider store={store}>
                 <Router>

@@ -43,20 +43,19 @@ const mockMovie = {
   "url": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
 };
 
-// We mock the store
-const mockStore = configureStore();
-const initialState = {
-    isFormOpen: false,
-    movies: data,
-    favoriteMovies: [],
-    likedMovieIds: [],
-    likedMoviesCount: 0,
-};
-const store = mockStore(initialState);
-
-let getByTestId, getByText, getByAltText;
-
 describe("When I am connected to the home page", () => {
+  // We mock the store
+  const mockStore = configureStore();
+  const initialState = {
+      isFormOpen: false,
+      movies: data,
+      favoriteMovies: [],
+      likedMovieIds: [],
+      likedMoviesCount: 0,
+  };
+  const store = mockStore(initialState);
+
+  let getByTestId, getByText, getByAltText;
   beforeEach(() => {
     const renderResult = render(
       <Provider store={store}>
@@ -84,6 +83,16 @@ describe("When I am connected to the home page", () => {
 
 describe("When I am connected to the home page", () => {
   beforeEach(() => {
+    // We mock the store
+    const mockStore = configureStore();
+    const initialState = {
+      isFormOpen: false,
+      movies: data,
+      favoriteMovies: [],
+      likedMovieIds: [],
+      likedMoviesCount: 0,
+    };
+    const store = mockStore(initialState);
     render(
       <Provider store={store}>
         <Router>
@@ -111,6 +120,28 @@ describe("When I am connected to the home page", () => {
     test("Then I should be sent to the favorite page", () => {
       fireEvent.click(screen.getByText('Favorite'));
       expect(screen.getByTestId('favorite-component')).toBeTruthy();
+    });
+  });
+  describe("When I click on the like button of a movie card", () => {
+    test("Then It should update the 'Favorite' link text based on likedMoviesCount", () => {
+      // We mock the store
+      const mockStore = configureStore();
+      const initialState = {
+        isFormOpen: false,
+        movies: data,
+        favoriteMovies: [mockMovie],
+        likedMovieIds: [mockMovie.id],
+        likedMoviesCount: 1,
+      };
+      const store = mockStore(initialState);
+      const { getByText } = render(
+        <Provider store={store}>
+          <Router>
+            <Header />
+          </Router>
+        </Provider>
+      );
+      expect(getByText('Favorite (1)')).toBeTruthy();
     });
   });
 });

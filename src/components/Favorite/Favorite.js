@@ -21,6 +21,7 @@ function FavoriteCard({ movie, onRemove }) {
                 <h2 className='Favorite-card-title'>{movie.title}</h2>
             </div>
             <button 
+                data-testid = 'favorite-card-trash'
                 className='Favorite-card-trash-border'
                 onClick={(e) => {
                     e.preventDefault();
@@ -51,9 +52,13 @@ export default function Favorite() {
             <CloudyTransition index={1} />
             <div className='favorite-list'>
                 {
-                    favoriteMovies.map((movie) => (
-                        <FavoriteCard key={movie.id} movie={movie} onRemove={handleRemoveFromFavorites} />
-                    ))
+                    favoriteMovies.length > 0 ? (
+                        favoriteMovies.map((movie) => (
+                            <FavoriteCard key={movie.id} movie={movie} onRemove={handleRemoveFromFavorites} />
+                        ))
+                    ) : (
+                        <h3>No liked movies in your collection</h3>
+                    )
                 }
             </div>
             <CloudyTransition index={2} />
